@@ -1,0 +1,200 @@
+{
+  "main": {
+    "id": "ed28e1d6ffb41173",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1d416552a83b1ce",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2dcddcb745022580",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "f3e9e2945726b5d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sphinx.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "57bec940dd74eb68",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Black.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3d4022a9faab0006",
+    "type": "split",
+    "children": [
+      {
+        "id": "418219fcaa7a37dd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ca9eaaa4a5dd60c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9204ae34bf60e818",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "49758c29eeb3d9f0",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bf2d35ea60dfb48a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e9cc447085d1617",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "584cb375f793fdc8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Black.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "425bae2e1048e984",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Black.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c58788ceb9ac9235",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6ccc7b206a38c85c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Black.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "57bec940dd74eb68",
+  "lastOpenFiles": [
+    "Sphinx.md",
+    "Black.md",
+    "SqlAlchemy.md",
+    "Base.md",
+    "Math of all sorts.md",
+    "List of packages for new machine.md",
+    "ML.md",
+    "Design Patterns.md",
+    "Git.md",
+    "Book Reference.md",
+    "Social webs.md",
+    "UnitTest.md",
+    "Ubuntu.md",
+    "Nvim.md",
+    "Poetry.md",
+    "Algos and Structures.md",
+    "Gunicorn.md",
+    "Celery.md",
+    "Mails.md",
+    "public/Ubuntu.Server.CLI.pro.tips.19.04.22.pdf",
+    "public",
+    "Untitled 1",
+    "Firefox Acc.md",
+    "Aptitude.md",
+    "PyTest.md",
+    "Docker.md",
+    "Tests.md"
+  ]
+}
