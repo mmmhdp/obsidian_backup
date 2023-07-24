@@ -32,3 +32,6 @@ fetch origin foo
 push origin source:destination (but here source - if from remote storage and destination is for local branch you want to fetch on)
 push origin :foo (source is empty, so that command will delete foo branch on the remote storage)
 fetch origin :foo (creates new branch foo on your local machine)
+
+add .
+status
