@@ -7,6 +7,8 @@ nvim
 git
 obsidian 
 postman
+tree
+tmux
 
 GNOME extensions: 
 Clipboard Indicator
