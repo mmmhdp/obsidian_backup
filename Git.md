@@ -15,7 +15,9 @@ checkout(with the HEAD, not only branches) checkout hash_of_the_commit
 
 ex of forcing branch 3 commits back: git branch -f main HEAD~3
 
-reset point_of_state_reset_to (for local repos, "time travelling")
+reset point_of_state_reset_to (for local repos, "time travelling"
+but it only changes point's target, but if u want to really change the data of 
+reros, use --hard option)
 
 revert point_of_reverting (for remote repos, new commit ahead with 
 CHANGES, what we should do to get back in time) 
