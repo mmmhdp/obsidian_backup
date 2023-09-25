@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ec63e01bad492ce3",
+        "id": "5405be85d25e5781",
         "type": "tabs",
         "children": [
           {
-            "id": "f85954915f601b30",
+            "id": "09f08e08d356760f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "not so essenctial/Tmux.md",
+                "file": "all/Git.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "not so essenctial/Tmux.md",
+                "file": "all/Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "not so essenctial/Tmux.md",
+                "file": "all/Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "not so essenctial/Tmux.md"
+                "file": "all/Git.md"
               }
             }
           }
@@ -146,42 +146,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f85954915f601b30",
+  "active": "09f08e08d356760f",
   "lastOpenFiles": [
-    "public/Ubuntu.Server.CLI.pro.tips.19.04.22.pdf",
-    "public/(Учебник для вузов. Стандарт третьего поколения) Орлов С. А. - Программная инженерия. Учебник для вузов-Питер (2016).pdf",
-    "not so essenctial/List of packages for new machine.md",
-    "Architecture diagrams.md",
-    "Black.md",
-    "money_longer.md",
-    "UnitTest.md",
-    "not so essenctial/Ubuntu.md",
-    "not so essenctial/TypeScript.md",
-    "not so essenctial/Tmux.md",
-    "not so essenctial/SqlAlchemy.md",
-    "not so essenctial/SQL.md",
-    "not so essenctial/Social webs.md",
-    "not so essenctial/ML.md",
-    "not so essenctial/Math of all sorts.md",
-    "not so essenctial/Mails.md",
-    "not so essenctial/JS.md",
-    "not so essenctial/Book Reference.md",
-    "not so essenctial/Aptitude.md",
-    "not so essenctial/Algos and Structures.md",
-    "not so essenctial/EXPRESS VPN CLI.md",
-    "Django.md",
-    "Gunicorn.md",
-    "PostgreSQL.md",
-    "PyTest.md",
-    "Sphinx.md",
-    "Poetry.md",
-    "not so essenctial",
-    "public/Алгоритмы 3 семестр/05 Путь в графе/Собрание_20210922_075416.mp4",
-    "public/Алгоритмы 3 семестр/02 Основы теории графов/02. Введение в теорию графов.mp4",
-    "public/Базы Данных 3 семестр/Лекция 2.pdf",
-    "public/Базы Данных 3 семестр/Лекция 1.pdf",
-    "public/Алгоритмы 3 семестр/02 Основы теории графов/02. Основы теории графов.pdf",
-    "public/Алгоритмы 3 семестр/01 Асимптотика/01. Введение. Асимптотика.pdf",
-    "public"
+    "all/Django.md",
+    "all/PyTest.md",
+    "all/Nvim.md",
+    "all/Poetry.md",
+    "АКАДЕМ ДОЛЖОК, ПИРОЖОК.md",
+    "МАТ СТАТ ПЕРЕСДАЧА.md",
+    "RACE.md",
+    "10 лабораторных по численнымметодам.md",
+    "all/public/conda-cheatsheet.pdf",
+    "all/public/МАТ_СТАТ_ТЕОРИЯ.pdf",
+    "линал за 2 семак.md",
+    "АиСД за 3 семак.md",
+    "all/public/РКСП - Лекция - 1.pdf",
+    "all/public/РКСП - Лекция - 2.pdf",
+    "all/Architecture diagrams.md",
+    "all/Black.md",
+    "all/Celery.md",
+    "all/Design Patterns.md",
+    "all/Docker.md",
+    "all/Git.md",
+    "all/I3.md",
+    "all/money_longer.md",
+    "all/MongoDB.md",
+    "all/PostgreSQL.md",
+    "all/Sphinx.md",
+    "all/Tmux.md",
+    "all/UnitTest.md",
+    "all/now/Algos and Structures.md",
+    "all/now/Base.md",
+    "беды с башкой",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "all",
+    "all/public/Ubuntu.Server.CLI.pro.tips.19.04.22.pdf",
+    "all/public/(Учебник для вузов. Стандарт третьего поколения) Орлов С. А. - Программная инженерия. Учебник для вузов-Питер (2016).pdf",
+    "all/now",
+    "public/Алгоритмы 3 семестр/05 Путь в графе/Собрание_20210922_075416.mp4"
   ]
 }
