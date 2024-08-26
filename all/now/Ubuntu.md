@@ -1,2 +1,0 @@
-![[Ubuntu.Server.CLI.pro.tips.19.04.22.pdf]]
-

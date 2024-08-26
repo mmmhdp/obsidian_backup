@@ -4,22 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "5405be85d25e5781",
+        "id": "53c5f748fff4b9fe",
         "type": "tabs",
         "children": [
           {
-            "id": "09f08e08d356760f",
+            "id": "282890cfd98ae46c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "all/Git.md",
+                "file": "Мелочи/Надо выделить время на почитать книги по матеше, а то беда.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "f3bb933e5373e45b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -85,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "all/Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "all/Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "all/Git.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,44 +151,46 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09f08e08d356760f",
+  "active": "f3bb933e5373e45b",
   "lastOpenFiles": [
-    "all/Django.md",
-    "all/PyTest.md",
-    "all/Nvim.md",
-    "all/Poetry.md",
-    "АКАДЕМ ДОЛЖОК, ПИРОЖОК.md",
-    "МАТ СТАТ ПЕРЕСДАЧА.md",
-    "RACE.md",
-    "10 лабораторных по численнымметодам.md",
-    "all/public/conda-cheatsheet.pdf",
-    "all/public/МАТ_СТАТ_ТЕОРИЯ.pdf",
-    "линал за 2 семак.md",
-    "АиСД за 3 семак.md",
-    "all/public/РКСП - Лекция - 1.pdf",
-    "all/public/РКСП - Лекция - 2.pdf",
-    "all/Architecture diagrams.md",
-    "all/Black.md",
-    "all/Celery.md",
-    "all/Design Patterns.md",
-    "all/Docker.md",
+    "Мелочи/Общий конфиг для переноса.md",
+    "Мелочи/Надо настроить nvim по человечески.md",
+    "Мелочи/Надо выделить время на почитать книги по матеше, а то беда.md",
+    "Untitled.md",
+    "Untitled",
+    "Долги.md",
+    "Текущие дела.md",
+    "Расписание.md",
+    "Мелочи",
+    "Диплом",
+    "C++.md",
     "all/Git.md",
-    "all/I3.md",
-    "all/money_longer.md",
-    "all/MongoDB.md",
-    "all/PostgreSQL.md",
-    "all/Sphinx.md",
-    "all/Tmux.md",
-    "all/UnitTest.md",
-    "all/now/Algos and Structures.md",
-    "all/now/Base.md",
-    "беды с башкой",
-    "Untitled.canvas",
-    "Untitled 1.canvas",
-    "all",
-    "all/public/Ubuntu.Server.CLI.pro.tips.19.04.22.pdf",
+    "all/Docker.md",
+    "Модули по расписанию.md",
+    "ШАД.md",
+    "KAN.md",
+    "ADS/data_structures/sparse_table.md",
+    "ADS/data_structures/prefix_sum.md",
+    "ADS/data_structures/disjoint sparse table.md",
+    "Вопросы по проге",
+    "sparse_table.md",
+    "АСД.md",
+    "ADS/data_structures",
+    "ADS",
+    "all/public/Алгоритмы 3 семестр/01 Асимптотика/01. Введение. Асимптотика.pdf",
+    "all/public/Базы Данных 3 семестр/Лекция 1.pdf",
+    "all/public/Базы Данных 3 семестр/Лекция 7.pdf",
     "all/public/(Учебник для вузов. Стандарт третьего поколения) Орлов С. А. - Программная инженерия. Учебник для вузов-Питер (2016).pdf",
-    "all/now",
-    "public/Алгоритмы 3 семестр/05 Путь в графе/Собрание_20210922_075416.mp4"
+    "Untitled.canvas",
+    "2024-03-13.md",
+    "DataStrucures/Sparse table.md",
+    "Sparse table.md",
+    "Hackaton's list.md",
+    "Nvim.md",
+    "gcc.md",
+    "all/Gunicorn.md",
+    "all/List of packages for new machine.md",
+    "all/public/Pasted image 20240111162656.png",
+    "Untitled 1.canvas"
   ]
 }
