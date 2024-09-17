@@ -4,27 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "53c5f748fff4b9fe",
+        "id": "79a2afb9de7ab1bb",
         "type": "tabs",
         "children": [
           {
-            "id": "282890cfd98ae46c",
+            "id": "dcd86326f84a17ec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Мелочи/Надо выделить время на почитать книги по матеше, а то беда.md",
+                "file": "Speaking questions/Бонус дз 3.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "f3bb933e5373e45b",
+            "id": "5d5c6ce8f056c238",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Speaking questions/3_14.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ],
@@ -78,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 292.5004348754883
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -94,6 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Speaking questions/3_14.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Speaking questions/3_14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +137,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Speaking questions/3_14.md"
+              }
             }
           }
         ]
@@ -151,46 +159,56 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f3bb933e5373e45b",
+  "active": "5d5c6ce8f056c238",
   "lastOpenFiles": [
-    "Мелочи/Общий конфиг для переноса.md",
-    "Мелочи/Надо настроить nvim по человечески.md",
-    "Мелочи/Надо выделить время на почитать книги по матеше, а то беда.md",
-    "Untitled.md",
-    "Untitled",
-    "Долги.md",
-    "Текущие дела.md",
+    "Speaking questions/attachments/Pasted image 20240917185550.png",
+    "Speaking questions/3_13.md",
+    "Speaking questions/3_14.md",
+    "Speaking questions/Бонус дз 3.md",
+    "Speaking questions/3_9 д.md",
+    "Speaking questions/attachments/Pasted image 20240917183004.png",
+    "Speaking questions/attachments/Pasted image 20240917175352.png",
+    "Speaking questions/attachments/Screenshot from 2024-09-17 17-49-14.jpg",
+    "Вопросы на спикинг/attachments/Screenshot from 2024-09-17 17-49-14.png",
+    "Вопросы на спикинг/attachments/Pasted image 20240917174916.png",
+    "Вопросы на спикинг/attachments/Screenshot from 2024-09-14 20-28-33.png",
+    "Вопросы на спикинг/attachments/Pasted image 20240914202954.png",
+    "Текущее.md",
+    "Вопросы на спикинг/attachments/Pasted image 20240914202827.png",
+    "Вопросы на спикинг/attachments/Pasted image 20240914202836.png",
+    "Вопросы на спикинг/attachments/Pasted image 20240914202830.png",
+    "Диплом/arch.canvas",
+    "Диплом/Общий план.md",
+    "Диплом/kanban.md",
+    "Подготовка к Шад/Ошибки в дз.md",
+    "Мелочи/shell.md",
+    "Speaking questions/attachments",
+    "Вопросы на спикинг/дз 3 эл мат грейд 1 задание 1.md",
+    "Вопросы на спикинг/дз 3 эл мат грейд 1 задание 3 пункт г.md",
     "Расписание.md",
-    "Мелочи",
-    "Диплом",
-    "C++.md",
-    "all/Git.md",
-    "all/Docker.md",
-    "Модули по расписанию.md",
-    "ШАД.md",
-    "KAN.md",
-    "ADS/data_structures/sparse_table.md",
-    "ADS/data_structures/prefix_sum.md",
-    "ADS/data_structures/disjoint sparse table.md",
-    "Вопросы по проге",
-    "sparse_table.md",
-    "АСД.md",
-    "ADS/data_structures",
-    "ADS",
-    "all/public/Алгоритмы 3 семестр/01 Асимптотика/01. Введение. Асимптотика.pdf",
-    "all/public/Базы Данных 3 семестр/Лекция 1.pdf",
-    "all/public/Базы Данных 3 семестр/Лекция 7.pdf",
-    "all/public/(Учебник для вузов. Стандарт третьего поколения) Орлов С. А. - Программная инженерия. Учебник для вузов-Питер (2016).pdf",
+    "Untitled",
+    "Speaking questions",
+    "Kanban Notes Folder/вопросы по дз 2 введение в матан.md",
+    "Kanban Notes Folder",
+    "Текущее/вопросы по дз 2 введение в матан.md",
+    "Текущее",
+    "kanban/in progress",
+    "kanban",
+    "Подготовка к Шад",
+    "Подготовка к Шад/Мозги",
+    "Мелочи/Конфиг для vpn.md",
+    "Мелочи/Конфиг для tmux.md",
+    "Мелочи/Надо выделить время на почитать книги по матеше, а то беда.md",
+    "Мелочи/Надо настроить nvim по человечески.md",
+    "Мелочи/Бэкап Obsidian.md",
+    "Мелочи/Конфиг для  fish.md",
+    "Долги.md",
+    "Диплом/Яндекс кеш  - библиотека.md",
+    "Диплом/План.md",
     "Untitled.canvas",
-    "2024-03-13.md",
-    "DataStrucures/Sparse table.md",
-    "Sparse table.md",
-    "Hackaton's list.md",
-    "Nvim.md",
-    "gcc.md",
-    "all/Gunicorn.md",
-    "all/List of packages for new machine.md",
-    "all/public/Pasted image 20240111162656.png",
-    "Untitled 1.canvas"
+    "Untitled 1.canvas",
+    "Мелочи/Общие конфиги.md",
+    "ЫА.md",
+    "Мелочи"
   ]
 }

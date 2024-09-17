@@ -1,5 +1,5 @@
 {
-  "attachmentFolderPath": "/public",
+  "attachmentFolderPath": "./attachments",
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
