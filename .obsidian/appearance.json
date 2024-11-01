@@ -1,5 +1,10 @@
 {
   "accentColor": "",
-  "cssTheme": "",
-  "baseFontSize": 11
+  "cssTheme": "Minimal",
+  "baseFontSize": 18,
+  "theme": "system",
+  "enabledCssSnippets": [
+    "black_text_in_both_modes"
+  ],
+  "baseFontSizeAction": false
 }

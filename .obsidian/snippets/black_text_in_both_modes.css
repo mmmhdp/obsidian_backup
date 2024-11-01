@@ -1,0 +1,7 @@
+/* Force black text on all highlighted elements */
+.cm-highlight,
+mark,
+[class*="hltr-"],
+[style*="background-color"] {
+    color: black !important;
+}

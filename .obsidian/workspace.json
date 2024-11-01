@@ -4,35 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "79a2afb9de7ab1bb",
+        "id": "b14914033be3aa89",
         "type": "tabs",
         "children": [
           {
-            "id": "dcd86326f84a17ec",
+            "id": "26374456f26261d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Speaking questions/Бонус дз 3.md",
+                "file": "Shad preparation/Linalg/Линейная алгебра.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "5d5c6ce8f056c238",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Speaking questions/3_14.md",
-                "mode": "source",
-                "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Линейная алгебра"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -52,7 +41,21 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9fd1aaa20c57d66a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Shad preparation/Linalg/Линейная алгебра.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Линейная алгебра"
             }
           },
           {
@@ -61,13 +64,15 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "принцип локали",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -75,14 +80,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 292.5004348754883
+    "width": 235.50043487548828
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -98,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Speaking questions/3_14.md",
+                "file": "SHAD prep/Calc/Матан.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +113,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Матан"
             }
           },
           {
@@ -115,10 +124,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Speaking questions/3_14.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
             }
           },
           {
@@ -129,7 +139,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -137,9 +149,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Speaking questions/3_14.md"
-              }
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           }
         ]
@@ -156,59 +168,61 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false
     }
   },
-  "active": "5d5c6ce8f056c238",
+  "active": "26374456f26261d5",
   "lastOpenFiles": [
-    "Speaking questions/attachments/Pasted image 20240917185550.png",
-    "Speaking questions/3_13.md",
-    "Speaking questions/3_14.md",
-    "Speaking questions/Бонус дз 3.md",
-    "Speaking questions/3_9 д.md",
-    "Speaking questions/attachments/Pasted image 20240917183004.png",
-    "Speaking questions/attachments/Pasted image 20240917175352.png",
-    "Speaking questions/attachments/Screenshot from 2024-09-17 17-49-14.jpg",
-    "Вопросы на спикинг/attachments/Screenshot from 2024-09-17 17-49-14.png",
-    "Вопросы на спикинг/attachments/Pasted image 20240917174916.png",
-    "Вопросы на спикинг/attachments/Screenshot from 2024-09-14 20-28-33.png",
-    "Вопросы на спикинг/attachments/Pasted image 20240914202954.png",
+    "Shad preparation/Linalg/Линейная алгебра на плоскости.md",
+    "Shad preparation/Linalg/Теория размерности.md",
+    "Shad preparation/Calculus/Математический анализ.md",
+    "Shad preparation/Linalg/Линейная алгебра.md",
+    "Shad preparation/Calculus/Week 9/Лекция 9.md",
+    "Shad preparation/Подготовка к ШАД.md",
     "Текущее.md",
-    "Вопросы на спикинг/attachments/Pasted image 20240914202827.png",
-    "Вопросы на спикинг/attachments/Pasted image 20240914202836.png",
-    "Вопросы на спикинг/attachments/Pasted image 20240914202830.png",
+    "Shad preparation/Linalg/Untitled",
+    "Shad preparation/Linalg",
+    "Shad preparation/Linalg/Week 9/Лекция 9.md",
+    "Shad preparation/Linalg/Week 9",
+    "Shad preparation/Linalg",
+    "Shad preparation/Calculus/Week 9/Лекция 9 Ряды с неотрицательными членами.md",
+    "Shad preparation/Calculus/Week 9/Лекция 9 Ряды с произвольными членами.md",
+    "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029190712.png",
+    "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029131357.png",
+    "Shad preparation/Calculus/Week 9/local_attachments",
+    "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029131249.png",
+    "Shad preparation/Calculus/Week 9/Lection 9.md",
+    "Shad preparation/Calculus/Weeks 9-10/Week 9/9.md",
+    "Shad preparation/Calculus/Матан.md",
+    "SHAD prep/ЛИНАЛ.md",
+    "Линал.md",
+    "SHAD prep/Линал/Линал.md",
+    "SHAD prep/Calc/9-10/9/lection/local_attachments/Pasted image 20241029124317.png",
+    "Speaking questions/calc/Она линейна, чи шо?.md",
+    "Speaking questions/calc/local_attachments/Pasted image 20241004211413.png",
+    "Speaking questions/calc/Пример последовательности приведи.md",
+    "Speaking questions/calc/Геометрический пердел.md",
+    "Speaking questions/calc/Геом 2.md",
+    "Speaking questions/calc/local_attachments/Pasted image 20241004212658.png",
+    "Speaking questions/calc/local_attachments/Pasted image 20241004213506.png",
+    "SHAD prep/Calc/9-10/9/lection/local_attachments",
+    "SHAD prep/Calc/9-10/9/lection/local_attachments/Pasted image 20241029122539.png",
+    "Подготовка к Шад/Матан/9-10/9/Лекция/local_attachments/Pasted image 20241004211413 1.png",
+    "Подготовка к Шад/Матан/9-10/9/Лекция/local_attachments/test.png",
     "Диплом/arch.canvas",
-    "Диплом/Общий план.md",
-    "Диплом/kanban.md",
-    "Подготовка к Шад/Ошибки в дз.md",
-    "Мелочи/shell.md",
-    "Speaking questions/attachments",
-    "Вопросы на спикинг/дз 3 эл мат грейд 1 задание 1.md",
-    "Вопросы на спикинг/дз 3 эл мат грейд 1 задание 3 пункт г.md",
-    "Расписание.md",
-    "Untitled",
-    "Speaking questions",
-    "Kanban Notes Folder/вопросы по дз 2 введение в матан.md",
-    "Kanban Notes Folder",
-    "Текущее/вопросы по дз 2 введение в матан.md",
-    "Текущее",
-    "kanban/in progress",
-    "kanban",
-    "Подготовка к Шад",
-    "Подготовка к Шад/Мозги",
-    "Мелочи/Конфиг для vpn.md",
-    "Мелочи/Конфиг для tmux.md",
-    "Мелочи/Надо выделить время на почитать книги по матеше, а то беда.md",
-    "Мелочи/Надо настроить nvim по человечески.md",
-    "Мелочи/Бэкап Obsidian.md",
-    "Мелочи/Конфиг для  fish.md",
-    "Долги.md",
-    "Диплом/Яндекс кеш  - библиотека.md",
-    "Диплом/План.md",
+    "Speaking questions/calc/Про биекцию.md",
+    "Speaking questions/linal/3_13.md",
+    "Speaking questions/calc/TEST.md",
+    "relativity.md",
+    "[[9]].md",
+    "Подготовка к Шад/Матан/9-10/9/Лекция 9.md",
+    "Подготовка к Шад/Матан/9-10/проверяемое дз за 9-10",
+    "Подготовка к Шад/Матан/9-10/10",
+    "Shad preparation/Calculus/Week 9",
+    "Подготовка к Шад/Матан/9-10/9/Семинар",
     "Untitled.canvas",
-    "Untitled 1.canvas",
-    "Мелочи/Общие конфиги.md",
-    "ЫА.md",
-    "Мелочи"
+    "uni/digital economy/Untitled.canvas",
+    "Untitled 1.canvas"
   ]
 }

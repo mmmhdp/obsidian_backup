@@ -6,5 +6,37 @@
       ],
       "key": "M"
     }
+  ],
+  "highlightr-plugin:Yellow": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
+  ],
+  "highlightr-plugin:Крутой-цвет мужсткой и вообще": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "]"
+    }
+  ],
+  "highlightr-plugin:Зелибобка": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "]"
+    }
+  ],
+  "highlightr-plugin:Coler": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "]"
+    }
   ]
 }

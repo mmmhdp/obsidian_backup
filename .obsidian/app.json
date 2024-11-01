@@ -1,5 +1,5 @@
 {
-  "attachmentFolderPath": "./attachments",
+  "attachmentFolderPath": "./local_attachments",
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
@@ -7,6 +7,10 @@
     "margin": "2",
     "downscalePercent": 57
   },
-  "promptDelete": false,
-  "vimMode": true
+  "promptDelete": true,
+  "vimMode": true,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "trashOption": "system"
 }
