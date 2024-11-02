@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b14914033be3aa89",
+        "id": "d93036243e106fcb",
         "type": "tabs",
         "children": [
           {
-            "id": "26374456f26261d5",
+            "id": "14687b3e3ceff206",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shad preparation/Linalg/Линейная алгебра.md",
+                "file": "Shad preparation/Linalg/Theory of dimension/Линейные соотношения в координатах.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Линейная алгебра"
+              "title": "Линейные соотношения в координатах"
             }
           }
         ]
@@ -52,10 +52,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shad preparation/Linalg/Линейная алгебра.md"
+                "file": "Shad preparation/Linalg/Theory of dimension/Линейные соотношения в координатах.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Линейная алгебра"
+              "title": "Outline of Линейные соотношения в координатах"
             }
           },
           {
@@ -64,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "принцип локали",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +85,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -172,16 +173,21 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "26374456f26261d5",
+  "active": "9fd1aaa20c57d66a",
   "lastOpenFiles": [
-    "Shad preparation/Linalg/Линейная алгебра на плоскости.md",
-    "Shad preparation/Linalg/Теория размерности.md",
-    "Shad preparation/Calculus/Математический анализ.md",
+    "Shad preparation/Linalg/Theory of dimension/Векторные пространства.md",
+    "Shad preparation/Linalg/Theory of dimension/Системы линейных уравнений.md",
+    "Shad preparation/Linalg/Theory of dimension/Теория размерности.md",
+    "Shad preparation/Linalg/Theory of dimension/Линейные соотношения в координатах.md",
+    "Shad preparation/Linalg/Theory of dimension/Взаимное расположение подпространств.md",
     "Shad preparation/Linalg/Линейная алгебра.md",
+    "Shad preparation/Linalg/Linalg on plane/Линейная алгебра на плоскости.md",
     "Shad preparation/Calculus/Week 9/Лекция 9.md",
+    "Shad preparation/Linalg/Linalg on plane",
     "Shad preparation/Подготовка к ШАД.md",
+    "Shad preparation/Linalg/Theory of dimension",
+    "Shad preparation/Calculus/Математический анализ.md",
     "Текущее.md",
-    "Shad preparation/Linalg/Untitled",
     "Shad preparation/Linalg",
     "Shad preparation/Linalg/Week 9/Лекция 9.md",
     "Shad preparation/Linalg/Week 9",
@@ -213,14 +219,9 @@
     "Диплом/arch.canvas",
     "Speaking questions/calc/Про биекцию.md",
     "Speaking questions/linal/3_13.md",
-    "Speaking questions/calc/TEST.md",
-    "relativity.md",
-    "[[9]].md",
-    "Подготовка к Шад/Матан/9-10/9/Лекция 9.md",
     "Подготовка к Шад/Матан/9-10/проверяемое дз за 9-10",
     "Подготовка к Шад/Матан/9-10/10",
     "Shad preparation/Calculus/Week 9",
-    "Подготовка к Шад/Матан/9-10/9/Семинар",
     "Untitled.canvas",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"

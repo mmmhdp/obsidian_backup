@@ -38,5 +38,13 @@
       ],
       "key": "]"
     }
+  ],
+  "highlightr-plugin:unhighlight": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "\\"
+    }
   ]
 }
