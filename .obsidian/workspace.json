@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "c8acdefa387c53ca",
+        "id": "fb1dd80881c833e9",
         "type": "tabs",
         "children": [
           {
-            "id": "bb69abd94ec2878c",
+            "id": "0dd09dd86d341e30",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shad preparation/Linalg/7 Spectral theory/Собственные вектора и собственные значения оператора.md",
+                "file": "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Собственные вектора и собственные значения оператора"
+              "title": "Modulo inequalities"
             }
           }
         ]
@@ -52,10 +52,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shad preparation/Linalg/7 Spectral theory/Собственные вектора и собственные значения оператора.md"
+                "file": "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Собственные вектора и собственные значения оператора"
+              "title": "Outline of Modulo inequalities"
             }
           },
           {
@@ -64,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "линейный оператор",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 297.5004348754883
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -172,55 +172,56 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "bb69abd94ec2878c",
+  "active": "0dd09dd86d341e30",
   "lastOpenFiles": [
-    "Shad preparation/Linalg/6 Determinants and permutations/Общее понятия определителя и его свойства.md",
-    "Shad preparation/Linalg/6 Determinants and permutations/Определитель третьего порядка.md",
+    "Shad preparation/Calculus/00_Basic course/Means Inequality.md",
+    "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md",
+    "Shad preparation/Calculus/00_Basic course/Properties of numeric functions.md",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128124431.png",
+    "Shad preparation/Calculus/00_Basic course/Equations and inequalities.md",
+    "Shad preparation/Calculus/00_Basic course/Elementary functions.md",
+    "Shad preparation/Calculus/Series/Числовые ряды.md",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128121131.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments",
+    "Shad preparation/Calculus/_Basics/Trigonometry.md",
+    "Shad preparation/Calculus/00_Basic course/Vieta's formula.md",
+    "Shad preparation/Calculus/_Basics/Taylor series.md",
+    "Shad preparation/Calculus/_Basics/Integrals.md",
+    "Shad preparation/Calculus/_Basics/Essential limits.md",
+    "Shad preparation/Calculus/_Basics/Derivatives.md",
+    "Shad preparation/Calculus/_Basics/local_attachments/Pasted image 20241128102655.png",
+    "Shad preparation/Calculus/_Basics/local_attachments",
+    "Shad preparation/Calculus/00_Basic course",
+    "Диплом/arch.canvas",
+    "Диплом/Общий план.md",
+    "Диплом/kanban.md",
+    "Shad preparation/Calculus/Series/local_attachments/lecture_9.pdf",
+    "Shad preparation/Calculus/Uniform convergence/Равномерная сходимость.md",
+    "Shad preparation/Calculus/Series/local_attachments/Pasted image 20241029131357.png",
+    "Shad preparation/Calculus/Математический анализ.md",
+    "Shad preparation/Calculus/Series/local_attachments/Pasted image 20241029190712.png",
+    "Shad preparation/Calculus/_Basics",
+    "Shad preparation/Calculus/Untitled.md",
+    "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
+    "Untitled.canvas",
     "Shad preparation/Linalg/7 Spectral theory/Собственные вектора и собственные значения оператора.md",
-    "Shad preparation/Linalg/7 Spectral theory/local_attachments/Pasted image 20241107221429.png",
-    "Shad preparation/Linalg/7 Spectral theory/local_attachments",
     "Shad preparation/Linalg/7 Spectral theory/! Спектральная теория.md",
     "Shad preparation/Linalg/7 Spectral theory/Операторы и их матрицы.md",
-    "Shad preparation/Linalg/-1 Offtop/Алгебра над кольцом.md",
-    "Shad preparation/Linalg/3 Linalg on plane/Линейная алгебра на плоскости.md",
-    "Shad preparation/Linalg/6 Determinants and permutations/! Определители и перестановки.md",
-    "Shad preparation/Linalg/5 Matrix multiplication/! Умножение матриц.md",
-    "Shad preparation/Linalg/7 Spectral theory",
-    "Shad preparation/Linalg/4 Theory of dimension/Системы линейных уравнений.md",
-    "Shad preparation/Linalg/4 Theory of dimension/Линейные соотношения в координатах.md",
-    "Shad preparation/Linalg/5 Matrix multiplication/Обратная матрица и матричные уравнения.md",
-    "Shad preparation/Linalg/6 Determinants and permutations/Группа перестановок.md",
-    "Shad preparation/Linalg/6 Determinants and permutations/Untitled.md",
-    "Shad preparation/Linalg/Линейная алгебра.md",
-    "Shad preparation/Подготовка к ШАД.md",
-    "Shad preparation/Linalg/-1 Offtop/Лемма Цорна.md",
-    "Shad preparation/Linalg/4 Theory of dimension/! Теория размерности.md",
-    "Shad preparation/Linalg/6 Determinants and permutations",
-    "Shad preparation/Linalg/5 Matrix multiplication/Ранг произведения матриц.md",
-    "Shad preparation/Linalg/5 Matrix multiplication/Умножение матриц.md",
-    "Shad preparation/Linalg/5 Matrix multiplication/Проекторы и отражения.md",
-    "Shad preparation/Linalg/4 Theory of dimension/Ранг матрицы.md",
-    "Shad preparation/Linalg/5 Matrix multiplication",
     "Shad preparation/Linalg/4 Theory of dimension/Векторные пространства.md",
-    "Shad preparation/Linalg/4 Theory of dimension/Взаимное расположение подпространств.md",
-    "Shad preparation/Linalg/-1 Offtop",
-    "Shad preparation/Linalg/Theory of dimension/Векторные.md",
-    "Shad preparation/Linalg/3 Linalg on plane",
-    "Shad preparation/Linalg/4 Theory of dimension",
-    "Shad preparation/Linalg",
-    "Shad preparation/Linalg/Week 9",
-    "Shad preparation/Linalg",
-    "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029190712.png",
-    "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029131357.png",
+    "Shad preparation/Linalg/6 Determinants and permutations/Общее понятия определителя и его свойства.md",
+    "Shad preparation/Linalg/6 Determinants and permutations/! Определители и перестановки.md",
+    "Shad preparation/Calculus/01_Sequence limit/local_attachments/Pasted image 20241112141949.png",
+    "Shad preparation/Calculus/01_Sequence limit/local_attachments",
+    "Shad preparation/Calculus/01_Sequence limit",
+    "Shad preparation/Calculus/Uniform convergence",
+    "Shad preparation/Calculus/Week 10.md",
+    "Shad preparation/Linalg/4 Theory of dimension/Ранг матрицы.md",
+    "Shad preparation/Linalg/7 Spectral theory/local_attachments/Pasted image 20241107221429.png",
+    "Shad preparation/Linalg/7 Spectral theory/local_attachments",
+    "Shad preparation/Linalg/7 Spectral theory",
     "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029131249.png",
     "SHAD prep/Calc/9-10/9/lection/local_attachments/Pasted image 20241029124317.png",
     "Speaking questions/calc/local_attachments/Pasted image 20241004211413.png",
-    "Speaking questions/calc/local_attachments/Pasted image 20241004212658.png",
-    "Speaking questions/calc/local_attachments/Pasted image 20241004213506.png",
-    "SHAD prep/Calc/9-10/9/lection/local_attachments/Pasted image 20241029122539.png",
-    "Подготовка к Шад/Матан/9-10/9/Лекция/local_attachments/Pasted image 20241004211413 1.png",
-    "Диплом/arch.canvas",
-    "Untitled.canvas",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"
   ]
