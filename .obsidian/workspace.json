@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "fb1dd80881c833e9",
+        "id": "89b259740f829b70",
         "type": "tabs",
         "children": [
           {
-            "id": "0dd09dd86d341e30",
+            "id": "ed177986070f6849",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Modulo inequalities"
+              "title": "New tab"
             }
           }
         ]
@@ -51,11 +47,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "Outline of Modulo inequalities"
+              "title": "Outline"
             }
           },
           {
@@ -172,16 +166,25 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "0dd09dd86d341e30",
+  "active": "ed177986070f6849",
   "lastOpenFiles": [
-    "Shad preparation/Calculus/00_Basic course/Means Inequality.md",
+    "Shad preparation/Calculus/00_Basic course/Graphs transformation.md",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140819.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140802.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140030.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135920.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135822.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135806.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135303.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135245.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135231.png",
+    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128134003.png",
     "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md",
+    "Shad preparation/Calculus/00_Basic course/Means Inequality.md",
     "Shad preparation/Calculus/00_Basic course/Properties of numeric functions.md",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128124431.png",
     "Shad preparation/Calculus/00_Basic course/Equations and inequalities.md",
     "Shad preparation/Calculus/00_Basic course/Elementary functions.md",
     "Shad preparation/Calculus/Series/Числовые ряды.md",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128121131.png",
     "Shad preparation/Calculus/00_Basic course/local_attachments",
     "Shad preparation/Calculus/_Basics/Trigonometry.md",
     "Shad preparation/Calculus/00_Basic course/Vieta's formula.md",
@@ -189,7 +192,6 @@
     "Shad preparation/Calculus/_Basics/Integrals.md",
     "Shad preparation/Calculus/_Basics/Essential limits.md",
     "Shad preparation/Calculus/_Basics/Derivatives.md",
-    "Shad preparation/Calculus/_Basics/local_attachments/Pasted image 20241128102655.png",
     "Shad preparation/Calculus/_Basics/local_attachments",
     "Shad preparation/Calculus/00_Basic course",
     "Диплом/arch.canvas",
@@ -197,9 +199,7 @@
     "Диплом/kanban.md",
     "Shad preparation/Calculus/Series/local_attachments/lecture_9.pdf",
     "Shad preparation/Calculus/Uniform convergence/Равномерная сходимость.md",
-    "Shad preparation/Calculus/Series/local_attachments/Pasted image 20241029131357.png",
     "Shad preparation/Calculus/Математический анализ.md",
-    "Shad preparation/Calculus/Series/local_attachments/Pasted image 20241029190712.png",
     "Shad preparation/Calculus/_Basics",
     "Shad preparation/Calculus/Untitled.md",
     "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
@@ -210,18 +210,11 @@
     "Shad preparation/Linalg/4 Theory of dimension/Векторные пространства.md",
     "Shad preparation/Linalg/6 Determinants and permutations/Общее понятия определителя и его свойства.md",
     "Shad preparation/Linalg/6 Determinants and permutations/! Определители и перестановки.md",
-    "Shad preparation/Calculus/01_Sequence limit/local_attachments/Pasted image 20241112141949.png",
     "Shad preparation/Calculus/01_Sequence limit/local_attachments",
     "Shad preparation/Calculus/01_Sequence limit",
     "Shad preparation/Calculus/Uniform convergence",
-    "Shad preparation/Calculus/Week 10.md",
-    "Shad preparation/Linalg/4 Theory of dimension/Ранг матрицы.md",
-    "Shad preparation/Linalg/7 Spectral theory/local_attachments/Pasted image 20241107221429.png",
     "Shad preparation/Linalg/7 Spectral theory/local_attachments",
     "Shad preparation/Linalg/7 Spectral theory",
-    "Shad preparation/Calculus/Week 9/local_attachments/Pasted image 20241029131249.png",
-    "SHAD prep/Calc/9-10/9/lection/local_attachments/Pasted image 20241029124317.png",
-    "Speaking questions/calc/local_attachments/Pasted image 20241004211413.png",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"
   ]
