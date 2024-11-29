@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1660e9f1568e0eb6",
+        "id": "0d9fe87d3faa4a54",
         "type": "tabs",
         "children": [
           {
-            "id": "fed836deac9cb4c6",
+            "id": "e600fb9620da1856",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -166,8 +166,9 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "fed836deac9cb4c6",
+  "active": "e600fb9620da1856",
   "lastOpenFiles": [
+    "Shad preparation/Calculus/_Basics/Тригонометрия.md",
     "Shad preparation/Calculus/02_Continuous functions and their limits/Непрервыность функции.md",
     "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments/lection_3.pdf",
     "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_2.pdf",
@@ -185,7 +186,6 @@
     "Shad preparation/Calculus/-1_Offtop/local_attachments",
     "Shad preparation/Calculus/01_Sequence limit/Untitled.md",
     "Shad preparation/Calculus/-1_Offtop",
-    "Shad preparation/Calculus/_Basics/Тригонометрия.md",
     "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
     "Shad preparation/Calculus/_Basics/Базовые интегралы.md",
     "Shad preparation/Calculus/_Basics/Базовые производные.md",
