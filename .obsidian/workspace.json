@@ -11,10 +11,14 @@
             "id": "ed177986070f6849",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Предел последовательности"
             }
           }
         ]
