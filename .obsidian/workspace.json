@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "89b259740f829b70",
+        "id": "1660e9f1568e0eb6",
         "type": "tabs",
         "children": [
           {
-            "id": "ed177986070f6849",
+            "id": "fed836deac9cb4c6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Предел последовательности"
+              "title": "New tab"
             }
           }
         ]
@@ -87,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5004348754883
+    "width": 382.5
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -170,9 +166,37 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "ed177986070f6849",
+  "active": "fed836deac9cb4c6",
   "lastOpenFiles": [
-    "Shad preparation/Calculus/00_Basic course/Graphs transformation.md",
+    "Shad preparation/Calculus/02_Continuous functions and their limits/Непрервыность функции.md",
+    "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments/lection_3.pdf",
+    "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_2.pdf",
+    "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_1.pdf",
+    "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
+    "Shad preparation/Calculus/-1_Offtop/Счётные и несчётные множества.md",
+    "Shad preparation/Calculus/-1_Offtop/local_attachments/lection_3.pdf",
+    "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments/Pasted image 20241129124128.png",
+    "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments",
+    "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_3.pdf",
+    "Shad preparation/Calculus/-1_Offtop/local_attachments/lection_2.pdf",
+    "Shad preparation/Calculus/01_Sequence limit/local_attachments/Pasted image 20241112141949.png",
+    "Shad preparation/Calculus/02_Continuous functions and their limits",
+    "Shad preparation/Calculus/-1_Offtop/local_attachments/Pasted image 20241129121522.png",
+    "Shad preparation/Calculus/-1_Offtop/local_attachments",
+    "Shad preparation/Calculus/01_Sequence limit/Untitled.md",
+    "Shad preparation/Calculus/-1_Offtop",
+    "Shad preparation/Calculus/_Basics/Тригонометрия.md",
+    "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
+    "Shad preparation/Calculus/_Basics/Базовые интегралы.md",
+    "Shad preparation/Calculus/_Basics/Базовые производные.md",
+    "Shad preparation/Calculus/_Basics/Essential limits.md",
+    "Shad preparation/Calculus/00_Basic course/Уравнение и неравенства.md",
+    "Shad preparation/Calculus/00_Basic course/Элементарные функции.md",
+    "Shad preparation/Calculus/00_Basic course/Свойства числовых функций.md",
+    "Shad preparation/Calculus/00_Basic course/Неравенства о средних.md",
+    "Shad preparation/Calculus/00_Basic course/Неравенства с модулями.md",
+    "Shad preparation/Calculus/00_Basic course/Теорема Виета.md",
+    "Shad preparation/Calculus/00_Basic course/Преобразование графиков.md",
     "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140819.png",
     "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140802.png",
     "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140030.png",
@@ -180,45 +204,17 @@
     "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135822.png",
     "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135806.png",
     "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135303.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135245.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135231.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128134003.png",
-    "Shad preparation/Calculus/00_Basic course/Modulo inequalities.md",
-    "Shad preparation/Calculus/00_Basic course/Means Inequality.md",
-    "Shad preparation/Calculus/00_Basic course/Properties of numeric functions.md",
-    "Shad preparation/Calculus/00_Basic course/Equations and inequalities.md",
-    "Shad preparation/Calculus/00_Basic course/Elementary functions.md",
     "Shad preparation/Calculus/Series/Числовые ряды.md",
-    "Shad preparation/Calculus/00_Basic course/local_attachments",
-    "Shad preparation/Calculus/_Basics/Trigonometry.md",
-    "Shad preparation/Calculus/00_Basic course/Vieta's formula.md",
-    "Shad preparation/Calculus/_Basics/Taylor series.md",
-    "Shad preparation/Calculus/_Basics/Integrals.md",
-    "Shad preparation/Calculus/_Basics/Essential limits.md",
-    "Shad preparation/Calculus/_Basics/Derivatives.md",
-    "Shad preparation/Calculus/_Basics/local_attachments",
-    "Shad preparation/Calculus/00_Basic course",
     "Диплом/arch.canvas",
     "Диплом/Общий план.md",
     "Диплом/kanban.md",
-    "Shad preparation/Calculus/Series/local_attachments/lecture_9.pdf",
     "Shad preparation/Calculus/Uniform convergence/Равномерная сходимость.md",
     "Shad preparation/Calculus/Математический анализ.md",
-    "Shad preparation/Calculus/_Basics",
     "Shad preparation/Calculus/Untitled.md",
-    "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
     "Untitled.canvas",
     "Shad preparation/Linalg/7 Spectral theory/Собственные вектора и собственные значения оператора.md",
     "Shad preparation/Linalg/7 Spectral theory/! Спектральная теория.md",
     "Shad preparation/Linalg/7 Spectral theory/Операторы и их матрицы.md",
-    "Shad preparation/Linalg/4 Theory of dimension/Векторные пространства.md",
-    "Shad preparation/Linalg/6 Determinants and permutations/Общее понятия определителя и его свойства.md",
-    "Shad preparation/Linalg/6 Determinants and permutations/! Определители и перестановки.md",
-    "Shad preparation/Calculus/01_Sequence limit/local_attachments",
-    "Shad preparation/Calculus/01_Sequence limit",
-    "Shad preparation/Calculus/Uniform convergence",
-    "Shad preparation/Linalg/7 Spectral theory/local_attachments",
-    "Shad preparation/Linalg/7 Spectral theory",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"
   ]
