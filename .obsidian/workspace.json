@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0d9fe87d3faa4a54",
+        "id": "0d3b2704ecb5c9b8",
         "type": "tabs",
         "children": [
           {
-            "id": "e600fb9620da1856",
+            "id": "9fcdfaec72babbae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Shad preparation/Calculus/03_Differentiable functions/Правило Лопиталя.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Правило Лопиталя"
             }
           }
         ]
@@ -47,9 +51,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Shad preparation/Calculus/03_Differentiable functions/Правило Лопиталя.md"
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Правило Лопиталя"
             }
           },
           {
@@ -83,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 382.5
+    "width": 334.5
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -166,29 +172,47 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "e600fb9620da1856",
+  "active": "9fcdfaec72babbae",
   "lastOpenFiles": [
+    "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
+    "Shad preparation/Calculus/03_Differentiable functions/Правило Лопиталя.md",
+    "Shad preparation/Calculus/03_Differentiable functions/Разложение в ряд Тейлора.md",
+    "Shad preparation/Calculus/03_Differentiable functions/Выпуклость функции.md",
+    "Shad preparation/Calculus/03_Differentiable functions/Дифференцируемые функции.md",
+    "Shad preparation/Calculus/03_Differentiable functions/local_attachments/Pasted image 20241202174305.png",
+    "Shad preparation/Calculus/03_Differentiable functions/Экстремумы функций.md",
+    "Shad preparation/Calculus/03_Differentiable functions/Теоремы о среднем(Ферма, Ролль, Лагранжа, Коши).md",
+    "Shad preparation/Calculus/03_Differentiable functions/local_attachments/lection_5.pdf",
+    "Shad preparation/Calculus/03_Differentiable functions/local_attachments/lection_4.pdf",
+    "Shad preparation/Calculus/_Basics/Базовые производные.md",
+    "Shad preparation/Calculus/03_Differentiable functions/local_attachments/Pasted image 20241202163903.png",
+    "Shad preparation/Calculus/03_Differentiable functions/local_attachments",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Сравнение функций.md",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Замечательные пределы.md",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Пределы и разрывы функций.md",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Непрервыность функции.md",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Классификация точек разрыва.md",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202142658.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202142644.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202142625.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202142610.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202142442.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202142243.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Классификация точке разрыва.md",
+    "Shad preparation/Calculus/03_Differentiable functions",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202140328.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/Pasted image 20241202135452.png",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments/lection_3.pdf",
+    "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
     "Shad preparation/Calculus/_Basics/Тригонометрия.md",
-    "Shad preparation/Calculus/02_Continuous functions and their limits/Непрервыность функции.md",
-    "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments/lection_3.pdf",
     "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_2.pdf",
     "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_1.pdf",
-    "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
     "Shad preparation/Calculus/-1_Offtop/Счётные и несчётные множества.md",
     "Shad preparation/Calculus/-1_Offtop/local_attachments/lection_3.pdf",
-    "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments/Pasted image 20241129124128.png",
-    "Shad preparation/Calculus/02_Continuous functions and their limits/local_attachments",
+    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/local_attachments",
     "Shad preparation/Calculus/01_Sequence limit/local_attachments/lection_3.pdf",
-    "Shad preparation/Calculus/-1_Offtop/local_attachments/lection_2.pdf",
-    "Shad preparation/Calculus/01_Sequence limit/local_attachments/Pasted image 20241112141949.png",
-    "Shad preparation/Calculus/02_Continuous functions and their limits",
-    "Shad preparation/Calculus/-1_Offtop/local_attachments/Pasted image 20241129121522.png",
-    "Shad preparation/Calculus/-1_Offtop/local_attachments",
     "Shad preparation/Calculus/01_Sequence limit/Untitled.md",
-    "Shad preparation/Calculus/-1_Offtop",
-    "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
     "Shad preparation/Calculus/_Basics/Базовые интегралы.md",
-    "Shad preparation/Calculus/_Basics/Базовые производные.md",
     "Shad preparation/Calculus/_Basics/Essential limits.md",
     "Shad preparation/Calculus/00_Basic course/Уравнение и неравенства.md",
     "Shad preparation/Calculus/00_Basic course/Элементарные функции.md",
@@ -196,25 +220,8 @@
     "Shad preparation/Calculus/00_Basic course/Неравенства о средних.md",
     "Shad preparation/Calculus/00_Basic course/Неравенства с модулями.md",
     "Shad preparation/Calculus/00_Basic course/Теорема Виета.md",
-    "Shad preparation/Calculus/00_Basic course/Преобразование графиков.md",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140819.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140802.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128140030.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135920.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135822.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135806.png",
-    "Shad preparation/Calculus/00_Basic course/local_attachments/Pasted image 20241128135303.png",
-    "Shad preparation/Calculus/Series/Числовые ряды.md",
     "Диплом/arch.canvas",
-    "Диплом/Общий план.md",
-    "Диплом/kanban.md",
-    "Shad preparation/Calculus/Uniform convergence/Равномерная сходимость.md",
-    "Shad preparation/Calculus/Математический анализ.md",
-    "Shad preparation/Calculus/Untitled.md",
     "Untitled.canvas",
-    "Shad preparation/Linalg/7 Spectral theory/Собственные вектора и собственные значения оператора.md",
-    "Shad preparation/Linalg/7 Spectral theory/! Спектральная теория.md",
-    "Shad preparation/Linalg/7 Spectral theory/Операторы и их матрицы.md",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"
   ]
