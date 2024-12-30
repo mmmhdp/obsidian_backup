@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "bb95300e0b346f63",
+        "id": "77eff9ea2dc385b8",
         "type": "tabs",
         "children": [
           {
-            "id": "f5a3e0285fbfe7c4",
+            "id": "9009da0f3fbbf7f2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов (Дополнить).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Свойства биномиальных коэфов (Дополнить)"
+              "title": "New tab"
             }
           }
         ]
@@ -170,21 +166,31 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "f5a3e0285fbfe7c4",
+  "active": "4ca9eaaa4a5dd60c",
   "lastOpenFiles": [
-    "Shad preparation/Calculus/-1_Offtop/Формула Стирлинга.md",
+    "Shad preparation/Probability theory/03_Random variable/Untitled.md",
+    "Shad preparation/Probability theory/03_Random variable/local_attachments/Lection_3.pdf",
+    "Shad preparation/Probability theory/03_Random variable/local_attachments/Pasted image 20241226103818.png",
+    "Shad preparation/Probability theory/03_Random variable/local_attachments",
+    "Shad preparation/Probability theory/02_Conditional probability/Модель испытаний Бернулли.md",
+    "Shad preparation/Probability theory/03_Random variable",
+    "Shad preparation/Probability theory/02_Conditional probability/Условная вероятность.md",
+    "Shad preparation/Probability theory/01_Probability model/Размещения и сочетания.md",
+    "Shad preparation/Probability theory/01_Probability model/Вероятностная модель.md",
     "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
+    "Shad preparation/Probability theory/01_Probability model/Нотация.md",
+    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов (Дополнить).md",
+    "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
+    "Shad preparation/Discrete math/00_Basics/Формулы Де Моргана (Дополнить).md",
+    "Shad preparation/Calculus/-1_Offtop/Формула Стирлинга.md",
     "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/Непрервыность функции.md",
     "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
     "Shad preparation/Calculus/_Basics/Базовые интегралы.md",
     "Shad preparation/Calculus/_Basics/Essential limits.md",
     "Shad preparation/Calculus/-1_Offtop/Счётные и несчётные множества.md",
-    "Shad preparation/Probability theory/02_Conditional probability/Условная вероятность.md",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218122622.png",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218111706.png",
-    "Shad preparation/Probability theory/02_Conditional probability/Модель испытаний Бернулли.md",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Формула Байеса.md",
-    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов (Дополнить).md",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/lection_02.pdf",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218114331.png",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218114318.png",
@@ -196,28 +202,17 @@
     "Shad preparation/Linalg/-1_Offtop/Лемма Цорна.md",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218105051.png",
     "Shad preparation/Probability theory/02_Conditional probability/local_attachments",
-    "Shad preparation/Probability theory/01_Probability model/Нотация.md",
-    "Shad preparation/Probability theory/01_Probability model/Вероятностная модель.md",
     "Shad preparation/Probability theory/01_Probability model/Свойства вероятности.md",
     "Shad preparation/Probability theory/01_Probability model/! Вероятностная модель.md",
     "Shad preparation/Probability theory/02_Conditional probability",
-    "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
-    "Shad preparation/Подготовка к ШАД.md",
-    "Shad preparation/Probability theory/01_Probability model/Размещения и сочетания.md",
     "Shad preparation/Discrete math",
-    "Shad preparation/Discrete math/00_Basics/Формулы Де Моргана (Дополнить).md",
     "Shad preparation/Discrete math/00_Basics",
-    "Shad preparation/Calculus/Математический анализ.md",
     "Shad preparation/Probability theory/01_Probability model",
     "Shad preparation/Probability theory",
-    "Shad preparation/Calculus/05_Improper integral",
     "Shad preparation/Calculus/04_Indefinite integral/local_attachments/Pasted image 20241202202224.png",
     "Shad preparation/Calculus/04_Indefinite integral/local_attachments/Pasted image 20241202190126.png",
     "Shad preparation/Calculus/04_Indefinite integral/local_attachments/Pasted image 20241202185735.png",
-    "Shad preparation/Calculus/04_Indefinite integral/local_attachments/lection_6.pdf",
     "Shad preparation/Calculus/04_Indefinite integral/local_attachments/Pasted image 20241202181630.png",
-    "Shad preparation/Calculus/04_Indefinite integral/local_attachments",
-    "Shad preparation/Calculus/03_Differentiable functions/local_attachments/Pasted image 20241202174305.png",
     "Диплом/arch.canvas",
     "Untitled.canvas",
     "uni/digital economy/Untitled.canvas",
