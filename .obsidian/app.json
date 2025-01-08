@@ -12,5 +12,6 @@
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
   "newFileLocation": "current",
-  "trashOption": "system"
+  "trashOption": "system",
+  "readableLineLength": false
 }
