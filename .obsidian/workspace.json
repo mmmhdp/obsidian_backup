@@ -4,39 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "485308a721098c57",
+        "id": "3455f937e43afc50",
         "type": "tabs",
         "children": [
           {
-            "id": "4a61fab555231cb9",
+            "id": "19af92a26ead9f58",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shad preparation/Probability theory/03_Random variable/Классическая->Дискретная->Бернулли.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Классическая->Дискретная->Бернулли"
-            }
-          },
-          {
-            "id": "7e569a56651e0f2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Shad preparation/Probability theory/03_Random variable/Теорема Муавра-Лапласа.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Теорема Муавра-Лапласа"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -55,7 +36,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -67,10 +49,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shad preparation/Probability theory/03_Random variable/Теорема Муавра-Лапласа.md"
+                "file": "Shad preparation/Probability theory/03_Random variable/Случайная величина.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Теорема Муавра-Лапласа"
+              "title": "Outline of Случайная величина"
             }
           },
           {
@@ -79,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Пример",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -104,7 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 447.5
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -120,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SHAD prep/Calc/Матан.md",
+                "file": "Shad preparation/Linalg/02_Polynomials/! Многочлены.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +112,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Матан"
+              "title": "Backlinks for ! Многочлены"
             }
           },
           {
@@ -187,55 +169,55 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "7e569a56651e0f2f",
+  "active": "19af92a26ead9f58",
   "lastOpenFiles": [
-    "Shad preparation/Probability theory/03_Random variable/Классическая->Дискретная->Бернулли.md",
-    "Shad preparation/Probability theory/03_Random variable/Теорема Муавра-Лапласа.md",
-    "Shad preparation/Probability theory/03_Random variable/Частота -> Вероятность (Частотный случай ЗБЧ).md",
-    "Shad preparation/Probability theory/03_Random variable/Распределение случайной величины.md",
-    "Shad preparation/Probability theory/03_Random variable/Случайная величина.md",
-    "Shad preparation/Calculus/04_Indefinite integral/Неопределенный интеграл.md",
-    "Shad preparation/Calculus/05_Improper integral/Несобственный интеграл Римана.md",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments/Pasted image 20250106140849.png",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments/Pasted image 20250106140824.png",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments/Pasted image 20250106140648.png",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments/Pasted image 20250106140040.png",
-    "Shad preparation/Probability theory/02_Conditional probability/Условная вероятность.md",
-    "Shad preparation/Probability theory/02_Conditional probability/Модель испытаний Бернулли.md",
-    "Shad preparation/Probability theory/01_Probability model/Вероятностная модель.md",
-    "Shad preparation/Probability theory/01_Probability model/Нотация.md",
-    "Shad preparation/Probability theory/01_Probability model/Размещения и сочетания.md",
-    "Shad preparation/Probability theory/01_Probability model/Свойства вероятности.md",
-    "Shad preparation/Probability theory/01_Probability model/! Вероятностная модель.md",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/lection_02.pdf",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments/Lection_3.pdf",
-    "Shad preparation/Текущее/Linalg.md",
-    "Shad preparation/Текущее/Discrete math.md",
-    "Shad preparation/Текущее/Calculus.md",
-    "Shad preparation/Текущее/Basis.md",
-    "Shad preparation/Текущее/Probability theory.md",
-    "Shad preparation/Текущее.md",
-    "Shad preparation/Текущее",
-    "Untitled",
-    "Shad preparation/Подготовка к ШАД.md",
-    "Диплом/kanban.md",
+    "SS_HW_1.md",
+    "asd.md",
+    "Shad preparation/Discrete math/00_Basics/Делимость.md",
+    "Shad preparation/Discrete math/00_Basics/! Основа.md",
+    "Shad preparation/Discrete math/00_Basics/local_attachments/Pasted image 20250117160125.png",
+    "Shad preparation/Discrete math/00_Basics/local_attachments",
+    "Shad preparation/Linalg/02_Polynomials/Многочлены.md",
+    "Shad preparation/Linalg/02_Polynomials/local_attachments/Pasted image 20250117144518.png",
+    "Shad preparation/Linalg/02_Polynomials/local_attachments",
+    "Shad preparation/Linalg/02_Polynomials/! Многочлены.md",
+    "Shad preparation/Probability theory/05_General probability model/Общая вероятностная модель.md",
+    "Shad preparation/Probability theory/05_General probability model/Геометрическая вероятность.md",
+    "Shad preparation/Probability theory/05_General probability model/Абсолютно непрерыные распределения.md",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116142242.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116142103.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116141924.png",
+    "Shad preparation/Probability theory/05_General probability model/! Общая вероятностная модель.md",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116122608.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/uni.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/norm.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/exp.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116113144.png",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Untitled 1.md",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments/Untitled.md",
+    "Shad preparation/Probability theory/Теория вероятности.md",
+    "Shad preparation/Probability theory/05_General probability model/local_attachments",
+    "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
+    "Shad preparation/Probability theory/05_General probability model",
+    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов.md",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables/Математическое ожидание.md",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables/Стандартизация случайной величины.md",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables/Дисперсия.md",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables/Закон Больших Чисел.md",
+    "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
+    "Shad preparation/Linalg/-1_Offtop/Алгебраические структуры (ДОПОЛНИТЬ РАЗДЕЛ).md",
+    "Shad preparation/Linalg/Линейная алгебра.md",
+    "Shad preparation/Linalg/-1_Offtop/! Вне общих тем.md",
+    "Shad preparation/Linalg/-1_Offtop/Лемма Цорна.md",
+    "Shad preparation/Linalg/01_Complex numbers/! Комплексные числа.md",
+    "Shad preparation/Linalg/01_Complex numbers/Формулы Муавра.md",
+    "Shad preparation/Linalg/02_Polynomials",
+    "Shad preparation/Linalg/01_Complex numbers",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables/local_attachments/local_attachments",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables/local_attachments",
+    "Shad preparation/Probability theory/04_Numeric properties of random variables",
+    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/lecture_02.pdf",
     "Диплом/arch.canvas",
-    "Диплом/Общий план.md",
-    "Текущее.md",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments/Pasted image 20241226103818.png",
-    "Shad preparation/Probability theory/03_Random variable/local_attachments",
-    "Shad preparation/Probability theory/03_Random variable",
-    "Shad preparation/Calculus/01_Sequence limit/Предел последовательности.md",
-    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов (Дополнить).md",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218122622.png",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218111706.png",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218114331.png",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218114318.png",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/Pasted image 20241218105051.png",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments",
-    "Shad preparation/Probability theory/02_Conditional probability",
-    "Shad preparation/Discrete math",
-    "Shad preparation/Discrete math/00_Basics",
     "Untitled.canvas",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"

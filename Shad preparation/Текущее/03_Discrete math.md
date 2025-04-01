@@ -1,5 +1,13 @@
-# STEP 1
-## LECTION
+# STEP 0 
+## LECTURE
+- [ ] content 
+- [ ] quiz
+- [ ] hw
+## SEMINAR
+- [ ] content 
+- [ ] quiz
+- [ ] hw
+## LECTURE
 - [ ] content 
 - [ ] quiz
 - [ ] hw

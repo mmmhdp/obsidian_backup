@@ -1,0 +1,126 @@
+# Guide for Converting Handwritten Notes to Obsidian Notes
+
+This guide outlines the instructions and formatting rules to convert handwritten notes into Obsidian-friendly markdown format. Follow these rules for consistency and clarity.
+
+---
+
+## General Rules
+1. Focus on Each Screenshot Individually:
+   - Transcribe only the content provided in the screenshots without merging it with others unless explicitly requested.
+   - Avoid maintaining a single document for all screenshots; process and deliver each piece separately.
+
+2. Compact Formatting:
+   - Avoid adding extra empty lines between text and formulas. Keep the formatting tight for clarity and compactness.
+
+---
+
+## Formatting Instructions
+
+1. Headings:
+   - Wrap all top-level headers with `<mark class="hltr-coler">...</mark>` for clarity.
+   - Example:
+     ```
+     # <mark class="hltr-coler">Многочлены</mark>
+     ```
+   - Wrap lower-level headers (e.g., `##`) with `<mark class="hltr-yellow">...</mark>` for distinction.
+   - Example:
+     ```
+     ## <mark class="hltr-yellow">Key Notes</mark>
+     ```
+
+2. Inline Math:
+   - Use `$...$` for inline mathematical expressions.
+   - Example:
+     ```
+     $K = \mathbb{Q}, \mathbb{R}, \mathbb{C}$
+     ```
+
+3. Block Math:
+   - Use `$$...$$` for block-style mathematical equations.
+   - These should be placed on their own lines for readability.
+   - Example:
+     ```
+     $$
+     f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+     $$
+     ```
+
+4. Text and Formula Placement:
+   - Place math blocks directly below the relevant text with no empty lines in between.
+   - Example:
+     ```
+     - Многочлен от $x$ над полем $K$ — выражение вида:
+     $$
+     f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0
+     $$
+     ```
+
+5. Avoid Bold Formatting:
+   - Do not use `**...**` for bold text. Leave emphasis to the user to format later.
+
+6. Examples and Definitions:
+   - Clearly separate examples, definitions, or theorems with bullet points or proper headings.
+   - Example:
+     ```
+     - Пусть также:
+     $$
+     g(x) = b_m x^m + \dots + b_1 x + b_0
+     $$
+     ```
+
+---
+
+## Comprehensive Example
+
+Here’s how a note might look after transcription and formatting:
+
+# <mark class="hltr-coler">Многочлены</mark>
+- K-поле: $K \supseteq 0, 1; \text{операции: } +, -, \cdot, \div$ ($K = \mathbb{Q}, \mathbb{R}, \mathbb{C}$)
+- Многочлен от $x$ над полем $K$ — выражение вида:
+$$
+f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0, \text{ где } a_0, a_1, \dots, a_n \in K
+$$
+## <mark class="hltr-yellow">Операции с многочленами</mark>
+### <mark class="hltr-yellow">Сложение многочленов</mark>
+- Пусть $f(x)$ и $g(x)$ — многочлены вида:
+$$
+f(x) = a_n x^n + \dots + a_0, \quad g(x) = b_m x^m + \dots + b_0
+$$
+- Сумма многочленов определяется как:
+$$
+f(x) + g(x) = (a_0 + b_0) + (a_1 + b_1)x + \dots + (a_n + b_n)x^n
+$$
+(при $n \geq m$, считаем $b_{m+1} = \dots = b_n = 0$)
+### <mark class="hltr-yellow">Умножение многочленов</mark>
+- Пусть $f(x)$ и $g(x)$ заданы как выше. Тогда их произведение определяется как:
+$$
+(f \cdot g)(x) = c_k x^k + \dots + c_0
+$$
+где:
+$$
+c_k = \sum_{i+j=k} a_i b_j
+$$
+## <mark class="hltr-yellow">Степень многочлена</mark>
+- Степень многочлена $f(x)$ — это наибольшее число $n$, для которого $a_n \neq 0$.
+- Обозначение: $\deg(f(x)) = n$
+- Свойства:
+  - $\deg(f + g) \leq \max(\deg(f), \deg(g))$
+  - $\deg(f \cdot g) = \deg(f) + \deg(g)$
+## <mark class="hltr-yellow">Пример</mark>
+- Рассмотрим $f(x) = 2x^3 + 3x + 1$ и $g(x) = x^2 + 4x + 5$.
+  - Сумма:
+  $$
+  f(x) + g(x) = 2x^3 + x^2 + 7x + 6
+  $$
+  - Произведение:
+  $$
+  (f \cdot g)(x) = 2x^5 + 8x^4 + 13x^3 + 17x^2 + 17x + 5
+  $$
+
+---
+
+## Key Notes
+- Keep the math formatting readable by using `$$...$$` for block formulas and `$...$` for inline.
+- Ensure no extra blank lines are introduced between formulas and text to maintain compactness.
+- Transcribe exactly what is in the notes, and avoid unnecessary modifications unless explicitly requested.
+- And give notes to user in convenient to copy format

@@ -3,10 +3,14 @@
   "highlighterMethods": "css-classes",
   "highlighters": {
     "Yellow": "#FFF3A3A6",
-    "Coler": "#A3FFABA6"
+    "Coler": "#A3FFABA6",
+    "Zima-Blue": "#33CCFF",
+    "па": "#A7D8F0"
   },
   "highlighterOrder": [
     "Yellow",
-    "Coler"
+    "Coler",
+    "Zima-Blue",
+    "па"
   ]
 }

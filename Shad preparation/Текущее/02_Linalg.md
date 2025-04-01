@@ -1,26 +1,21 @@
-# STEP 1
-## LECTION
+# STEP WEEK 1 - 2
+## LECTURE 1
 - [x] content 
 - [x] quiz
 - [x] hw
-## SEMINAR
+## SEMINAR 1
 - [x] content 
 - [x] quiz
 - [x] hw
-## STEP HW
-- [x] grade 1
-- [x] grade 2
-
-# STEP 2
-## LECTION
+## LECTURE 2
 - [ ] content 
 - [ ] quiz
 - [ ] hw
-## SEMINAR
+## SEMINAR 2
 - [ ] content 
 - [ ] quiz
 - [ ] hw
-## STEP HW
+## STEP HW 1
 - [ ] grade 1
 - [ ] grade 2
 - [ ] bonus
