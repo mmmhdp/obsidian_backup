@@ -1,0 +1,322 @@
+# Genesis 
+![[Pasted image 20251202155959.png]]
+Тут заметны следы механики, которая уже была замечена тут [[Left reference#Lifetime extension]],
+правые ссылки тоже как бы продляют жизнь целому выражению, более того, значение под && можно ещё и 
+изменить в процессе.
+![[Pasted image 20251202160037.png]]
+Думать о std::move() стоит как о фунции, которая делает следующее - она 
+берёт lvalue ref и кастует его к rvalue ref. Т.е. думать о нём стоит как о простом 
+приведение одного типа к другому.
+```cpp
+#include <iostream>
+
+int main() {
+  int x = 3;
+  int && rrx = std::move(x);
+  int && rr = x + 2;
+
+  std::cout << x   << " " << &x << std::endl;
+  // 3 address_x
+  std::cout << rrx << " " << &rrx << std::endl;
+  // 3 address_x
+  std::cout << rr + 20  << " " << &rr << std::endl;
+  // 25 some_other_address 
+}
+```
+# Cross-linking
+- Правая ссылка не может быть связана с lvalue
+```cpp
+int x = 1;
+int &&y = x + 1; // ok (x + 1) is an expression thus it's type as an expression is rvalue
+int &&d = std::move(x); // ok, since std::move() casts x to rvalue
+int &&b = x; // FAIL! x is a name for lvalue so b here cannot link up with x - it's not a rvalue 
+```
+- Неконстантная левая ссылка не может быть связана с rvalue
+```cpp
+int &z = x + 1; // FAIL! non const & doesn't provide lifetime extention
+const int &z = x + 1; // ok, lifetime extended  
+```
+- Но при этом сама правая ссылка задаёт имя и адрес и является lvalue 
+```cpp
+int &&e = y; // FAIL! y has type int && so it's a lvalue expression
+int &f = y; // ok, since y is an lvalue expression and has a location in memory
+```
+# Methods ref annotation
+## Мотивация 
+```cpp
+#include <iostream>
+
+struct Foo {
+  int n_ = 0;
+  int & get() {return n_;}
+};
+
+
+int main() {
+  Foo f {52};
+
+  int &a = f.get();
+  std::cout << a << std::endl;
+
+  int &b = Foo{42}.get(); // it is UB right here, but nobody complains
+  std::cout << b << std::endl;
+}
+```
+## Реализация
+Методы могут быть аннотированы lvarue & или rvalue &&, в зависимоти от того, 
+для какого объекта класса мы бы хотели данный метод вызвать - для временного (&&) или находящегося в памяти (&)
+```cpp
+struct S {
+	int foo () & {}  // 1
+	int foo () && {} // 2
+};
+
+S a;
+a.foo(); // 1 is called
+
+b{}.foo(); // 2 is called
+```
+
+### Золотое правило аннотирования методов референсами
+Золотое правило - если всё таки возращаешь левую или правую ссылку на внутренее состояние класса в методе,
+то данный метод стоит аннотировать референсом на ссылку того же рода.
+```cpp
+#include <iostream>
+
+struct Foo {
+  int n_ = 0;
+  int & get() & {return n_;} // now annotation is correct 
+};
+
+
+int main() {
+  Foo f {52};
+
+  int &a = f.get();
+  std::cout << a << std::endl;
+
+  int &b = Foo{42}.get(); //  and we get compilation error here and not silent UB!
+  std::cout << b << std::endl;
+}
+};
+```
+Для правых ссылок это даёт возмножность вызвать конструктор перемещения для large_obj.
+```cpp
+#include <iostream>
+
+struct Foo {
+  int n_ = 0;
+  int & get() & {return n_;}
+  int && get() && {return std::move(n_);}
+};
+
+
+int main() {
+  Foo f {52};
+
+  int a = f.get(); // copy
+  std::cout << a << std::endl;
+
+  int large_obj = Foo{42}.get(); // move
+  std::cout << large_obj << std::endl;
+}
+```
+### Подводные камни возврата правых ссылок
+Возврат правых ссылок часто ведёт себя довольно плохо:
+```cpp
+int& foo(int& x) {return x;} // ok
+const int& bar(const int& x) {return x;} // когда как
+/*
+	Если пришёл временный объект, мы продливаем ему время жизни константной левой ссылкой, 
+	а когда мы её вернём, она провиснет
+*/
+
+int&& buz(int&& x) {return std::move(x);} // DANGLING
+/*
+	Тут проблема такая же, как при возвращении из функции указателя 
+	на локальную переменную. 
+
+	x в данном случае как раз является временным объектом на стеке, а мы 
+	берём и возвращаем ссылку на этот объект. Понятно, что она 
+	всегда будет провисшей в таком случае.
+*/
+```
+Обычно, вы не хотите возвращать ссылки, если у вас данный метод не аннотирован как соответствующая ссылка
+
+При этом:
+```cpp
+int& bat(int&& x) {return x;} // снова когда как
+```
+Итог: правые ссылки в каком-то смысле даже опаснее в контексте провисание, чем левые.
+### Когда мы хотим вернуть ссылку
+Если из вашего метода вы возвращаете правую ссылку, это значит что:
+- Либо вы пишите одну из трёх функций(которая скорее всего написана уже за вас):
+  - std::move()
+  - std::forward()
+  - std::declval
+- Либо у вас метод &&-аннотированный
+- Либо вы ошибаетесь)) (90 % случаев) 
+
+# Перемещающие конструкторы и перемещающее присваивание
+Тут есть варианты, но идея близкая 
+- Конструктор, берущий rvalue ref не обязан сохранять значения (т.к. это rvalue).
+
+  **Т.е. после работы, объект под rvalue должен быть в консистентном, но не обязательно предсказуемом состоянии.**
+  
+  Вот тут было раньше про это тоже упоминал уже [[Difference between coping and initialisation#Спецсмантика копирования (RVO)]]. Т.е. там мы хотели получить в итоге эквивалентные объекты, но тут нам на пришедший объект как бы всё равно, лишь бы его можно было удалить нормально. Тут как раз дело в семантическом смысле xvalue (expired value) как объекта, который вот вот уже готов закончить свою жизнь.
+- Данное обстоятельство потрясающе выгодно тогда, когда требуется глубокое копирование объекта (т.е. мы прям всё мясо тащим, а не только захватываем владение условным указателем на объект, нет, нам прям нужен такой же свой и отдельный).
+
+Вот этому работяге [[Operator overloading#Implementation]] теперь добавляем
+```cpp
+/*
+ Тут ещё и семантика копирования реализована
+ с помощью конструктора копирования и наличия 
+ перегрузки оператора =
+ 
+ А теперь тут и семантика перемещения тоже на 
+ месте
+*/
+#include <iostream>
+
+template <typename T> class PtrGuard {
+  T *ptr_;
+
+public:
+  PtrGuard(T *ptr) : ptr_(ptr) {
+    std::cout << "ctor" << std::endl;
+  }
+
+  T &operator*() { 
+    std::cout << "(*) op" << std::endl;
+    return *ptr_; 
+  }
+  const T &operator*() const {
+    std::cout << "const (*) op" << std::endl;
+    return *ptr_;
+  }
+
+  T *operator->() {
+    std::cout << "(->) op" << std::endl;
+    return ptr_;
+  }
+  const T *operator->() const {
+    std::cout << "const (->) op" << std::endl;
+    return ptr_; 
+  }
+
+  // DEEP COPY
+  PtrGuard(const PtrGuard &rhs) {
+    std::cout << "copy ctor" << std::endl;
+    ptr_ = new T{*rhs.ptr_};
+    /*
+     * strong assumption on T that
+     * it should have implicit copy
+     * constructor a.k.a T should
+     * be CopyConstuctible
+     * */
+  }
+
+  // HERE WE ARE
+  // SHALLOW COPY
+  PtrGuard(PtrGuard &&rhs) : ptr_(rhs.ptr_) {
+    std::cout << "move ctor" << std::endl;
+    rhs.ptr_ = nullptr;
+  }
+
+  PtrGuard &operator=(const PtrGuard &rhs) {
+    std::cout << "(=) op" << std::endl;
+    if (this == &rhs) {
+      return *this;
+    }
+    delete ptr_;
+
+    ptr_ = rhs.ptr_;
+    return *this;
+  }
+
+  // HERE WE ARE
+  PtrGuard &operator=(PtrGuard &&rhs) {
+    std::cout << "move (=) op" << std::endl;
+    if (this == &rhs) {
+      return *this;
+    }
+
+#ifdef WECLEAN
+    // вариант #1: оставляем пустое состояние
+    delete ptr_;
+    ptr_ = rhs.ptr_;
+    rhs.ptr_ = nullptr;
+    return *this;
+#else
+    // вариант #2: делаем обмен, а удаляет уже пусть деструктор
+    // в том объекте класса, который как раз уже собирается
+    // отъехать
+    std::swap(ptr_, rhs.ptr_);
+    return *this;
+#endif
+  }
+
+  ~PtrGuard() {
+    std::cout << "dtor" << std::endl;
+    delete ptr_;
+  }
+};
+```
+# Аккуратнее с move on result
+- Обычно, move в таком коде просто не нужен 
+```cpp
+T foo (some args)
+{
+	T x = some expression;
+	// more code
+	return std::move(x); // не ошибка, но какой в этом смысл?
+}
+```
+- Функция, возвращающая by value это уже и так rvalue expression и таким образом всё 
+  равно делает move в точке вызова.
+- При этом, в подобном случае move может сделать оптимизации хуже, например, убив RVO
+- Секрет успеха - ограничьте move on result случаями возврата ссылки, которые уже обсуждались выше.
+# Особенности move
+```cpp
+int x = 1;
+int y = std::move(x);
+assert(x == y); // всегда выполнится
+
+PtrGuard<int> z{new int(10)};
+PtrGuard<int> m = std::move(z);
+assert(z == m) // мы не знаем наверняка
+```
+- Использование move всего лишь получает && ничего не делая с переменной.
+- Будет ли состояние потеряно зависит от наличия и деталей реализации конструктора перемещения.
+- У int конструктора перемещения нет вообще, поэтому move буквально просто делает каст.
+# Проблема implicit move
+Как и в случае с дефолтными методами в пустом классе [[Empty class magic]], к ним в команду присоединяются 
+ещё два метода - это конструктор перемещения и оператор перемещающего присваивания. 
+
+Данные ребята могут пародить те же проблемы, что и просто дефолтные конструкторы копирования и присваивания - 
+так как move тоже происходит побитово и просто мувает все поля класса.
+
+Данная мысль приводит нас к идиомам вида "Rule of NUMBER".
+[[Rule of 5]]
+[[Rule of 0]]
+
+# Краевой случай: move from const
+Итак, хорошо организованый move ctor изменяется состояние rhs. А что если rhs изменть нельзя, что если это const объект?
+```cpp
+const PtrGuard<int> y{new int(10)};
+PtrGuard<int> x = std::move(y);
+```
+В таком случае, move ctor просто не будет вызван,
+так как сигнатура move ctor предполагает PtrGuard&&, а не const PtrGuard&&.
+
+Вместо этого, const PtrGuard&& будет приведен к const PtrGuard& и вызовется copy ctor,
+несмотря на явное указание move().
+
+Тут важно заметить, что const Foo&& вообще довольно странный объект, так как это неизменяемая 
+правая ссылка, а мы правые ссылки чаще всего видим в контексе move семантики, которая хочет
+работать с объектами, которые можно оставить в неконститентном состоянии, т.е. из них вытащить 
+что-то мы постоянно хотим, т.е. изменить. Короче говоря, в семье не без урода, технически 
+такое можно создать, но чтобы использовать - думай 10 раз прежде чем. С другой стороны, 
+подобная милая особенность, описанная здесь, где референсы приводятся один к другому без 
+нашей помощи, ещё будет детально разобрана, а этот пример можно считать мотивацией к наличию
+подобных спец случаев конверсии.

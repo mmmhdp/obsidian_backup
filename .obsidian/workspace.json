@@ -4,20 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "3455f937e43afc50",
+        "id": "967df19f04dfb4fd",
         "type": "tabs",
         "children": [
           {
-            "id": "19af92a26ead9f58",
+            "id": "b29defee8b614d5f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/04-raii/Rule of 5.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Rule of 5"
+            }
+          },
+          {
+            "id": "e7d7d990e28f85af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Shad preparation/Discrete math/00_Basics/! Основа.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "! Основа"
+            }
+          },
+          {
+            "id": "7f2548d8b50752e1",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Cpp language mipt lections/slides/03-creation.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "03-creation"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -49,10 +80,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Shad preparation/Probability theory/03_Random variable/Случайная величина.md"
+                "file": "Shad preparation/Discrete math/00_Basics/! Основа.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Случайная величина"
+              "title": "Outline of ! Основа"
             }
           },
           {
@@ -86,7 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5
+    "width": 300.5004348754883
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -102,17 +136,16 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Shad preparation/Linalg/02_Polynomials/! Многочлены.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ! Многочлены"
+              "title": "Backlinks"
             }
           },
           {
@@ -121,11 +154,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Cpp language mipt lections/slides/01-scentpp.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 01-scentpp"
             }
           },
           {
@@ -135,7 +169,9 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-tags",
               "title": "Tags"
@@ -146,9 +182,14 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "Cpp language mipt lections/slides/01-scentpp.pdf",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 01-scentpp"
             }
           }
         ]
@@ -160,6 +201,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -169,56 +211,56 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "19af92a26ead9f58",
+  "active": "e7d7d990e28f85af",
   "lastOpenFiles": [
-    "SS_HW_1.md",
-    "asd.md",
+    "Shad preparation/Discrete math/Дискретная математика.md",
+    "Shad preparation/Discrete math/00_Basics/Формулы Де Моргана.md",
+    "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
+    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов.md",
     "Shad preparation/Discrete math/00_Basics/Делимость.md",
     "Shad preparation/Discrete math/00_Basics/! Основа.md",
     "Shad preparation/Discrete math/00_Basics/local_attachments/Pasted image 20250117160125.png",
-    "Shad preparation/Discrete math/00_Basics/local_attachments",
-    "Shad preparation/Linalg/02_Polynomials/Многочлены.md",
-    "Shad preparation/Linalg/02_Polynomials/local_attachments/Pasted image 20250117144518.png",
-    "Shad preparation/Linalg/02_Polynomials/local_attachments",
-    "Shad preparation/Linalg/02_Polynomials/! Многочлены.md",
-    "Shad preparation/Probability theory/05_General probability model/Общая вероятностная модель.md",
-    "Shad preparation/Probability theory/05_General probability model/Геометрическая вероятность.md",
-    "Shad preparation/Probability theory/05_General probability model/Абсолютно непрерыные распределения.md",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116142242.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116142103.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116141924.png",
-    "Shad preparation/Probability theory/05_General probability model/! Общая вероятностная модель.md",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116122608.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/uni.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/norm.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/exp.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Pasted image 20250116113144.png",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Untitled 1.md",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments/Untitled.md",
-    "Shad preparation/Probability theory/Теория вероятности.md",
-    "Shad preparation/Probability theory/05_General probability model/local_attachments",
-    "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
-    "Shad preparation/Probability theory/05_General probability model",
-    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов.md",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables/Математическое ожидание.md",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables/Стандартизация случайной величины.md",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables/Дисперсия.md",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables/Закон Больших Чисел.md",
-    "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
-    "Shad preparation/Linalg/-1_Offtop/Алгебраические структуры (ДОПОЛНИТЬ РАЗДЕЛ).md",
-    "Shad preparation/Linalg/Линейная алгебра.md",
-    "Shad preparation/Linalg/-1_Offtop/! Вне общих тем.md",
-    "Shad preparation/Linalg/-1_Offtop/Лемма Цорна.md",
-    "Shad preparation/Linalg/01_Complex numbers/! Комплексные числа.md",
+    "Shad preparation/Linalg/05_Matrix multiplication/Обратная матрица и матричные уравнения.md",
+    "Shad preparation/Linalg/05_Matrix multiplication/Проекторы и отражения.md",
+    "Shad preparation/Linalg/05_Matrix multiplication/Ранг произведения матриц.md",
     "Shad preparation/Linalg/01_Complex numbers/Формулы Муавра.md",
-    "Shad preparation/Linalg/02_Polynomials",
-    "Shad preparation/Linalg/01_Complex numbers",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables/local_attachments/local_attachments",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables/local_attachments",
-    "Shad preparation/Probability theory/04_Numeric properties of random variables",
-    "Shad preparation/Probability theory/02_Conditional probability/local_attachments/lecture_02.pdf",
-    "Диплом/arch.canvas",
+    "Shad preparation/Linalg/01_Complex numbers/! Комплексные числа.md",
+    "Cpp language mipt lections/04-raii/Move semantics.md",
+    "Cpp language mipt lections/04-raii/Operator overloading.md",
+    "Cpp language mipt lections/slides/03-creation.pdf",
+    "Cpp language mipt lections/04-raii/Rule of 5.md",
+    "Cpp language mipt lections/04-raii/Rule of 0.md",
+    "Cpp language mipt lections/03-creation/Empty class magic.md",
+    "Cpp language mipt lections/04-raii/RAII.md",
+    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
+    "Cpp language mipt lections/Functions and methods specifiers, modifiers, attributes.md",
+    "Cpp language mipt lections/02-lrefs/Lvalue & rvalue.md",
+    "Cpp language mipt lections/04-raii/local_attachments/Pasted image 20251202160037.png",
+    "Cpp language mipt lections/04-raii/local_attachments/Pasted image 20251202155959.png",
+    "Cpp language mipt lections/04-raii/local_attachments",
+    "Cpp language mipt lections/03-creation/Operator type.md",
+    "Cpp language mipt lections/slides/04-raii.pdf",
+    "Cpp language mipt lections/03-creation/Constructor initialization.md",
+    "Cpp language mipt lections/03-creation/Namespaces.md",
+    "Cpp language mipt lections/03-creation/Names overloading resolution.md",
+    "Cpp language mipt lections/03-creation/Names mangling.md",
+    "Cpp language mipt lections/04-raii",
+    "Cpp language mipt lections/03-creation/local_attachments/Pasted image 20251202112802.png",
+    "Cpp language mipt lections/03-creation/local_attachments",
+    "Cpp language mipt lections/Usign keyword.md",
+    "Cpp language mipt lections/slides/02-lrefs.pdf",
+    "Cpp language mipt lections/03-creation",
+    "Cpp language mipt lections/02-lrefs",
+    "Cpp language mipt lections/slides/07-grammars.pdf",
+    "Cpp language mipt lections/slides/06-inheritance.pdf",
+    "Cpp language mipt lections/lection 1/local_attachments/Pasted image 20251009094013.png",
+    "Cpp language mipt lections/lection 1/local_attachments/Pasted image 20251009103756.png",
+    "Cpp language mipt lections/lection 1/local_attachments/Pasted image 20251009103747.png",
+    "Cpp language mipt lections/lection 1/local_attachments/Pasted image 20251009103437.png",
+    "Cpp language mipt lections/lection 1/local_attachments/Pasted image 20251009103150.png",
+    "Cpp language mipt lections/lection 1/local_attachments/Pasted image 20251009101926.png",
     "Untitled.canvas",
+    "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
     "Untitled 1.canvas"
   ]
