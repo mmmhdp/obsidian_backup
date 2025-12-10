@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "Множественное наследование"
             }
+          },
+          {
+            "id": "a964557cf90c1925",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Cpp language mipt lections/slides/06-inheritance.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "06-inheritance"
+            }
           }
         ]
       }
@@ -89,7 +101,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -187,10 +200,14 @@
   },
   "active": "2544138a66d6ca4c",
   "lastOpenFiles": [
-    "Cpp language mipt lections/slides/06-inheritance.pdf",
-    "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
-    "Cpp language mipt lections/06-inheritance/Наследование.md",
+    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210174610.png",
+    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210173816.png",
+    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210173513.png",
+    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210165204.png",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
+    "Cpp language mipt lections/06-inheritance/Наследование.md",
+    "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+    "Cpp language mipt lections/slides/06-inheritance.pdf",
     "Cpp language mipt lections/04-raii-05-opers/EBCO.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/04-raii-05-opers/PImpl.md",
@@ -226,13 +243,9 @@
     "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
     "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов.md",
     "Shad preparation/Discrete math/00_Basics/local_attachments/Pasted image 20250117160125.png",
-    "Cpp language mipt lections/04-raii-05-opers/local_attachments/Pasted image 20251202160037.png",
-    "Cpp language mipt lections/04-raii-05-opers/local_attachments/Pasted image 20251202155959.png",
     "Cpp language mipt lections/04-raii-05-opers/local_attachments",
     "Cpp language mipt lections/04-raii-05-opers",
-    "Cpp language mipt lections/03-creation/local_attachments/Pasted image 20251202112802.png",
     "Cpp language mipt lections/03-creation/local_attachments",
-    "Cpp language mipt lections/slides/02-lrefs.pdf",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
