@@ -13,24 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+                "file": "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Множественное наследование"
+              "title": "Oшибки и исключения"
             }
           },
           {
-            "id": "a964557cf90c1925",
+            "id": "d7d1d800bbe06116",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Cpp language mipt lections/slides/06-inheritance.pdf"
+                "file": "Cpp language mipt lections/slides/08-exceptions.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "06-inheritance"
+              "title": "08-exceptions"
             }
           }
         ]
@@ -65,13 +65,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+                "file": "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Множественное наследование"
+              "title": "Outline of Oшибки и исключения"
             }
           },
           {
@@ -80,7 +80,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "foo_im",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 258.500732421875
+    "width": 200
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+                "file": "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Множественное наследование"
+              "title": "Backlinks for Oшибки и исключения"
             }
           },
           {
@@ -141,12 +141,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+                "file": "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Множественное наследование"
+              "title": "Outgoing links from Oшибки и исключения"
             }
           },
           {
@@ -170,13 +170,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+                "file": "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Множественное наследование"
+              "title": "Outline of Oшибки и исключения"
             }
           }
         ]
@@ -200,23 +200,31 @@
   },
   "active": "2544138a66d6ca4c",
   "lastOpenFiles": [
+    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251215124610.png",
+    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251215123859.png",
+    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251212155637.png",
+    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251212155634.png",
+    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251212155405.png",
+    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251212155331.png",
+    "Cpp language mipt lections/08-exceptions/local_attachments",
+    "Cpp language mipt lections/slides/08-exceptions.pdf",
+    "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
+    "Cpp language mipt lections/slides/06-inheritance.pdf",
+    "Cpp language mipt lections/06-inheritance/RTTI.md",
+    "Cpp language mipt lections/08-exceptions",
+    "Cpp language mipt lections/04-raii-05-opers/Type casting.md",
+    "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
+    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251211190930.png",
+    "Cpp language mipt lections/06-inheritance/NVI.md",
+    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251211183604.png",
     "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210174610.png",
     "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210173816.png",
     "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210173513.png",
-    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251210165204.png",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
     "Cpp language mipt lections/06-inheritance/Наследование.md",
-    "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
-    "Cpp language mipt lections/slides/06-inheritance.pdf",
     "Cpp language mipt lections/04-raii-05-opers/EBCO.md",
-    "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/04-raii-05-opers/PImpl.md",
-    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251209120826.png",
-    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251209115017.png",
     "Cpp language mipt lections/03-creation/Names overloading resolution.md",
-    "Cpp language mipt lections/04-raii-05-opers/Type casting.md",
-    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251205133552.png",
-    "Cpp language mipt lections/06-inheritance/local_attachments/Pasted image 20251205133509.png",
     "Cpp language mipt lections/06-inheritance/local_attachments",
     "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
     "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
@@ -226,8 +234,6 @@
     "Cpp language mipt lections/06-inheritance",
     "Cpp language mipt lections/04-raii-05-opers/Static and friend methods.md",
     "Cpp language mipt lections/04-raii-05-opers/Sequecing.md",
-    "Cpp language mipt lections/04-raii-05-opers/local_attachments/Pasted image 20251204183556.png",
-    "Cpp language mipt lections/04-raii-05-opers/local_attachments/Pasted image 20251204182114.png",
     "Cpp language mipt lections/04-raii/Untitled.base",
     "Cpp language mipt lections/04-raii/Untitled Kanban.md",
     "Cpp language mipt lections/04-raii-05-opers/RAII.md",
@@ -240,12 +246,6 @@
     "Cpp language mipt lections/slides/03-creation.pdf",
     "Shad preparation/Discrete math/Дискретная математика.md",
     "Shad preparation/Discrete math/00_Basics/Формулы Де Моргана.md",
-    "Shad preparation/Discrete math/00_Basics/Формула включений-исключений.md",
-    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов.md",
-    "Shad preparation/Discrete math/00_Basics/local_attachments/Pasted image 20250117160125.png",
-    "Cpp language mipt lections/04-raii-05-opers/local_attachments",
-    "Cpp language mipt lections/04-raii-05-opers",
-    "Cpp language mipt lections/03-creation/local_attachments",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
