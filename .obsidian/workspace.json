@@ -8,29 +8,29 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2544138a66d6ca4c",
+            "id": "898500e5d09f1d16",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/09-philosophy/Принципы ООП.md",
+                "file": "Cpp language mipt lections/12-templates/Обощения типов.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Принципы ООП"
+              "title": "Обощения типов"
             }
           },
           {
-            "id": "d7d1d800bbe06116",
+            "id": "0b2221a96fe5f080",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Cpp language mipt lections/slides/08-exceptions.pdf"
+                "file": "Cpp language mipt lections/slides/12-templates.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "08-exceptions"
+              "title": "12-templates"
             }
           }
         ]
@@ -60,21 +60,6 @@
             }
           },
           {
-            "id": "9fd1aaa20c57d66a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Cpp language mipt lections/09-philosophy/Принципы ООП.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Принципы ООП"
-            }
-          },
-          {
             "id": "9204ae34bf60e818",
             "type": "leaf",
             "state": {
@@ -92,6 +77,21 @@
             }
           },
           {
+            "id": "9fd1aaa20c57d66a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Cpp language mipt lections/12-templates/Обощения типов.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Обощения типов"
+            }
+          },
+          {
             "id": "49758c29eeb3d9f0",
             "type": "leaf",
             "state": {
@@ -102,7 +102,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -198,30 +198,35 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2544138a66d6ca4c",
+  "active": "898500e5d09f1d16",
   "lastOpenFiles": [
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218214809.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218214723.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218191800.png",
-    "Cpp language mipt lections/slides/08-exceptions.pdf",
+    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222182421.png",
     "Cpp language mipt lections/09-philosophy/Принципы ООП.md",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218185716.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218185714.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218185548.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218185436.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218182204.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218173949.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251218173815.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
+    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222124654.png",
+    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222122312.png",
+    "Cpp language mipt lections/12-templates/local_attachments",
+    "Cpp language mipt lections/slides/12-templates.pdf",
+    "Cpp language mipt lections/12-templates",
+    "Cpp language mipt lections/slides/09-philosophy.pdf",
+    "Cpp language mipt lections/slides/10-3dgraphics.pdf",
+    "Cpp language mipt lections/slides/11-compute.pdf",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219180001.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175917.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175812.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175738.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175720.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175644.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175510.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175344.png",
+    "Cpp language mipt lections/slides/08-exceptions.pdf",
     "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
+    "Cpp language mipt lections/09-philosophy/local_attachments",
     "Cpp language mipt lections/09-philosophy",
-    "Cpp language mipt lections/08-exceptions/local_attachments/Pasted image 20251218141317.png",
     "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
     "Cpp language mipt lections/04-raii-05-opers/Type casting.md",
     "Cpp language mipt lections/08-exceptions/local_attachments",
-    "Cpp language mipt lections/slides/06-inheritance.pdf",
     "Cpp language mipt lections/06-inheritance/RTTI.md",
-    "Cpp language mipt lections/08-exceptions",
     "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
@@ -229,15 +234,11 @@
     "Cpp language mipt lections/04-raii-05-opers/EBCO.md",
     "Cpp language mipt lections/04-raii-05-opers/PImpl.md",
     "Cpp language mipt lections/03-creation/Names overloading resolution.md",
-    "Cpp language mipt lections/06-inheritance/local_attachments",
     "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
     "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
     "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
-    "Cpp language mipt lections/slides/05-opers.pdf",
-    "Cpp language mipt lections/06-inheritance",
     "Cpp language mipt lections/04-raii-05-opers/Static and friend methods.md",
     "Cpp language mipt lections/04-raii-05-opers/Sequecing.md",
-    "Cpp language mipt lections/04-raii/Untitled.base",
     "Cpp language mipt lections/04-raii/Untitled Kanban.md",
     "Cpp language mipt lections/04-raii-05-opers/RAII.md",
     "Cpp language mipt lections/03-creation/Operator type.md",
@@ -245,7 +246,6 @@
     "Cpp language mipt lections/04-raii-05-opers/Rule of 5.md",
     "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
     "Shad preparation/Discrete math/00_Basics/! Основа.md",
-    "Shad preparation/Discrete math/Дискретная математика.md",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
