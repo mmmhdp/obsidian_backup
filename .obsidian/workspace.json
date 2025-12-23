@@ -65,7 +65,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "foo_im",
+                "query": "RTTI",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,12 +101,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 201.50043487548828
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -200,13 +199,15 @@
   },
   "active": "898500e5d09f1d16",
   "lastOpenFiles": [
+    "Cpp language mipt lections/slides/12-templates.pdf",
+    "Cpp language mipt lections/06-inheritance/RTTI.md",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
+    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251223123904.png",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222182421.png",
     "Cpp language mipt lections/09-philosophy/Принципы ООП.md",
-    "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222124654.png",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222122312.png",
     "Cpp language mipt lections/12-templates/local_attachments",
-    "Cpp language mipt lections/slides/12-templates.pdf",
     "Cpp language mipt lections/12-templates",
     "Cpp language mipt lections/slides/09-philosophy.pdf",
     "Cpp language mipt lections/slides/10-3dgraphics.pdf",
@@ -217,8 +218,6 @@
     "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175738.png",
     "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175720.png",
     "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175644.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175510.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175344.png",
     "Cpp language mipt lections/slides/08-exceptions.pdf",
     "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
     "Cpp language mipt lections/09-philosophy/local_attachments",
@@ -226,7 +225,6 @@
     "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
     "Cpp language mipt lections/04-raii-05-opers/Type casting.md",
     "Cpp language mipt lections/08-exceptions/local_attachments",
-    "Cpp language mipt lections/06-inheritance/RTTI.md",
     "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
