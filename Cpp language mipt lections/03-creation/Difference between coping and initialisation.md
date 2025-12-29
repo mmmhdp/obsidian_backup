@@ -28,7 +28,9 @@ template <typename T> struct Point2D {
 	~Point2D() {}
 	Point2D(const Point2D & rhs): x_(rhs.x_), y_(rhs.y_) ; 
 	Point2D & operator=(const Point2D & rhs){
-		if 
+		if (this == &rhs)
+			return *this;
+			
 		this.x_ = rhs.x_;	
 		this.y_ = rhs.y_;	
 		return *this;

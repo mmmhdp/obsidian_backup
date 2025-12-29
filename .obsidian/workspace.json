@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+                "file": "Cpp language mipt lections/14-iterators/Итераторы.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Вектора и SFINAE"
+              "title": "Итераторы"
+            }
+          },
+          {
+            "id": "4f22f082a9dfb15a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/12-templates/Обощения типов.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Обощения типов"
             }
           }
         ]
@@ -53,13 +67,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
-                "followCursor": true,
-                "showSearch": false,
+                "file": "Cpp language mipt lections/14-iterators/Итераторы.md",
+                "followCursor": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Вектора и SFINAE"
+              "title": "Outline of Итераторы"
             }
           },
           {
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "value_type",
+                "query": "частичная специализация",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,12 +103,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 225.5086555480957
+    "width": 222.50043487548828
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -188,21 +201,25 @@
   },
   "active": "0b2221a96fe5f080",
   "lastOpenFiles": [
+    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+    "Cpp language mipt lections/14-iterators/Итераторы.md",
+    "Cpp language mipt lections/14-iterators",
+    "Cpp language mipt lections/13-vectors-sfinae/local_attachments/Pasted image 20251229134311.png",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
+    "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
+    "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
+    "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
+    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
+    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
     "Makefile~",
     "Makefile",
-    "Cpp language mipt lections/12-templates/Обощения типов.md",
-    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments/Pasted image 20251225195810.png",
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments/Pasted image 20251225192742.png",
     "Cpp language mipt lections/03-creation/Operator type.md",
     "Cpp language mipt lections/03-creation/Namespaces.md",
     "Cpp language mipt lections/03-creation/Names overloading resolution.md",
     "Cpp language mipt lections/03-creation/Names mangling.md",
-    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
     "Cpp language mipt lections/03-creation/Constructor initialization.md",
-    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
-    "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
-    "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
     "Cpp language mipt lections/04-raii-05-opers/RAII.md",
     "Cpp language mipt lections/04-raii-05-opers/Rule of 0.md",
     "Cpp language mipt lections/04-raii-05-opers/Rule of 5.md",
@@ -216,7 +233,6 @@
     "Shad preparation/Calculus/03_Differentiable functions/Разложение в ряд Тейлора.md",
     "Shad preparation/Calculus/03_Differentiable functions/Правило Лопиталя.md",
     "Shad preparation/Calculus/_Basics/Полезные пределы.md",
-    "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
     "Cpp language mipt lections/13-vectors-sfinae/Untitled 2.base",
     "Cpp language mipt lections/13-vectors-sfinae/Untitled 1.base",
     "Cpp language mipt lections/13-vectors-sfinae/Untitled.base",
@@ -226,14 +242,11 @@
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments",
     "Cpp language mipt lections/slides/13-vectors.pdf",
     "Cpp language mipt lections/13-vectors-sfinae",
-    "Cpp language mipt lections/slides/12-templates.pdf",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251223123904.png",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222182421.png",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222124654.png",
     "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222122312.png",
-    "Cpp language mipt lections/12-templates/local_attachments",
     "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219180001.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175917.png",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
