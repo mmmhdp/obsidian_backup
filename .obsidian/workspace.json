@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "Итераторы"
             }
+          },
+          {
+            "id": "6e7fecaaa2e615ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/ADL.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ADL"
+            }
           }
         ]
       }
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "void_t",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,14 +202,20 @@
   },
   "active": "9fd1aaa20c57d66a",
   "lastOpenFiles": [
+    "Cpp language mipt lections/ADL.md",
+    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+    "Cpp language mipt lections/14-iterators/Итераторы.md",
+    "Cpp language mipt lections/14-iterators/local_attachments/Pasted image 20260104165708.png",
+    "Cpp language mipt lections/14-iterators/local_attachments/Pasted image 20260104162559.png",
+    "Cpp language mipt lections/14-iterators/local_attachments/Pasted image 20260104162557.png",
+    "Cpp language mipt lections/14-iterators/local_attachments/Pasted image 20260104161523.png",
+    "Cpp language mipt lections/14-iterators/local_attachments/Pasted image 20260104161049.png",
+    "Cpp language mipt lections/14-iterators/local_attachments",
     "Cpp related/Google tests.md",
     "Cpp related",
-    "Cpp language mipt lections/ADL.md",
     "Cpp language mipt lections/Functions and methods specifiers, modifiers, attributes.md",
     "Cpp language mipt lections/Using keyword.md",
-    "Cpp language mipt lections/14-iterators/Итераторы.md",
     "Cpp language mipt lections/12-templates/Обощения типов.md",
-    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
     "Cpp language mipt lections/14-iterators",
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments/Pasted image 20251229134311.png",
     "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
@@ -227,12 +247,6 @@
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments/Pasted image 20251224145051.png",
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments/Pasted image 20251224144842.png",
     "Cpp language mipt lections/13-vectors-sfinae/local_attachments",
-    "Cpp language mipt lections/slides/13-vectors.pdf",
-    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251223123904.png",
-    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222182421.png",
-    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222124654.png",
-    "Cpp language mipt lections/12-templates/local_attachments/Pasted image 20251222122312.png",
-    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219180001.png",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
