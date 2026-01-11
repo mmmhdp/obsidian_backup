@@ -20,6 +20,34 @@
               "icon": "lucide-file",
               "title": "Контейнеры"
             }
+          },
+          {
+            "id": "9659d23143719bbd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/16-containers/Контейнеры.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Контейнеры"
+            }
+          },
+          {
+            "id": "672ea3ce3c638571",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Вектора и SFINAE"
+            }
           }
         ]
       }
@@ -55,7 +83,7 @@
               "state": {
                 "file": "Cpp language mipt lections/16-containers/Контейнеры.md",
                 "followCursor": false,
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
@@ -68,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "void_t",
+                "query": "integral",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -94,7 +122,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 232.50043487548828
+    "width": 227.50043487548828
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -188,30 +216,30 @@
   },
   "active": "0b2221a96fe5f080",
   "lastOpenFiles": [
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111110123.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111103910.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111103613.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111102327.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111102004.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111101712.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260111101517.png",
+    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260110203441.png",
+    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+    "Cpp language mipt lections/16-containers/Контейнеры.md",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260108095427.png",
     "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260108094939.png",
     "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260107105233.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260107104307.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260107104000.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260107103636.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260107103634.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260106113041.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260106113006.png",
-    "Cpp language mipt lections/16-containers/local_attachments/Pasted image 20260106111237.png",
     "Cpp language mipt lections/16-containers/local_attachments",
     "Cpp language mipt lections/14-iterators/Итераторы.md",
-    "Cpp language mipt lections/16-containers/Контейнеры.md",
     "Cpp language mipt lections/16-containers",
     "Cpp language mipt lections/slides/09-philosophy.pdf",
     "Cpp language mipt lections/ADL.md",
-    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
-    "Cpp language mipt lections/14-iterators/local_attachments/Pasted image 20260104165708.png",
     "Cpp language mipt lections/14-iterators/local_attachments",
     "Cpp related/Google tests.md",
     "Cpp related",
     "Cpp language mipt lections/Functions and methods specifiers, modifiers, attributes.md",
     "Cpp language mipt lections/Using keyword.md",
-    "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt lections/14-iterators",
     "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
     "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
