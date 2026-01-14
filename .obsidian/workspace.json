@@ -13,12 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
+                "file": "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Алгоритмы"
+              "title": "CONSTEXPR"
+            }
+          },
+          {
+            "id": "9a0bb4671f98bdae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Difference between coping and initialisation"
             }
           }
         ]
@@ -53,13 +67,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
+                "file": "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Алгоритмы"
+              "title": "Outline of CONSTEXPR"
             }
           },
           {
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "integral",
+                "query": "condi",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -188,6 +202,15 @@
   },
   "active": "9659d23143719bbd",
   "lastOpenFiles": [
+    "Cpp language mipt lections/14-iterators/Итераторы.md",
+    "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
+    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
+    "Cpp language mipt lections/03-creation/Operator type.md",
+    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
+    "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
+    "Cpp language mipt lections/slides/18-meta-ce.pdf",
+    "Cpp language mipt lections/18-meta-ce",
+    "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114038.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114005.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114113830.png",
@@ -198,7 +221,6 @@
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111230.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111154.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111148.png",
-    "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111059.png",
     "Cpp language mipt lections/17-algorithms/local_attachments",
     "C language mipt lections/Intermedia/8.1 Введение в стандарт C.md",
     "C language mipt lections/Seminar 3/3.3 Цифровой поиск.md",
@@ -207,13 +229,11 @@
     "C language mipt lections/Seminar 2/2.2 Побитовые вычисления.md",
     "C language mipt lections/Seminar 1/1.2 Основы систем счисления и вычисления по модулю.md",
     "C language mipt lections/Seminar 1/1.1 Алгоритм Евклида.md",
-    "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
     "Cpp language mipt lections/16-containers/Контейнеры.md",
     "Cpp language mipt lections/17-algorithms",
     "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
     "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt lections/16-containers/local_attachments",
-    "Cpp language mipt lections/14-iterators/Итераторы.md",
     "Cpp language mipt lections/16-containers",
     "Cpp language mipt lections/slides/09-philosophy.pdf",
     "Cpp language mipt lections/ADL.md",
@@ -224,16 +244,9 @@
     "Cpp language mipt lections/Using keyword.md",
     "Cpp language mipt lections/14-iterators",
     "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
-    "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
     "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
-    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
-    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
-    "Makefile~",
-    "Makefile",
-    "Cpp language mipt lections/03-creation/Operator type.md",
     "Cpp language mipt lections/03-creation/Namespaces.md",
     "Cpp language mipt lections/03-creation/Names overloading resolution.md",
-    "Cpp language mipt lections/03-creation/Names mangling.md",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
