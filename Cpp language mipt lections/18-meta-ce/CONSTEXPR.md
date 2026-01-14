@@ -186,3 +186,29 @@ template
 	std::integral_constant<int, S> {};
 ```
 # Квадранты вычислений
+- `Runtime computations`
+- `Compile-time computations`
+- `Type-level computations`
+```cpp
+template <typename T>
+struct add_const_pointer {
+	using type = const T*;
+};
+
+using types = mpl::vector<int, char, float, void>;
+using pointers = mpl::transform<types,
+	ass_const_pointer<mpl::_1>>::type;
+```
+- `Heterogenious computations`
+```cpp
+auto to_string = [](auto t) {
+	std::stringstream ss; ss << t; return ss.str();
+};
+
+fusion::vector<int, std::string, float> seq {
+	1, "abc", 3.4f
+};
+
+auto strings = fusion::transform(seq, to_string);
+```
+# Обсуждение
