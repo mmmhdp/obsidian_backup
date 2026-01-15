@@ -187,9 +187,9 @@ template
 	std::integral_constant<int, S> {};
 ```
 ## Квадранты вычислений
-- `Runtime computations`
-- `Compile-time computations`
-- `Type-level computations`
+1. `Runtime computations`
+2. `Compile-time computations`
+3. `Type-level computations`
 ```cpp
 template <typename T>
 struct add_const_pointer {
@@ -200,7 +200,7 @@ using types = mpl::vector<int, char, float, void>;
 using pointers = mpl::transform<types,
 	ass_const_pointer<mpl::_1>>::type;
 ```
-- `Heterogenious computations`
+4. `Heterogenious computations`
 ```cpp
 auto to_string = [](auto t) {
 	std::stringstream ss; ss << t; return ss.str();
@@ -371,3 +371,444 @@ int arr[square(5)]; // ok arr[25]
 ```
 Теперь очевидно, что мы вызываем функцию времени компиляции.
 Стандарт накладывает некоторые ограничения на тела таких фунций.
+## Список ограничений на `constexpr`-функции для `C++14` 
+Важно понимать, что данный список кажется куда более натуральным, если принять то, что для вычислений на этапе компиляции не существует ещё никакой памяти у программы. Скажем, вычисления на этапе компиляции происходят в своего рода вакууме, Платоновском пространстве. 
+
+Именно поэтому, если у нас есть массив `int a [4]`, а мы пытаемся обратиться к `a[5]` это уже не UB, как бы это было для рантайма, а ошибка компиляции - у нас в воздухе массив из 4 элементов, пятый там откуда?
+
+Исходя из отсутствия памяти, данный список вполне понятен:
+- `new` и `delete`
+- Генерация исключений через `throw`
+- Вызов не-`constexpr` функций
+- Использование `goto`(запретили, так как control flow граф программы из дерева превразается в граф - а такое исполнить компилятору исключительно сложнее)
+- Лямбда выражения (можно в `C++17`)
+- Преобразования `const_cast` и `reinterpret_cast`(памяти нет, какие тогда биты нужно "реинтерпертировать"?)
+- Преобразования `void *` в `object *`
+- Модификация нелокальных объектов
+- Неинициализированные данные
+- Сравнение с `unspecified` результатом
+- Вызов `type_id` для полиморфных классов и `dynamic_cast`
+- Блоки `try` для обработки исключений
+- Операции с `undefined behavior`(любое `constexpr`-функции является ошибкой компиляции)
+- Инлайн ассемблер во всех разновидностях(как знать, а на каком ассемблере писать, если у нас разные архитектуры)
+- Большая часть операций с `this`
+
+Важно понимать, что в дальнейших стандартах список ослабляли, так что многие вещи теперь доступны.
+Однако, этот список выглядит наиболее разумным, так как в дальнейшем его послабления происходят за счёт исключительно нетривиальных техник на грани с фокусами.
+
+## Пример: целочисленный логарифм
+```cpp
+#include <climits>
+#include <iostream>
+
+constexpr size_t int_log(size_t N) {
+  size_t pos = sizeof(size_t) * CHAR_BIT, mask = 0;
+
+  // throw idiom
+  if (N == 0)
+    throw "N == 0 not supported";
+  // since throw is not allowed
+  // we will see compilation error here
+  // so it's a way to tell about exceptions 
+  // during compile time.
+  // but this will work like that only if
+  // there is an attempt to evaluate it at compile time
+  // on other hand - it will throw at runtime
+  
+  // but if no throw (N != 0)- "if" here will work like 
+  // "constexpr if", and code inside it will not be
+  // instanciated 
+
+  do {
+    pos -= 1;
+    mask = 1ull << pos;
+  } while ((N & mask) != mask);
+
+  if (N != mask)
+    pos += 1;
+
+  return pos;
+}
+
+int main() {
+#if COMPILATION_ERROR_WITH_THROW_IDIOM_TRIGGER
+  constexpr size_t log = int_log(0);
+#endif
+  
+  std::cout << int_log(1024) << std::endl; 
+  // 10
+}
+```
+
+## Не всегда `constexpr`
+Логичный вопрос: можно ли перегрузить функцию по `constexpr`, чтобы иметь и статический и нестатический вариант `int_log`?
+
+И что теперь, нам теперь ещё писать перегрузку для рантайма отдельно?
+Нет, `constexpr` - аннотация, а не часть типа, по нему нельзя перегрузить.
+
+Оказывается, что в этом даже нет необходимости - `constexpr` функция может быть вызвана и на этапе компиляции и на этапе исполнения - никаких проблем, всё зависит от контекста её вызова, статический вариант уже может быть использован с неизвестными на этапе компиляции аргументом.
+```cpp
+std::cin >> x;
+
+std::cout << int_log(x) << std::endl;
+```
+
+Поэтому `constexpr` и не входит в тип функции и не может аннотировать параметры.
+## Обсуждение
+Можем ли мы каким-то образом гарантировать, что `constexpr` функция выполнилась на этапе компиляции?
+```cpp
+int t = int_log(5);
+```
+Законных оснований надеяться на это у нас нет.
+Компилятор не хочет считать, всё что можно отложить на этап исполнения - скорее всего будет отложено. Но мы можем его заставить, если надо.
+
+Решение: использовать в `compile-time` контексте (положить в `constexpr` переменную, сделать размером массива, параметризовать шаблон):
+```cpp
+constexpr int logval = int_log(5);
+int t = logval;
+```
+Вот теперь мы уверены, что вызов состоялся на этапе компиляции.
+
+## `C++20`, введение `consteval` и `constinit`
+Функции, помеченные `consteval` обязаны быть выполнены именно и конкретно на этапе компиляции:
+```cpp
+consteval int ctsqr(int n) {return n*n;}
+
+constexpr int r = ctsqr(100); // OK
+
+int x = 100;
+int r2 = ctsqr(x); // Ошибка: не ct const
+```
+
+Для того, чтобы гарантировать только константную инициализацию `constexpr` наоборот слишком сильная гарантия и достаточно `constinit`:
+```cpp
+constinit int x = 1000;
+// запрещено для локальных переменных
+/*
+	иначе сложно понять, что такое начальное значение 
+	переменной на стеке, которое известно на этапе 
+	компиляции.
+	стека то нет никакого на этапе компиляции.
+*/
+
+++x; // ок
+```
+Т.е. значение такой переменной известно на этапе компиляции, но только её начальное значение.
+## Не везде `constexpr`
+Двойная природа `constexpr` функций имеет обратную сторону:
+```cpp
+template <typename T>
+constexpr size_t ilist_sz (std::initializer_list<T> list){
+	constexpr size_t init_sz = init.size();
+	return init_sz;
+}
+```
+И это ошибка.
+Компилятор тут не может дать **гарантию** константности для переменной (хотя сама функция и `constexpr`).
+
+Как вы думаете, измениться ли ситуация, если заменть `constexpr` на `consteval`?
+Нет, не будет, так как проблема не в этом.
+Дело в `std::initializer_list<T> list` - это не `core constant expression`, что и вызывает проблемы. Даже если будет подано в качестве параметра при вызове `constexpr` выражение, компилятор действует формально и смотрит на аргумент - он не `constexpr`(а аннотировать его мы не можем - мы же не можем аннотировать `constexpr`
+аргументы).
+
+А если убрать `constexpr` из определения `init_sz`?
+На удивление, тогда всё будет работать:
+```cpp
+template <typename T>
+consteval size_t ilist_sz (std::initializer_list<T> list){
+	size_t init_sz = init.size();
+	
+	// и более того
+	init_sz += 2; // ок
+	return init_sz;
+}
+```
+Т.е. тут мы получаем забавный парадокс - мы точно знаем, что `init_sz`- будет вычисленна на этапе компиляции, но аннотировать её таким образом мы её не можем!
+И более того, в данном случае мы получили не просто переменную, а 
+**не константную переменную времени компиляции**. 
+## Обсудение
+Статические `constexpr` метод в классе - это просто `constexpr` функция.
+
+Имеют ли смысл нестатические `constexpr` методы в классах?
+Имеют.
+
+Дело в том, что у нас есть особый метод у класса - конструктор.
+Секрет в том, что если сделать конструктор у класса `constexpr` - то у нас появится возможность создать данный объект на этапе компиляции.
+Такие объекты - которые имеют репрезентацию на этапе компиляции - называются литералами. Часть из них нам хорошо знакома, остаётся разобраться, а как создать свои)
+
+# Meta-OOP
+## Пользовательские литеральные типы
+Чтобы сделать пользовательский тип литеральным, ему нужен **`constexpr` конструктор**:
+```cpp
+struct Complex {
+	constexpr Complex (double r, double i) : re(r), im(i) {}
+	constexpr double real() const { return re; }
+	constexpr double imag() const { return im;}
+private:
+	double re, im;
+};
+
+constexpr Complex c{0.0, 1.0}; // это литеральное значение
+```
+## Арифметика
+Для таких объектов становится возможной арифметика времени компиляции:
+```cpp
+constexpr Complex Complex::operator+= (Complex rhs) {
+	re += rhs.re, im += rhs.im;
+	return *this;
+}
+
+constexpr Complex operator+ (Complex lhs, Complex rhs){
+	lhs += rhs;
+	return lhs;
+}
+
+// использование
+
+constexpr Complex c {0.0, 1.0}, d {1.0, 2.0};
+constexpr Complex e = c + d;
+```
+## Обсуждение
+Литералы такого класса выглядят как `Complex{1.0, 2.0}`, но нам бы хотелось более привычной формы `1.0 + 1.0_i`.
+
+Для сложения у нас есть выход, но как приделать суффикс?
+Удивительно, но для этого мы тоже используем перегрузку очень специального оператора.
+## Пользовательский суффикс
+И этот оператор - это **оператор кавычки**.
+```cpp
+constexpr Complex Complex::operator+= (Complex rhs) {
+	re += rhs.re, im += rhs.im;
+	return *this;
+}
+
+constexpr Complex operator+ (Complex lhs, Complex rhs){
+	lhs += rhs;
+	return lhs;
+}
+
+
+constexpr Complex operator"" _i (long double arg){
+	return Complex{0.0, arg};
+}
+
+// использование
+
+constexpr Complex c {0.0, 1.0}, d {1.0, 2.0};
+constexpr Complex e = c + d;
+
+constexpr Complex a = 0.0 + 1.0_i; 
+// ok, arg_i -> ""_i(arg) 
+//     => Complex(0.0, 0.0) + Complex(0.0, 1.0);
+```
+Здесь суффикс определён с параметром типа `double`.
+
+## Внезапная проблема
+Допустим, хочется переопределить суффикс`_binary` для бинарных констант.
+
+Но уже даже довольно маленькая константа:
+`1010101010101_binary` не влазит в `unsigned long long` параметр.
+
+Решение есть - синтаксис с вариабельным суффиксом:
+```cpp
+template <char... Chars>
+constexpr unsigned long long operator "" _binary(){
+	// и что тут?
+}_
+```
+## Небольшая метапрограмма
+```cpp
+#include <iostream>
+
+template <int Sum, char... Chars> struct binparser;
+
+template <int Sum, char... Rest> struct binparser<Sum, '0', Rest...> {
+  static constexpr int value = binparser<Sum * 2, Rest...>::value;
+};
+
+template <int Sum, char... Rest> struct binparser<Sum, '1', Rest...> {
+  static constexpr int value = binparser<Sum * 2 + 1, Rest...>::value;
+};
+
+template <int Sum> struct binparser<Sum> {
+  static constexpr int value = Sum;
+};
+
+template <char... Chars> constexpr int operator""_binary() {
+  return binparser<0, Chars...>::value;
+}
+
+int main() {
+  constexpr auto x = 1001_binary;
+  std::cout << x << std::endl;
+  // 9
+}
+```
+Но это всё - привет из 98 года.
+## Ладно, это была шутка
+Тоже, но современное:
+```cpp
+template<char... Chars>
+constexpr int operator""_binary() {
+	std::array<int, sizeof...(Chars)> arr { Chars... };
+	int sum = 0;
+	for (auto c : arr)
+		switch(c) {
+			case '0': sum = sum * 2; break;
+			case '1': sum = sum * 2 + 1; break;
+			default : throw "Unexpected symbol";
+		}
+		
+	return sum;
+}
+```
+Но откуда в программе времени компиляции взялся `std::array`?
+А ответ простой - у `std::array` тоже есть `constexpr` конструктор.
+
+Когда люди поняли, что `constexpr` мало к чему обязывает, но при этом даёт новые возможности для времени компиляции, тут началось...
+
+Более того, уже можно даже вот так:
+```cpp
+#include <iostream>
+#include <vector>
+
+template <char... Chars> constexpr int operator""_binary() {
+  std::vector<char> arr{Chars...};
+  int sum = 0;
+  for (auto c : arr)
+    switch (c) {
+    case '0':
+      sum = sum * 2;
+      break;
+    case '1':
+      sum = sum * 2 + 1;
+      break;
+    default:
+      throw "Unexpected symbol";
+    }
+
+  return sum;
+}
+
+int main() {
+  constexpr auto x = 1001_binary;
+  std::cout << x << std::endl;
+}
+```
+## `Constexpr all the things!`
+После их появления, `constexpr-ctors` начали торжественно расползаться по стандартной библиотеке.
+
+Очевидно сразу появились `constexpr`-контейнеры `std::array` и `std::bitset`.
+
+Точно также появились `constexpr`-алгоритмы.
+
+Постепенно, таких контейнеро и алгоритмов становится (с некоторыми ограничениями) всё больше и больше.
+
+Первоначально написание дуального кода было связано с некоторыми проблемами.
+## Case study: замена `vector` на `array`
+Да, можно оствить и вектор, но это, скажем, теперь можно.
+
+Попробуем перейти от:
+```cpp
+template <typename T> class PermLoop {
+	std::vector<T> loop_;
+	....	
+	
+	PremLoop(std::initializer_list<T> ls) : 
+		loop_(ls) {
+			reroll(); // rearange to meet normal perm form
+		}
+};
+```
+К чему-то вроде (в таком виде работать не будет):
+```cpp
+template <typename T, size_t N> class PermLoop {
+	std::array<T> loop_;
+	....	
+	constexpr PremLoop(std::initializer_list<T> ls) : 
+		loop_(ls)
+		// не будет работать 
+		// у array нет инициализации из
+		// initializer_list, это именно что 
+		// нативный агрегат, но у него нет 
+		// конструктора из initializer_list
+		{
+			reroll(); 
+		}
+};
+```
+И что с этим делать? 
+Кажется, нам бы хотелось тогда поэлементно разобрать этот лист и уже так запихнуть всё в массив. И всё это на этапе компиляции.
+Выход есть.
+## Index sequences
+Удивительно полезный класс `interget_sequence`;
+```cpp
+template <typename T, T... Ints>
+class integet_sequence;
+```
+Его синоним, если нам нужны индексы:
+```cpp
+template <size_t... Ints>
+using index_sequence = 
+	std::integer_sequence<size_t, Ints...>;
+```
+Мы можем писать `std::make_index_sequence<3>`.
+Типом этого выражения является `integer_sequence<size_t, 0, 1, 2>`.
+Теперь у нас есть инструменты, чтобы подступиться к созданию `array`.
+## Переход от вектора к массиву
+```cpp
+template <typename T, size_t N, size_t... Ns>
+constexpr std::array<T, N>
+make_array_impl(
+	std::initializer_list<T> t,
+	std::index_sequence<Ns...>){
+	return std::array<T, N>{ *(t.begin() + Ns)...};
+}
+
+template <typename T, size_t N>
+constexpr std::array<T, N>
+make_array(std::initializer_list<T> t) {
+	return make_array_impl<T, N>(
+		t,
+		std::make_index_sequence<N>{}
+	);
+}
+```
+На самом деле, подобный паттерн - некое действие к элементу во время свёртки - частый паттерн, когда речь заходит о коде программ, который работает с 3 и 4 квадрантом [[#Квадранты вычислений]].
+## `C++20`: `constexpr` `vector` и `string`
+Казалось бы, мучений с заменой на `array` больше не надо?
+```cpp
+struct S {
+	std::vector<int> arr;
+	constexpr S(std::initializer_list<int> il) : arr(il) {}
+};
+```
+
+Интересно, что это УЖЕ работает, но всё ещё конечно интересно, а как оно работает? Отсылка к магистерскому курсу.
+## Core constant expression...
+Интересно, что идея того, что на самом деле компилятор считает известными на этапе компиляции не совсем те вещи, которые нативно попадают в эту категорию, а скорее он дейсвует формально - всё, что является `core constant expression` - то и известно.
+
+Так что всё, что касается `constexpr`, полно сложных и странных сюрпризов.
+
+Это в свою очередь приводит нас к таком вот:
+```cpp
+struct S {
+	int n_;
+	S(int n) : n_(n) {} // non-constexpr ctor
+	constexpr int get() { return 42;}
+};
+
+int main (){
+	S s{2};
+	// это объект на стеке
+	constexpr int k = s.get();
+	// но по ряду формальных признаков, 
+	// компилятор разрешает такой вызов и 
+	// формально является правым
+	
+}
+// это довольно хрупкий пример, его легко сломать
+// продолжение этого разговора нужно искать в 
+// углублённом курсе по стандарту
+```
+## Обсуждение 
+Если у нас есть
