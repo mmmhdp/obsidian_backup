@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -200,7 +200,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "9659d23143719bbd",
+  "active": "9fd1aaa20c57d66a",
   "lastOpenFiles": [
     "Cpp language mipt lections/14-iterators/Итераторы.md",
     "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
