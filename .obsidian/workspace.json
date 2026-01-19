@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "CONSTEXPR"
             }
+          },
+          {
+            "id": "7b9e345c8f031c77",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Вектора и SFINAE"
+            }
           }
         ]
       }
@@ -68,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "condi",
+                "query": "declval",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -188,8 +202,10 @@
   },
   "active": "9659d23143719bbd",
   "lastOpenFiles": [
-    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
+    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+    "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
     "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
+    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
     "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
     "Cpp language mipt lections/18-meta-ce/local_attachments/Pasted image 20260115141056.png",
     "Cpp language mipt lections/18-meta-ce/local_attachments",
@@ -218,7 +234,6 @@
     "C language mipt lections/Seminar 1/1.1 Алгоритм Евклида.md",
     "Cpp language mipt lections/16-containers/Контейнеры.md",
     "Cpp language mipt lections/17-algorithms",
-    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
     "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt lections/16-containers/local_attachments",
     "Cpp language mipt lections/16-containers",

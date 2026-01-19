@@ -811,4 +811,301 @@ int main (){
 // углублённом курсе по стандарту
 ```
 ## Обсуждение 
-Если у нас есть
+Если у нас есть возможность считать вещи на этапе компиляции...
+Почему бы нам тогда не считать также `SFINAE` характеристики?
+# `Concepts`
+## Обсуждение
+Говорят, что интерфейсы в статическом полиморфизме являются неявными.
+
+Хорошо ли, что они неявные? Должны ли они быть такими?
+
+Понятно, что нет, не хорошо.
+Мы всегда предпочтём явный интерфейс.
+Мы хотим предъявлять некоторый набор критериев к типам и во время работы шаблонов (статический полиморфизм).
+
+Что если взять пример попроще и, находясь в реалиях `C++17`, попробовать сформулировать явный интерфейс в терминах типов?
+
+## Пример: проверка равенства
+В следующей функции неявный контракт состоит из одного пункта: равенство.
+```cpp
+template <typename T, typename U>
+bool check_eq(T &&lhs, U &&rhs) { return (lhs == rhs);}
+```
+
+Разумеется, это требование можно **сформулировать** явно:
+```cpp
+template <typename T, typename U, typename = void>
+sturct is_equality_comparable : false_type {};
+
+template <typename T, typename U>
+sturct is_equality_comparable <
+	T, U,
+	void_t<decltype(declval<T>() == declval<U>())>
+> : true_type {};
+```
+Вопрос в том, как его лучше всего **проверить**?
+
+Опция по умолчанию в таких случаях это `enable_if`:
+```cpp
+template <typename T, typename U>
+sturct is_equality_comparable
+<T, U,
+typename =
+enable_if_t <is equality_comparable<T, U>::value >
+>
+bool check_eq(T &&lhs, U &&rhs) {
+	return (lhs == rhs);
+}
+```
+Теперь сообщение будет выглядеть как-то так:
+```cpp
+error: no matching function for call to `check_eq`
+```
+## Обсуждение
+```cpp
+template <typename T, typename U>
+sturct is_equality_comparable
+<T, U,
+typename =
+enable_if_t <is equality_comparable<T, U>::value >
+>
+bool check_eq(T &&lhs, U &&rhs) {
+	return (lhs == rhs);
+}
+```
+Какие проблемы вы здесь видите?
+- Не достаточно явная ошибка
+- Мы в данном случае абъюзим языковой механизм - у нас существует для проверки третий шаблонный параметр. Дело времени, когда туда кто-то что-то третим параметром передаст, хотя мы совсем этого не подразумеваем:
+  ```cpp
+  check_eq<int, std::string, void> (1, "1");
+  // oops, 157 error lines are waiting for you
+  ``` 
+  В случае проблемы будет выдано сообщение, что нет такой функции, но не будет ничего сказано о том, **почему** её нет, не можем мы в таком виде передать корректно информацию о нарушении контракта, который мы тут хотим соблюдать (это к слову о неявных интерфейсах) 
+## Интересная идея
+Заслуживает внимания идея `if constexpr` + `static assert`:
+```cpp
+template <typename T, typename U>
+bool check_eq(T &&lhs, U &&rhs){
+	if constexpr (!is_equality_comparable<T, U>::value){
+		static_assert(0 && "equality comparable expected");
+	}
+	return (lhs == rhs);
+}
+```
+Стало лучше?
+Скорее нет, чем да.
+
+Всё ещё партянка сообщения об ошибке длиною в жизнь, так как 
+`static_assert` стрельнет на первой фазе, но `lhs == rhs` на второй - в итоге тут нет особо прогресса.
+
+Но мне не нравится эта идея.
+Почему?
+
+С другой стороны, так мы теряем `SFINAE`.
+Перенося проверку корректности из контекста подстановки в тело функции мы меняем `SFINAE-out` на ошибку. Но часто мы хотим именно что `SFINAE-out`, что позволяет нас расширить код, добавив перегрузку, а так уже ничего не поделаешь, совпадение точное по аргументам и остаётся только ловить ошибку.
+
+## Загадочный `distance`
+Вспомним наши мучения с самописным итератором где мы нечто забыли:
+```cpp
+int main () {
+	int arr[10];
+	junk_iter_t fst(arr), snd(arr + 3);
+	auto dist = std::distance(fst, snd);
+}
+```
+Он выдаёт ошибку:
+```
+error: no matching function for call to 
+`distance(junk_iter_t&, junk_iter_tо&)`
+```
+Вы помните с лекции по итераторам, в чём тут было дело?
+Мы забыли указать часть мета-информации, которую требует полноценный интерфейс итератора - конкретно:
+```cpp
+using pointer = int*;
+using reference = int&;
+```
+Проблема только в том, что в сообщении об ошибке ни слова не будет о том, почему конкретно не может произойти инстанцирование.
+
+Но с `C++20` возможность выражать подобные намерения интерфейса в более явном виде появилась в языке.
+
+## `Constraints`
+`Constraints` - это выражение времени компиляции, которое является аргументом `requires`.
+
+Констрейнты были введены чтобы сделать статические интерфейсы явными:
+```cpp
+template <typename T, typename U> 
+requires is_equality_comparable<T, U>::value
+bool  check_eq(T &&lhs, U **rhs) {return (lhs == rsh);}
+```
+Больше нет мусорного параметра шаблона.
+Языковые средства используются для того, для чего должны.
+
+И сообщение об ошибке гораздо лушче:
+```
+'is_equality_comparable<T, U, void>::value' evaluated to false
+```
+Внутри `requires` может быть что угодно, вычислимое на этапе компиляции.
+
+И по `requires` можно перегружать.
+
+Красота.
+## Полное покрытие 
+Все помнят, почему не работает очевидный `SFINAE` подход к разграничению:
+```cpp
+template <
+typename T,
+typename = enable_if_t<(sizeof(T) > 4)>>
+void foo(T x) { /*do smth with x*/ }
+
+template <
+typename T,
+typename = enable_if_t<(sizeof(T) <= 4)>>
+void foo(T x) { /*do smth more with x*/ }
+
+/*
+	Данный подход не рабочий, так как у данных 
+	функций с точки зрения языка две одинаковые 
+	сигнатуры, т.е. мы просто упрёмся в 
+	redefinition of foo
+*/
+
+// Наивное решение вопроса, 
+// его минусы только что уже обсуждали
+template <typename T, typename = std::enable_if_t<(sizeof(T) > 4)>>
+void foo(T x) { /*do smth with x*/ }
+
+template <typename T, typename = std::enable_if_t<(sizeof(T) <= 4)>, typename = void>
+void foo(T x) { /*do smth more with x*/ }
+
+// А можно этот `enable_if_t` запихнуть ещё куда, это 
+// не так важно
+template <typename T, typename = std::enable_if_t<(sizeof(T) > 4), int> = 0>
+void foo(T x) { /*do smth with x*/ }
+
+template <typename T, typename = std::enable_if_t<(sizeof(T) <= 4), int> = 0>
+void foo(T x) { /*do smth more with x*/ }
+```
+Очевидно, такой подход через констрейнты вполне работает, по ним же можно перегрузить:
+```cpp
+template <typename T>
+requires (sizeof(T) > 4)
+void foo(T x) { /*do smth with x*/ }
+
+template <typename T>
+requires (sizeof(T) <= 4)
+void foo(T x) { /*do smth more with x*/ }
+```
+## Недостатки `sfinae-constraints`
+Увы, `SFINAE` определители не упорядочены в отношении ограниченности:
+```cpp
+template <typename It>
+struct is_input_iterator : std::is_base_of<
+	std::input_iterator_tag,
+	typename std::iterator_traits<It>::iterator_category
+> {};
+
+template <typename It>
+struct is_random_iterator : std::is_base_of<
+	std::random_access_iterator_tag,
+	typename std::iterator_traits<It>::iterator_category
+> {};
+
+// Но input_iterator будет подходить под оба констрейнта,
+// т.е. с точки зрения `requires` у вас два подходящих 
+// объекта - не понятно, что выбрать - ошибка
+```
+Это просто два разных шаблона.
+И это приводит к проблемам, когда мы пытаемся исправить `distance`
+
+Т.е. кроме самих `sfinae`-констрейнтов, мы ещё и хотим задавать между ними соотношения типа "частное - общее".
+
+И тут мы опять вспоминаем про концепцию `partial weak ordering`.
+## Сложные ограничения
+Вернёмся к простому примеру:
+```cpp
+template <typename T, typename U>
+	requires is_equlity_comparable<T, U>::value
+bool check_eq(T &&lhs, U &&rhs) { return (lhs == rhs);}
+```
+Тоже самое, но через `requires-expression`:
+```cpp
+template <typename T, typename U>
+	requires requires(T t, U u) { t == u;}
+bool check_eq(T &&lhs, U &&rhs) { return (lhs == rhs);}
+```
+Да, `requires-expression` может смущать, но если вспомнить `noexcept-clause` и `noexcept-expression` вопросов сразу становится меньше.
+## Ещё лучше диагностика
+```cpp
+template <typename T, typename U>
+	requires requires(T t, U u) { t == u;}
+/*
+	Но надо понимать, что у этого выражения иная
+	семантика, нежели чем у sfinae - где либо да, 
+	либо подстановка провалена, либо тип существует,
+	либо нет.
+	
+	requires делает иначе, если `t == u` возможно
+	для тех типов, которые зашли в шаблон, возвращает
+	true, а если нет, то false
+*/
+bool check_eq(T &&lhs, U &&rhs) { return (lhs == rhs);}
+```
+Выражение:
+```cpp
+check_eq(std::string("1"), 1);
+```
+Даёт:
+```
+note: the required expression '(t == u)' would be ill-formed
+```
+Здесь сказано не только название констрейнта, но и конкретный  `ill-formed expression` в нём.
+
+## Главное отличие сложных ограничений
+Простые ограничения вычисляются на этапе компиляции:
+```cpp
+template <typename T>
+constexpr int somepred() {return 14;}
+
+template <typename T, typename U>
+	requires (somepred<T>() == 42)
+bool foo (T &&lhs, U &&rhs);
+```
+В сложных ограничения проверяется синтаксическая валидность выражения:
+```cpp
+template <typename T, typename U>
+	requires requires (T t) { somepred<T>() == 42;}
+bool bar (T &&lhs, U &&rhs);
+```
+
+Т.е. это значит, что в итоге вызов `foo` будет ошибкой косаиляции, а вызов `bar` - нет.
+## Что проверяют сложные ограничения
+Сложные ограничения могут проверять валидность выражений:
+```cpp
+requires requires (T a, T b) { a + b;}
+```
+Либо могут проверять существование типов:
+```cpp
+requires requires () {typename T::inner; }
+```
+Есть специальный синтаксис для `noexcept`:
+```cpp
+requires requires (T t) {
+	{++t} noexcept;
+}
+```
+Они могут комбинироваться друг с другом и с простыми ограничениями.
+
+## Пример: `convertible_to`
+Чтобы выделять системы ограничений, в `C++20` введено специально ключевое слово `concept`.
+
+`concept` - это булев предикат времени компиляции.
+
+Простейший концепт, который определён в хедере `concepts` и часто используется как вспомогательный:
+```cpp
+template <typename From, typename To>
+concept convertible_to =
+	std::is_convertible_v<From, To> &&
+	requires(From(&f)()) {static_cast<To>(f());};
+```
+
+Он состоит и из старых `SFINAE` определителей и из новых концептов, которые можно соединять конъюктивными или дизъюнктивными условиями.
