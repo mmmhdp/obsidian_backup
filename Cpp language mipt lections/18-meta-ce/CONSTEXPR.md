@@ -1109,3 +1109,270 @@ concept convertible_to =
 ```
 
 Он состоит и из старых `SFINAE` определителей и из новых концептов, которые можно соединять конъюктивными или дизъюнктивными условиями.
+## Синтаксический сахар
+Чтобы немного проще записывать одновременное требование к выражению и типу:
+```cpp
+requires requires (T x){
+	*x;
+	requires convertible_to<
+		decltype(*x),
+		typename T::inner
+	>;
+}
+```
+Существует более приятная форма записи со стрелочкой:
+```cpp
+requires requires(T x) {
+	{*x}->convertible_to<typename T::inner>;
+}
+```
+## Концепты
+На основе простых концептов можно строить более сложные:
+```cpp
+template <typename T, typename U>
+concept WeaklyEqulityComparableWith = 
+	requires (
+		const std::remove_reference_t<T>& t,
+		const std::remove_reference_t<U>& u,
+	) {
+		{ t == u }	 -> convertible_to<bool>;
+		{ t != u }	 -> convertible_to<bool>;
+		{ u == t }	 -> convertible_to<bool>;
+		{ u != t }	 -> convertible_to<bool>;
+	};
+```
+Концепт - это предикат, выполняющийся на этапе компиляции.
+
+Теперь при наличии концепта, довольно легко ограничить функцию:
+```cpp
+template <typename T, typename U>
+requires WeaklyEqulityComparableWith<T, U>
+bool foo(T x, U y);
+```
+Это также просто использовать как обычный предикат времени компиляции.
+Можно определять одни концепты в терминах других:
+```cpp
+template <typename T>
+concept EqualityComparable = 
+	WeaklyEqulityComparableWith<T, T>;
+```
+Заметьте, это не специализация, это полноценное создание нового концепта.
+## Отношение `subsumes`
+Сложные концепты можно писать так, чтобы они участвовали в отношениях большей или меньше ограниченности (или общности).
+```
+P subsumes Q if it can be proven that P implies Q
+```
+Если в концепте `P` присутствуют все атомарные ограничения из `Q`, в таких же логических связях, то между ними есть это соотношение.
+
+Самое простое - это прямое включение:
+```cpp
+template <typename T>
+concept P  = Q<T> && R<T>;
+// P subsumes Q and R
+
+template <typename T>
+concept P  = Q<T> || sizeof(T) == 4;
+// P not subsumes Q
+```
+## Теперь перегрузка работает
+```cpp
+#ifdef ONE
+template <typename Iter>
+requires std::input_iterator<Iter>
+int my_distance(Iter first, Iter last){
+	typename Iter::difference_type n = 0;
+	while (first != last) { ++first; ++n; }
+	return n;
+}
+
+// или тоже самое
+#else
+
+template <std::input_iterator Iter>
+int my_distance(Iter first, Iter last){
+	typename Iter::difference_type n = 0;
+	while (first != last) { ++first; ++n; }
+	return n;
+}
+#endif
+
+// а далее перегрузим
+
+template <std::random_access_iterator Iter>
+int my_distance(Iter first, Iter last){
+	return last - first;
+}
+```
+
+Благодаря тому, что `InputIterator` является менее общим (он входит как подусловие в `RandomAccessIterator`), теперь тут нет неоднозначности.
+
+Более того, теперь `auto` можно уточнить концептом:
+```cpp
+std::input_iterator auto it = cont.begin();
+```
+# Секретный уровень
+Диапазоны(`ranges`) и отображения в свете `concepts`
+## Внезапно `for_each`
+В стандартной библиотеке этот алгоритм определён как-то так:
+```cpp
+template <typename InputIt, typename UnaryFunc>
+UnaryFunc for_each(InputIt first, InputIt last, UnaryFunc f){
+	for (; first != last; ++first){
+		f(*first);
+	}
+	return f;
+}
+```
+
+Почему шаблонные параметры названы `InputIt` и `UnaryFunc`?
+Предки в доконцептные времена так пытались намекнуть на определённый интерфейс, сейчас же там бы стояло что-то вроде `std::input_iterator`.
+
+Но разве для `last` требуется, чтобы он был `InputIterator`?
+Мы же не можем его разыменовать - это UB.
+Дело в том, что `last` с типом `InputIt` - это опять же наивный способ указать на то, что мы должны уметь сравнить `first` и `last`.
+
+## Первое наблюдение: не требуется
+Рассмотрим например сингулярные итераторы:
+```cpp
+for_each(istream_iterator<int>{is},
+		 istream_iterator<int>{},
+		 [](int d) {
+			if (d < 5) os << d * 2 << " ";
+		 }
+);
+```
+Главная проблема в таком `std::for_each` в том, что вообще-то, кхм...:
+```cpp
+template <typename InputIt, typename UnaryFunc>
+UnaryFunc for_each(InputIt first, InputIt last, UnaryFunc f){ ....
+```
+Но сингулярный оператор это никогда не `InputIterator`, его разыменование это вообще UB.
+
+В итоге данные размышления навели людей на новое понимания понятия "диапазон", теперь мы понимаем, что диапазон образуют не два итератора, а итератор и некий ограничитель...
+## Концепт `range`: итератор и ограничитель
+Рассмотрим его подробнее:
+```cpp
+template <typename T>
+concept range = requires ( T&& t ) {
+	ranges::begin(t);
+	ranges::end(t);
+};
+```
+Действуют два стандартных функтора:
+```cpp
+template <typename T>
+using iterator_t = 
+	decltype(ranges::begin(declval<T&>()));
+	
+template <typename T>
+using sentinel_t = 
+	decltype(ranges::end(declval<T&>()));
+```
+## Унаследованые концепты
+Точно также, как категории итераторов, категории диапазонов  определяются иерархически:
+```cpp
+template <typename T>
+concept input_range = 
+	range<T> && input_iterator<iterator_t<T>>;
+	
+template <typename T>
+concept forward_range = 
+	range<T> && forward_iterator<iterator_t<T>>;
+```
+И так далее.
+
+Дополнительно, есть интересный спецконцепт `contiguous_range` для непрерывного диапазона.
+## Концепт `view`: вид на диапазон
+В стандарте `view` прописан как (я немного упрощаю):
+```cpp
+template <typename T>
+concept view = range<T>
+	&& movable<T>
+	&& default_initializable<T>
+	&& derived_from<T, view_base>;
+```
+Базовый пример для `view` это `ref_view`, являющийся аналогом `string_view` для всего, а не только `string`:
+```cpp
+std::vector v = {1,2,3,4,5,6,7,8,9};
+auto vv = ranges::views::all(v);
+vv[0] = 2; // now v[0] = 2;
+```
+## Снова о квадратных отверстиях
+```cpp
+for_each(istream_iterator<int>{is},
+		 istream_iterator<int>{},
+		 [](int d) {
+			if (d < 5) os << d * 2 << " ";
+			// os тут глобальная переменная
+		 }
+);
+```
+Разумеется, это не `for_each`, тут происходит `transform_copy_if`.
+Вот только никакого `transform_copy_if` или даже `transform_copy` в стандартной библиотеке нет.
+
+Рецепт от Шона Парента: напишите свой, опубликуйте статью, прославтесь!
+Сделаем такую попытку...
+## Попытка прославиться
+Сигнатура:
+```cpp
+template <
+	typename InputIt, typename OutputIt,
+	typename UnaryPred, typename UnaryFunc>
+OutputIt transform_copy_if(
+	InputIt first, InputIt last,
+	OutputIt d_first,
+	UnaryPred pred, UnaryFunc func
+);
+```
+Использование:
+```cpp
+transform_copy_if(
+	istream_iterator<int>{is},
+	istream_iterator<int>{},
+	ostream_iterator<int>{os, " "},
+	[](int n){ return n < 5;},
+	[](int n){ return n * 2;},
+);
+```
+Резюмируя - вряд ли прославимся.
+Но что нам помешало?
+## Нам мешает энергичность
+Проблемы, если вдуматься, следуют из энергичности работы библиотеки:
+```cpp
+std::vector<int> v;
+istream_iterator<int> start{is}, fin{};
+ostream_iterator<int> d_start{os, " "};
+
+std::copy_if(start, fin, std::back_inserter(v),
+	[](int n){ return n < 5;} );
+
+std::transform(v.begin(), v.end(), d_start,
+	[](int n){ return n * 2;} );
+```
+Проблема такого подхода:
+- Лишний контейнер, чтобы туда сложить результаты.
+- Два прохода по диапазону вместо одного.
+## Но виды не слишком энергичны
+Мы можем комбинировать разные типы видов:
+```cpp
+auto v =ranges::views::transform(
+	ranges::views::filter(
+		ranges::istream_view<int>(is),
+		[](int n){ return n < 5;}
+	),
+	[](int n){ return n * 2;}
+);
+```
+Выглядит немного сложно, но ... :
+```cpp
+auto v = ranges::istream_view<int>(is),
+	   | ranges::views::filter([](int n){return n < 5;})
+	   | ranges::views::transform([](int n){return n * 2;})
+```
+Так уже выглядит куда лучше!
+## Обсуждение
+Тут, кажется, есть одна засада... такое чувство, что `std::transform_view` владеет данными, иначе где он их хранит?
+
+Тогда вопрос, не является ли наш синтаксис лишь пожеланием ленивости, а на деле маскировкой последовательных энергичных операций?
+
+Это всё вопросы к тому, что пробуя новые вещи в языке необходимо помнить о том, что их реализация может таить в себе некоторые подводные камни...

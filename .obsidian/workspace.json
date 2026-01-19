@@ -103,12 +103,12 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 227.50043487548828
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
