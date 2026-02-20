@@ -3,12 +3,15 @@
 ```cpp
 int a = 2;
 void foo() { 
-int b = a + 3; // ok, we are in scope of a 
-if (b > 5) 
-	{ int c = (a + b) / 2; // ok we are in scope of a and b
+	int b = a + 3; 
+	// ok, we are in scope of a 
+	if (b > 5)  {
+	 int c = (a + b) / 2; 
+	 // ok we are in scope of a and b
+	}
+	b += c; 
+	// compilation fail 
 }
-
-b += c; // compilation fail }
 ```
 # Lifetime 
 У любой переменной есть время жизни - это совокупность всего моментов времени в программе, когда её состояние валидно.
@@ -32,14 +35,23 @@ struct S {
 	const int &y;
 };
 
-S x{1,2}; // ok, for y will extend lifetime of inner int object = 2, 
-// x here is not temporary, subobject of x - y - helds temporary object 
-// with prolonged lifetime
-
-S *p = new S{1,2}; // here we have dangling y after end of expression 
+S x{1,2};
 /*
-the problem is that here we not initialize subobject itself, 
-we initialize value of p - pointer to some unnamed object, constructed from temporary object S{1,2}. So p.y is invalid here.
+	ok, for y will extend lifetime of inner int object = 2, 
+	x here is not temporary, 
+	subobject of x - y - helds temporary object 
+	with prolonged lifetime
+*/
+
+S *p = new S{1,2}; 
+// here we have dangling y after end of expression 
+
+/*
+the problem is that here 
+we not initialize subobject itself, 
+we initialize value of p - pointer to some unnamed object, 
+constructed from temporary object S{1,2}.
+So p.y is invalid here.
 */
 
 ```

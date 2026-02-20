@@ -29,7 +29,7 @@ int *& xptrref = &xptr; // всё ок, ведь ссылка на инт ука
 int const & cref_0 = x;
 const int & cref_1 = x;
 //cref_0 и cref_1 - константные ссылки на константные данные
-int & ref = x/
+int & ref = x
 //ref - константная ссылка на изменяемые данные
 ```
 # Usage

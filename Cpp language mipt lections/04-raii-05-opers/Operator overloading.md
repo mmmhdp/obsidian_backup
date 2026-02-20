@@ -1,7 +1,7 @@
-# Type cast (typename ())operator
+# Type cast `(typename ())operator`
 ## Implementation
 [[Operator type]]
-# Dereference operator (\*) and arrow operator (->)
+# Dereference operator(`*`) and arrow operator`(->)`
 ## Drill down
 Оператор стрелочки имеет спецсемантику:
 - Вызов p->x эквивалентен (p.operator->())->x и так сколько угодно раз
@@ -19,12 +19,12 @@
 ВАЖНО:
 - (.\*) не перегружается
 - (::\*) также не перегружается
-# Assign operator (=) 
+# Assign operator (`=`) 
 ## Implementation
 [[PtrGuard#Два]]
 
 [[Operator overloading#Ограничения]]
-# Index operator ({})
+# Index operator (`[]`)
 ```cpp
 class MyVector {
 	std::vector<int> v_;
@@ -63,13 +63,9 @@ public:
 	const ProxyRow operator[] (int idx) const;
 };
 ```
-# Functor operator (())
-Наиболее правильный способ сделать функции-подобный объект - это перегрузка 
-оператора ().
-Данная история позволяет не просто передавать указатель на функцию, а как бы 
-добавить к этому указателю информацию о типах в этой функции, что в свою 
-очередь может позволить компилятору заинлайнить функцию, а не тратить ресурсы на 
-её вызов.
+# Functor operator (`()`)
+Наиболее правильный способ сделать функции-подобный объект - это перегрузка оператора ().
+Данная история позволяет не просто передавать указатель на функцию, а как бы добавить к этому указателю информацию о типах в этой функции, что в свою очередь может позволить компилятору заинлайнить функцию, а не тратить ресурсы на её вызов.
 
 ```cpp
 struct gt 
@@ -86,7 +82,7 @@ std::sort (myarr.begin(), myarr.end(), gt{});
 ```
 Кроме того, в классе можно хранить состояние.
 Данная идея ещё получит своё продолжение в контексте lambda-функций.
-# Increment and decrement operators(++ and --)
+# Increment and decrement operators(`++` and `--`)
 Post и pre инкремент используют один и тот же оператор,
 но для post добавляют dummy параметр int, так как по 
 возвращаемому значеную нельзя перегрузить функцию:
@@ -107,7 +103,11 @@ template <typename T> struct Quat
 		return *this;	
 	}
 	
-	Quat<T> operator++() {
+	Quat<T> operator++(int)
+	// dummy parametr since overloading 
+	// set is not change in terms of 
+	// return value type
+	{
 		Quat<T> tmp {*this};
 		++(*this);
 		return tmp;	
@@ -116,7 +116,7 @@ template <typename T> struct Quat
 ```
 Очевидно, что всё тоже самое работает для декримента.
 
-# Spaceship operator(<=>)
+# Spaceship operator(`<=>`)
 Доступен с 20 стандарта.
 
 Определяет тривалентное сравнение [[Operators and chains#Дву и три валентные сравнения]]. Но он возвращает не int, а некий ordering_type
@@ -159,7 +159,7 @@ struct MyInt {
 Логика тут такая: если вы генерируете всё по умолчанию, то вы 
 точно не хотите от равенства ничего необычного
 
-# Address extraction operator(&) 
+# Address extraction operator(`&`) 
 Тоже может быть перегружено, как разыменовывание.
 В реальности, перегружается редко.
 
@@ -186,7 +186,7 @@ std::addressof(obj);
 Он вернёт именно что адрес объекта, который ему был передан.
 
 
-# Dereference with call operator (->\*)
+# Dereference with call operator (`->*`)
 Начали про них говорить тут [[Operator overloading#Ограничения]].
 ## Указатели на метод класса
 Имеет ли смысл выражение "указатель на нестатический метод"?
@@ -249,7 +249,7 @@ y ->* false = 7;
 ```
 
 
-# Sequence operator (,)
+# Sequence operator (`,`)
 ```cpp
 result = foo(), bar(), buzz();
 // foo() guaranteed to be called first
@@ -267,22 +267,22 @@ result = foo(), bar(), buzz();
 - Последовательный доступ a ; b
 - Тернарный оператор a ? b : c
 - Почти все специальные операторы в том числе
-  sizeof, alignof, typeid
+  `sizeof`, `alignof`, `typeid`
   - Правило такое: если вы видите специальный оператор,
     скорее всего его нельзя перегрузить
-	(исключения: new, delete, co_await)
-  - Сюда же относятся static_cast и его друзья (\*\_cast)
+	(исключения: `new`, `delete`, `co_await`)
+  - Сюда же относятся `static_cast` и его друзья (`*_cast`)
 # Что не следует перегружать
-- Длинный логические операции && и || потому что они 
-  теряют сокращенное (lazy) поведение
+- Длинный логические операции `&&` и `||` потому что они 
+  теряют сокращенное (`lazy`) поведение
 ```cpp
 if (p && p->x) // может рвануть при перегрузке &&
 ```
-- Запятую, чтобы не потерять sequencing 
+- Запятую, чтобы не потерять `sequencing`
 ```cpp
 x = foo(), bar(); // взрыв, если мы заложились на foo первым
 ```
-- Унарный плюс, чтобы не потерять positive hack
+- Унарный плюс, чтобы не потерять `positive hack`
 
 
 # Требует отдельного рассказа
