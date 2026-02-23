@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "be10ad0514441bd2",
+        "id": "9cebfd81ba8ee18d",
         "type": "tabs",
         "children": [
           {
-            "id": "42fcc063f3096a28",
+            "id": "eac8fff90683cfb3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Наследование.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Наследование"
+              "title": "New tab"
             }
           }
         ]
@@ -53,13 +49,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Наследование.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Наследование"
+              "title": "Outline"
             }
           },
           {
@@ -68,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "PVC",
+                "query": "protected",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +84,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -185,34 +181,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "42fcc063f3096a28",
+  "active": "eac8fff90683cfb3",
   "lastOpenFiles": [
+    "Cpp language mipt lections/06-inheritance/Наследование.md",
+    "Cpp language mipt lections/09-philosophy/Принципы ООП.md",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
+    "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
+    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
+    "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
+    "Cpp language mipt lections/06-inheritance/RTTI.md",
+    "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Makefile~",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
-    "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
-    "Cpp language mipt lections/06-inheritance/Наследование.md",
     "Cpp language mipt lections/06-inheritance/Ковариантность, Контрвариантность, Стирание типов..md",
     "Cpp language mipt lections/04-raii-05-opers/Type casting.md",
-    "Cpp language mipt lections/06-inheritance/RTTI.md",
     "Cpp language mipt lections/04-raii-05-opers/Untitled.md",
     "Cpp language mipt lections/04-raii-05-opers/Static and friend methods.md",
     "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
     "Cpp language mipt lections/04-raii-05-opers/Sequecing.md",
     "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
     "Cpp language mipt lections/04-raii-05-opers/PImpl.md",
-    "Cpp language mipt lections/04-raii-05-opers/PtrGuard.md",
     "Cpp language mipt lections/04-raii-05-opers/RAII.md",
     "Cpp language mipt lections/04-raii-05-opers/Rule of 5.md",
     "Cpp language mipt lections/04-raii-05-opers/Rule of 0.md",
-    "Cpp language mipt lections/04-raii-05-opers/Operator overloading.md",
     "Cpp language mipt lections/04-raii-05-opers/EBCO.md",
-    "Cpp language mipt lections/08-exceptions/Oшибки и исключения.md",
     "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
     "Cpp language mipt lections/03-creation/Operator type.md",
     "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
     "Cpp language mipt lections/03-creation/Names mangling.md",
-    "Cpp language mipt lections/03-creation/Empty class magic.md",
     "Cpp language mipt lections/slides/01-scentpp.pdf",
     "Cpp language mipt lections/18-meta-ce/local_attachments/Pasted image 20260115141056.png",
     "Cpp language mipt lections/18-meta-ce/local_attachments",
@@ -232,7 +229,6 @@
     "Cpp language mipt lections/16-containers/local_attachments",
     "Cpp language mipt lections/16-containers",
     "Cpp language mipt lections/slides/09-philosophy.pdf",
-    "Cpp language mipt lections/14-iterators/local_attachments",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
