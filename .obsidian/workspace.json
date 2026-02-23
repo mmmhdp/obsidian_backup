@@ -27,10 +27,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Cpp language mipt lections/slides/12-templates.pdf"
+                "file": "Cpp language mipt lections/slides/03-creation.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "12-templates"
+              "title": "03-creation"
             }
           },
           {
@@ -47,8 +47,7 @@
               "title": "Move semantics"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -80,13 +79,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
+                "file": "Cpp language mipt lections/12-templates/Обощения типов.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Move semantics"
+              "title": "Outline of Обощения типов"
             }
           },
           {
@@ -212,13 +211,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "7d20b9c581d72460",
+  "active": "3684536bb13c1804",
   "lastOpenFiles": [
+    "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
+    "Cpp language mipt lections/slides/03-creation.pdf",
+    "Cpp language mipt lections/slides/04-raii.pdf",
+    "Cpp language mipt lections/slides/12-templates.pdf",
     "Cpp language mipt lections/02-lrefs/Left reference.md",
     "Cpp language mipt lections/02-lrefs/Lvalue & rvalue.md",
     "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
     "Cpp language mipt lections/12-templates/Обощения типов.md",
-    "Cpp language mipt lections/slides/12-templates.pdf",
     "Cpp language mipt lections/slides/01-scentpp.pdf",
     "Cpp language mipt lections/slides/10-3dgraphics.pdf",
     "Cpp language mipt lections/slides/13-vectors.pdf",
@@ -240,16 +242,13 @@
     "Cpp language mipt lections/04-raii-05-opers/Type casting.md",
     "Cpp language mipt lections/04-raii-05-opers/Untitled.md",
     "Cpp language mipt lections/04-raii-05-opers/Static and friend methods.md",
-    "Cpp language mipt lections/04-raii-05-opers/Move semantics.md",
     "Cpp language mipt lections/04-raii-05-opers/Sequecing.md",
     "Cpp language mipt lections/04-raii-05-opers/Operators and chains.md",
     "Cpp language mipt lections/04-raii-05-opers/PImpl.md",
     "Cpp language mipt lections/04-raii-05-opers/RAII.md",
-    "Cpp language mipt lections/04-raii-05-opers/Rule of 5.md",
     "Cpp language mipt lections/18-meta-ce/local_attachments/Pasted image 20260115141056.png",
     "Cpp language mipt lections/18-meta-ce/local_attachments",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
-    "Cpp language mipt lections/18-meta-ce",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114038.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114005.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114113830.png",
@@ -259,7 +258,6 @@
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111259.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111230.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114111154.png",
-    "Cpp language mipt lections/17-algorithms/local_attachments",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
