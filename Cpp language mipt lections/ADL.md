@@ -1,4 +1,4 @@
-Argument dependent lookup
+`Argument dependent lookup`
 Данная техника связана с разрешением имён. 
 Суть её в том, что имя функции может быть найдёно не только в текущем `namespace`е, но и в `namespase`ах его аргументов.
 
