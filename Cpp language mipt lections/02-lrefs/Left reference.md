@@ -64,8 +64,7 @@ bar(q); // а вот это строго сохранит инвариант т�
 
 Синоним для объекта с массивными именем:
 ```cpp
-void foo(BigBoi & b)
-{
+void foo(BigBoi & b){
 	int &internal = b.gut.smth[3].internal;
 }
 ```
