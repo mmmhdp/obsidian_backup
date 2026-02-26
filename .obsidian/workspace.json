@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/04-raii/Move semantics.md",
-                "mode": "source",
+                "file": "Cpp language mipt lections/06-inheritance/Наследование.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Move semantics"
+              "title": "Наследование"
+            }
+          },
+          {
+            "id": "2b0b05c431eb4e2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Полиморфизм"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,13 +68,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cpp language mipt lections/04-raii/Move semantics.md",
+                "file": "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Move semantics"
+              "title": "Outline of Полиморфизм"
             }
           },
           {
@@ -93,7 +108,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5086555480957
+    "width": 312.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -185,14 +201,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "ff353375caef901f",
+  "active": "2b0b05c431eb4e2a",
   "lastOpenFiles": [
-    "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
+    "Cpp language mipt lections/06-inheritance/Наследование.md",
     "Cpp language mipt lections/04-raii/Move semantics.md",
+    "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
     "Cpp language mipt lections/04-raii/PImpl.md",
     "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
-    "Cpp language mipt lections/06-inheritance/Наследование.md",
     "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/RTTI.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
