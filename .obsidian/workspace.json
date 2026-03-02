@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "3a39763ef28b14fd",
+        "id": "485996cc10ed6270",
         "type": "tabs",
         "children": [
           {
-            "id": "ff353375caef901f",
+            "id": "87480f1e5fe1c1cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Наследование.md",
-                "mode": "preview",
+                "file": "Cpp language mipt lections/12-templates/CRTP.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Наследование"
-            }
-          },
-          {
-            "id": "2b0b05c431eb4e2a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Полиморфизм"
+              "title": "CRTP"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "copy",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -108,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5086555480957,
-    "collapsed": true
+    "width": 312.5086555480957
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -201,20 +185,25 @@
       "bases:Create new base": false
     }
   },
-  "active": "2b0b05c431eb4e2a",
+  "active": "87480f1e5fe1c1cd",
   "lastOpenFiles": [
+    "Cpp language mipt lections/04-raii/EBCO.md",
+    "Cpp language mipt lections/03-creation/COW.md",
+    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
+    "Cpp language mipt lections/12-templates/CRTP.md",
     "Cpp language mipt lections/06-inheritance/Наследование.md",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
+    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+    "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
     "Cpp language mipt lections/04-raii/Move semantics.md",
     "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
     "Cpp language mipt lections/04-raii/PImpl.md",
     "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
-    "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
     "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/RTTI.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/05-opers/Type casting.md",
     "Cpp language mipt lections/05-opers/Static and friend methods.md",
-    "Cpp language mipt lections/04-raii/EBCO.md",
     "Cpp language mipt lections/04-raii/Rule of 0.md",
     "Cpp language mipt lections/04-raii/Rule of 5.md",
     "Cpp language mipt lections/05-opers/Sequecing.md",
@@ -225,17 +214,12 @@
     "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251204182114.png",
     "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251202160037.png",
     "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251202155959.png",
-    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/local_attachments/Pasted image 20251202112802.png",
     "Cpp language mipt lections/03-creation/Untitled",
     "Cpp language mipt lections/03-creation/Empty class magic.md",
     "Cpp language mipt lections/03-creation/Operator type.md",
     "Cpp language mipt lections/03-creation/Namespaces.md",
-    "Cpp language mipt lections/03-creation/Names overloading resolution.md",
-    "Cpp language mipt lections/03-creation/Names mangling.md",
-    "Cpp language mipt lections/03-creation/Constructor initialization.md",
-    "Cpp language mipt lections/02-lrefs/Lvalue & rvalue.md",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
     "Cpp language mipt lections/slides/17-algorithms.pdf",
     "Cpp language mipt lections/slides/03-creation.pdf",
