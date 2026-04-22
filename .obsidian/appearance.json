@@ -2,7 +2,7 @@
   "accentColor": "",
   "cssTheme": "WY Console",
   "baseFontSize": 18,
-  "theme": "system",
+  "theme": "obsidian",
   "enabledCssSnippets": [
     "black_text_in_both_modes"
   ],

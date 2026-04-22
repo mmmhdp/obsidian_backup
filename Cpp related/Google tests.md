@@ -47,7 +47,6 @@ std::vector<int> FibGen::GenerateNitems(std::size_t nitems) const {
 ```
 
 ```cpp
-#include "gtest/gtest.h"
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
