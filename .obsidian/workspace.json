@@ -107,7 +107,11 @@
             "state": {
               "type": "search",
               "state": {
+<<<<<<< HEAD
                 "query": "exception",
+=======
+                "query": "operator new",
+>>>>>>> d1b0162 (backup: basic)
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -132,7 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5086555480957
+    "width": 303.5004348754883
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -226,6 +230,7 @@
   },
   "active": "391ea0c2c3fdafc8",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
     "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
@@ -234,6 +239,22 @@
     "Cpp language mipt lections/06-inheritance/Наследование.md",
     "Cpp language mipt lections/06-inheritance/Ковариантность, Контрвариантность, Стирание типов..md",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
+=======
+    "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
+    "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
+    "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
+    "Cpp language mipt lections/12-templates/CRTP.md",
+    "Cpp language mipt lections/04-raii/EBCO.md",
+    "Cpp language mipt lections/03-creation/COW.md",
+    "Cpp language mipt lections/03-creation/Difference between coping and initialisation.md",
+    "Cpp language mipt lections/06-inheritance/Наследование.md",
+    "Cpp language mipt lections/12-templates/Обощения типов.md",
+    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
+    "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
+    "Cpp language mipt lections/04-raii/Move semantics.md",
+    "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
+    "Cpp language mipt lections/04-raii/PImpl.md",
+>>>>>>> d1b0162 (backup: basic)
     "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/RTTI.md",
     "Cpp language mipt lections/05-opers/Type casting.md",
@@ -259,6 +280,10 @@
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/local_attachments/Pasted image 20251202112802.png",
     "Cpp language mipt lections/03-creation/Untitled",
+<<<<<<< HEAD
+=======
+    "Cpp language mipt lections/03-creation/Empty class magic.md",
+>>>>>>> d1b0162 (backup: basic)
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
     "Cpp language mipt lections/slides/17-algorithms.pdf",
     "Cpp language mipt lections/slides/03-creation.pdf",
