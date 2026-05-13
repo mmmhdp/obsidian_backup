@@ -4,63 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "efc6952b97f9be8e",
+        "id": "485996cc10ed6270",
         "type": "tabs",
         "children": [
           {
-            "id": "a07b9d79e1bd6c05",
+            "id": "87480f1e5fe1c1cd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt lections/06-inheritance/Наследование.md",
-                "mode": "preview",
+                "file": "Cpp language mipt masters lections/The very soul of C++.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Наследование"
-            }
-          },
-          {
-            "id": "535947ccd93dde5f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cpp language mipt lections/12-templates/Обощения типов.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Обощения типов"
-            }
-          },
-          {
-            "id": "654bc999bf4167a1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "391ea0c2c3fdafc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Вектора и SFINAE"
+              "title": "The very soul of C++"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,11 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-<<<<<<< HEAD
-                "query": "exception",
-=======
                 "query": "operator new",
->>>>>>> d1b0162 (backup: basic)
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -136,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5004348754883
+    "width": 303.5004348754883,
+    "collapsed": true
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -218,28 +176,23 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "obsidian-kanban:Create new board": false,
       "bases:Create new base": false
     }
   },
-  "active": "391ea0c2c3fdafc8",
+  "active": "87480f1e5fe1c1cd",
   "lastOpenFiles": [
-<<<<<<< HEAD
-    "Cpp language mipt lections/12-templates/Обощения типов.md",
-    "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
-    "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
-    "Cpp language mipt lections/12-templates/CRTP.md",
-    "Cpp language mipt lections/06-inheritance/NVI.md",
-    "Cpp language mipt lections/06-inheritance/Наследование.md",
-    "Cpp language mipt lections/06-inheritance/Ковариантность, Контрвариантность, Стирание типов..md",
-    "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
-=======
+    "Cpp language mipt lections/02-lrefs/Left reference.md",
+    "Cpp language mipt masters lections/The very soul of C++.md",
+    "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
+    "Cpp language mipt lections/02-lrefs/Lvalue & rvalue.md",
+    "Cpp language mipt masters lections",
     "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
     "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
     "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
@@ -252,27 +205,16 @@
     "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
     "Cpp language mipt lections/06-inheritance/Полиморфизм.md",
     "Cpp language mipt lections/04-raii/Move semantics.md",
-    "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
     "Cpp language mipt lections/04-raii/PImpl.md",
->>>>>>> d1b0162 (backup: basic)
     "Cpp language mipt lections/06-inheritance/Множественное наследование.md",
     "Cpp language mipt lections/06-inheritance/RTTI.md",
+    "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/05-opers/Type casting.md",
     "Cpp language mipt lections/05-opers/Static and friend methods.md",
-    "Cpp language mipt lections/05-opers/Operators and chains.md",
-    "Cpp language mipt lections/05-opers/Operator overloading.md",
-    "Cpp language mipt lections/05-opers/Sequecing.md",
-    "Cpp language mipt lections/04-raii/PtrGuard.md",
-    "Cpp language mipt lections/04-raii/EBCO.md",
-    "Cpp language mipt lections/04-raii/PImpl.md",
-    "Cpp language mipt lections/04-raii/RAII.md",
     "Cpp language mipt lections/04-raii/Rule of 0.md",
     "Cpp language mipt lections/04-raii/Rule of 5.md",
-    "Cpp language mipt lections/04-raii/Move semantics.md",
-    "Cpp language mipt lections/03-creation/Operator type.md",
-    "Cpp language mipt lections/03-creation/Namespaces.md",
-    "Cpp language mipt lections/03-creation/Constructor initialization.md",
-    "Cpp language mipt lections/03-creation/Names overloading resolution.md",
+    "Cpp language mipt lections/05-opers/Sequecing.md",
+    "Cpp language mipt lections/04-raii/PtrGuard.md",
     "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251204183556.png",
     "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251204182114.png",
     "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251202160037.png",
@@ -280,10 +222,6 @@
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/local_attachments/Pasted image 20251202112802.png",
     "Cpp language mipt lections/03-creation/Untitled",
-<<<<<<< HEAD
-=======
-    "Cpp language mipt lections/03-creation/Empty class magic.md",
->>>>>>> d1b0162 (backup: basic)
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
     "Cpp language mipt lections/slides/17-algorithms.pdf",
     "Cpp language mipt lections/slides/03-creation.pdf",
@@ -291,7 +229,6 @@
     "Cpp language mipt lections/slides/12-templates.pdf",
     "Cpp language mipt lections/slides/01-scentpp.pdf",
     "Cpp language mipt lections/slides/10-3dgraphics.pdf",
-    "Cpp language mipt lections/slides/13-vectors.pdf",
     "Cpp language mipt lections/18-meta-ce/local_attachments/Pasted image 20260115141056.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114038.png",
     "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114005.png",
