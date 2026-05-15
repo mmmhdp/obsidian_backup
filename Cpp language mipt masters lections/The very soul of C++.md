@@ -340,3 +340,259 @@ What constitutes observable behavior?
 - The input and output dynamics of interactive devices
 
 The compiler is allowed to do anything with the program as long as the observable behavior remains the same.
+# We must be conservative
+```cpp
+int nonzero(int i) // external linkage
+{
+	return i * i  + i * 3 + 42; // no side effects, but...
+}
+```
+The compiler does not know whether this expression will be used later to produce a side effect.
+
+The scope within which the compiler can track all connections is called a `translation unit`.
+
+For `C` language, it's a file.
+For `C++` language, we will have a lecture about that.
+# Discussion
+Will be there a side effect?
+You will be able to figure out, who is right here, if you open up a standard.
+Patch to `clang/gcc`, huh?
+```cpp
+volatile std::nullptr_t a = nullptr;
+int *b;
+b = a;
+
+// clang
+mov qword ptr [rsp - 8], 0
+xor eax, eax
+
+// gcc
+mov QWORD PTR [rsp - 8], 0
+mov rax, QWORD PTR [rsp - 8]
+xor eax, eax
+ret
+```
+# How conservative?
+```cpp
+int foo (int *a, double *d, int n)
+{
+|\\or here?
+|	for (int i = 1; i < n; ++i)	
+|	{
+--------d[2] = 1.0; \\ where you prefer to jump as a coml
+|		a[i] += i * i;                               piler
+|	}
+|	
+|\\here?
+	return d[a[0]];
+}
+```
+# Strict aliasing
+```cpp
+int foo(int *a, double* d, int n){....
+```
+{basic.val} if a program attempts to access the stored value of an object through a glvalue whose type is not similar to one of the following types the behavior is undefined:
+1. The dynamic type of the object
+2. A type that is the singed or unsigned type corresponding to the dynamic type of the object
+3. a char, unsigned char, or std::byte type
+There is a very dubious option `-fno-strict-aliasing` that blocks the compilers's strict aliasing-based optimizations.
+# Details of the abstract machine
+The abstract machine is:
+- Parameterized:
+```cpp
+int nbits = std::numeric_limits<unsigned int>::digits;
+```
+- Non-deterministic:
+```cpp
+int is_equal = (+"abc" == +"abc");
+```
+- Not defined everywhere (and this is very interesting).
+# Undefined behavior is important
+Undefined behavior gives the optimizer free rein.
+```cpp
+int foo(int *a, double *d, int n);
+
+int arr[0] = {/*some initializer*/}
+double *d = (double *)(&arr[0]);
+
+foo(arr, d, 10);
+// this function will be optimized
+// as if arr and d do not overlap!!!
+```
+No one will warn you.
+For the optimizer, undefined behavior `does not exist`.
+# Undefined behavior is dangerous
+{intro.abstract} A conforming implementation executing a well-formed program shall produce the same observable behavior {...}.
+**However**, if any such execution contains an undefined operation, this document places no requirement on the implementation executing that program with that input(**not even with regard to operations preceding the first undefined operation**).
+```cpp
+int k, satd = 0, dd, d[16];
+
+/* some code here */
+
+for (dd = d[k = 0]; k < 16; dd = d[++k])// how do you think?
+{
+	satd += (dd < 0 ? -dd : dd);
+} 
+```
+# The compiler is blind to UB
+The compiler always behaves as if UB does not exists:
+```cpp
+int f() {
+	int i; int j = 0;
+	for (i = 1; i > 0; i += i){
+		++j;
+	}
+	return j;
+}
+```
+A legitimize optimization of this code is again an infinite loop:
+```cpp
+f():
+.L2: jmp    .L2
+```
+# Freedom of optimization around UB
+"The whole concept of "use undefined C behavior to change code generation" is complete and utter BS. It's wrong. It's stupid. And a compiler shouldn't do it." - `Linus Torvalds`.
+
+```cpp
+int ubranch (int n)
+{
+	int k = 1;
+	switch(n) {
+		case 0: k = 7; break;	
+		case 2: k = 0; break; // this is UB, so...
+		case 9: k = 4; break;	
+	}
+	return n / k;
+}
+
+// will be in assebmler in form of:
+ubranch (int):
+	        li       a1, 9
+	        beq      a0, a1, .LBB0_5
+	        li       a1, 2
+	        beq      a0, a1, .LBB0_4
+	        li       a1, 1
+	        bnez     a0, .LBB0_6
+	        li       a1, 7
+	        divw     a0, a0. a1
+	        ret
+.LBB0_4:    divw     a0, a0, zero
+	        ret
+.LBB0_5:    li       a1, 4
+.LBB0_6:    divw     a0, a0, a1
+		    ret 
+```
+Since case with `n == 2` cause an UB, compiler is really sure about your intent to say with that UB, that somehow you know, that n is never really becomes equal to 2 outside, since `n == 2` cause UB. So compiler uses that assumption about UB to optimize that code as if n CAN NOT EVER EVER BECOME 2, so, as an example, it could silently throw this line away like that:
+```cpp
+ubranch (int):
+	        li       a1, 9
+	        beq      a0, a1, .LBB0_2
+	        li       a1, 1
+	        beqz     a0, .LBB0_3
+			j        .LBB0_4
+.LBB0_2:    li       a1, 4
+	        bnez     a0, .LLB0_4
+.LBB0_3:    li       a1, 7
+.LBB0_4:    divw     a0, a0, a1
+		    ret 
+```
+# A golden opportunity to score a 10
+We will study C++, most industrial compilers are written in C++.
+
+Integrate into any industrial compiler a patch that removes code along paths leading to UB, which was not previously removed.
+
+For example, be the first to exploit the following UB (via Vladislav Belov):
+```cpp
+void foo(short const * const p);
+
+int test2(short p1)
+{
+	const short p2 = p1; 
+	foo(&p2); // UB if foo changes p2
+	
+	if (p1 == p2) return 14;
+	
+	return 42; // this branch to be disregarded 
+}
+```
+# Let me scary you now
+Suppose you wrote code that "protects you from UB:
+```cpp
+int foo(int *a, int base, int off)
+{
+	if (off > 0 && base > base + off) return 42;
+	// you thought you protected yourself from
+	// overflow of int, but since it's UB...
+	return a[base + off];
+}
+```
+In assembly, you suddenly see a strange thing: the compiler has erased all the checks:
+```cpp
+foo(int*, int, int):
+add    esi, edx
+movsxd rax, esi
+mov    eax, dword ptr [rdi + 4 * rax]
+ret
+```
+# The compiler removed my code...
+It can do it for two reasons:
+- Due to the as-if rule, if your code did not affect side effects.
+- If your code was on path that also contains UB:
+```cpp
+int foo(bool c) // foo(true) == 42
+{
+	int x, y;
+	y = c ? x : 42; // read from uninitialize var is UB 
+	return y;
+}
+```
+This irritates many people, and in `C++26` a new type behavior was defined.
+# Erroneous behavior (`C++26`)
+```cpp
+char foo()
+{
+	char a;
+	char b [[indeterminate]];
+	
+	char c = a + 1; // erroneous, not undefined from C++26
+	char d = b + 1; // still UB
+	
+	return c + d;
+}
+```
+Well-defined behavior that the implementation is recommended to diagnose {defns.erroneous}.
+# Erroneous value (`C++26`)
+```cpp
+unsigned char c;
+unsinged char d = c;
+// no erroneous behavior
+// but d has an erroneous value
+
+assert(c == d)
+// holds, both integral promotions
+// have erroneous behavior
+```
+When storage for an object with automatic or dynamic storage duration is obtained, the bytes comprising the storage for the object have the following initial value:
+- if the object has dynamic storage duration, or {...} marked with the {{indeterminate}} attribute, the bytes have **indeterminate values**.
+- otherwise, the bytes have **erroneous values**, where each value is determined by the implementation independently of the state of the program.
+# Homework assignment
+All tasks are based on C++23.
+
+1. Justify the situation with volatile `nullptr_t` using the standard:
+```cpp
+volatile std::nullptr_t a = nullptr; int *b; b = a;
+```
+it't actually possible patch to compiler too btw.
+2. Find another elegant example where dereferencing a null pointer is valid, before your classmates do:
+```cpp
+int *p = nullptr;
+std::println("{}", typeid(*p).name()); 
+// not even exception
+```
+3. Find how to write proper protection code for:
+```cpp
+int foo(int *a, int base, int off) 
+{
+	return a[base + off];
+}
+```
