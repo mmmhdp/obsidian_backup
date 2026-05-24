@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt masters lections/Strings.md",
+                "file": "Cpp language mipt masters lections/2 Strings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Strings"
+              "title": "2 Strings"
             }
           }
         ]
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5004348754883
+    "width": 303.5004348754883,
+    "collapsed": true
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -187,8 +188,20 @@
   },
   "active": "87480f1e5fe1c1cd",
   "lastOpenFiles": [
-    "Cpp language mipt masters lections/The very soul of C++.md",
-    "Cpp language mipt masters lections/Strings.md",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524210702.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524174815.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524173803.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524173553.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524173448.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524171006.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170909.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170802.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170632.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170338.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524111953.png",
+    "Cpp language mipt masters lections/local_attachments",
+    "Cpp language mipt masters lections/1 The very soul of C++.md",
+    "Cpp language mipt masters lections/2 Strings.md",
     "Cpp language mipt masters lections/slides",
     "Cpp language mipt lections/02-lrefs/Left reference.md",
     "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
@@ -214,25 +227,13 @@
     "Cpp language mipt lections/05-opers/Static and friend methods.md",
     "Cpp language mipt lections/04-raii/Rule of 0.md",
     "Cpp language mipt lections/04-raii/Rule of 5.md",
-    "Cpp language mipt lections/05-opers/Sequecing.md",
-    "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251204183556.png",
-    "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251204182114.png",
-    "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251202160037.png",
-    "Cpp language mipt lections/05-opers/local_attachments/Pasted image 20251202155959.png",
     "Cpp language mipt lections/04-raii",
-    "Cpp language mipt lections/03-creation/local_attachments/Pasted image 20251202112802.png",
     "Cpp language mipt lections/03-creation/Untitled",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
     "Cpp language mipt lections/slides/17-algorithms.pdf",
     "Cpp language mipt lections/slides/03-creation.pdf",
     "Cpp language mipt lections/slides/04-raii.pdf",
     "Cpp language mipt lections/slides/12-templates.pdf",
-    "Cpp language mipt lections/slides/01-scentpp.pdf",
-    "Cpp language mipt lections/18-meta-ce/local_attachments/Pasted image 20260115141056.png",
-    "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114038.png",
-    "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114114005.png",
-    "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114113830.png",
-    "Cpp language mipt lections/17-algorithms/local_attachments/Pasted image 20260114113700.png",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
