@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt masters lections/2 Strings.md",
+                "file": "Cpp language mipt masters lections/3 Building blocks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2 Strings"
+              "title": "3 Building blocks"
             }
           }
         ]
@@ -93,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5004348754883,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -188,6 +187,11 @@
   },
   "active": "87480f1e5fe1c1cd",
   "lastOpenFiles": [
+    "Notes/О том, как организовать заметки и общее расписание.md",
+    "Cpp language mipt masters lections/3 Building blocks.md",
+    "Notes/Untitled Kanban.md",
+    "Notes",
+    "Cpp language mipt masters lections/2 Strings.md",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524210702.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524174815.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524173803.png",
@@ -198,10 +202,8 @@
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170802.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170632.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170338.png",
-    "Cpp language mipt masters lections/local_attachments/Pasted image 20260524111953.png",
     "Cpp language mipt masters lections/local_attachments",
     "Cpp language mipt masters lections/1 The very soul of C++.md",
-    "Cpp language mipt masters lections/2 Strings.md",
     "Cpp language mipt masters lections/slides",
     "Cpp language mipt lections/02-lrefs/Left reference.md",
     "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
@@ -225,15 +227,12 @@
     "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/05-opers/Type casting.md",
     "Cpp language mipt lections/05-opers/Static and friend methods.md",
-    "Cpp language mipt lections/04-raii/Rule of 0.md",
-    "Cpp language mipt lections/04-raii/Rule of 5.md",
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/Untitled",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
     "Cpp language mipt lections/slides/17-algorithms.pdf",
     "Cpp language mipt lections/slides/03-creation.pdf",
     "Cpp language mipt lections/slides/04-raii.pdf",
-    "Cpp language mipt lections/slides/12-templates.pdf",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",
