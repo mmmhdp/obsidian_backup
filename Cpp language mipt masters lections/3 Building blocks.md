@@ -286,3 +286,69 @@ explicit basic_string(const StringViewLike& t,
 					  size_type count);
 ```
 # We must be nice
+We must somehow encode the requirements for the interface of generic functions:
+```cpp
+template<typename T, typename U>
+bool check_eq(T lhs, U rhs) {return (lhs == rhs);}
+```
+
+The simplest way to document this is with a requires constant:
+```cpp
+template<typename T, typename U>
+requires is_equality_comparable<T, U>::value
+bool check_eq(T lhs, U rhs) { return (lhs == rhs);}
+```
+
+Now, instead of an error inside the function, we simply exclude it from the overload set.
+# Combining Constraints
+Constraints are easy to combine:
+```cpp
+template<typename Iter>
+	requires(
+	is_forward_iterator<Iter>::value &&
+	is_totally_ordered<typename Iter::value_type>::value)
+Iter my_min_element(Iter first, Iter last)
+{
+	....
+}
+```
+Here, both requirements must be met.
+Furthermore, different error messages are shown depending on what wrong.
+```cpp
+note: 'is_forward_iterator::value' evaluated to false
+note: 'is_totally_ordered<typename Iter::value_type, void>::value' evaluated to false
+```
+# Overloading by Constraints
+You can overload based on constraints.
+```cpp
+struct Foo {
+	template <typename Int>
+		requires std::is_intergral<Int>::value
+	Foo (Int x) {
+		std::cout << "Creating int-like object\n";
+	}
+	
+	template <typename Float>
+		requires std::is_floating_point<Float>::value
+	Foo (Float x) {
+		std::cout << "Creating float-like object\n";
+	}
+	
+};
+```
+What would be is both of them failed?
+Improved diagnostics!
+# Improving Diagnostics
+If no overload is suitable, the failed constraints from each are displayed:
+```cpp
+struct S{};
+
+Foo fs(S{});
+```
+The error message will be clear and informative:
+```cpp
+note:  constraints not satisfied
+note: 'std::is_intergral::value' evaluated to false
+note:  constraints not satisfied
+note: 'std::is_floating_point::value' evaluated to false
+```
