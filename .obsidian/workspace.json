@@ -68,8 +68,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "operator new",
-                "matchingCase": true,
+                "query": "",
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -93,7 +93,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 519.5,
+    "collapsed": true
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -187,7 +188,9 @@
   },
   "active": "87480f1e5fe1c1cd",
   "lastOpenFiles": [
+    "Shad preparation/Calculus/_Basics/! Важные справочные материалы.md",
     "Cpp language mipt masters lections/3 Building blocks.md",
+    "Cpp language mipt masters lections/1 The very soul of C++.md",
     "Notes/О том, как организовать заметки и общее расписание.md",
     "Notes/Untitled Kanban.md",
     "Notes",
@@ -203,7 +206,6 @@
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170632.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260524170338.png",
     "Cpp language mipt masters lections/local_attachments",
-    "Cpp language mipt masters lections/1 The very soul of C++.md",
     "Cpp language mipt masters lections/slides",
     "Cpp language mipt lections/02-lrefs/Left reference.md",
     "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
@@ -226,7 +228,6 @@
     "Cpp language mipt lections/06-inheritance/RTTI.md",
     "Cpp language mipt lections/06-inheritance/NVI.md",
     "Cpp language mipt lections/05-opers/Type casting.md",
-    "Cpp language mipt lections/05-opers/Static and friend methods.md",
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/Untitled",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",

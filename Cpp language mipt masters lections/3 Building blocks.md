@@ -352,3 +352,114 @@ note: 'std::is_intergral::value' evaluated to false
 note:  constraints not satisfied
 note: 'std::is_floating_point::value' evaluated to false
 ```
+# Complete coverage
+We can use explicit constraints to discriminate between functions.
+```cpp
+template <typename T> requires (sizeof(T) > 4)
+void foo(T x) { /* do smth with x */ }
+
+template <typename T> requires (sizeof(T) <= 4)
+void foo(T x) { /* do smth else with x */ }
+```
+
+The special status of constraints makes them part of overload resolution.
+
+`[over.dcl]` **two function declarations of the same name refer to the same function if they are** in the same scope **and** have equivalent parameter declarations **and** equivalent trailing requires-clauses, **if any**.
+# Sometime this goes to far
+Expressions inside requires don't even require CT evaluation.
+
+```cpp
+consteval bool C() { return true; }
+
+template<typename T> struct A {
+	int f requires (C()) {return 1;}
+	
+	// this is not a redeclaration
+	int f requires true {return 2;}
+};
+```
+This means the analysis of requires clauses happens very early.
+# Limitation of simple constraints
+Alas, simple type traits are not ordered by how restrictive they are.
+
+```cpp
+template <typename It>
+struct is_input_iterator: std::is_base_of <
+	std::input_iterator_tag,
+	typename std::iterator_traits<It>::iterator_category>{};
+	
+template <typename It>
+struct is_random_iterator: std::is_base_of <
+	std::random_access_iterator_tag,
+	typename std::iterator_traits<It>::iterator_category>{};
+```
+These are just two different templates. And this leads to problems.
+
+In practice, this would cause ambiguity for `std::vector::iterator`:
+```cpp
+template <typename It>
+	requires is_input_iterator<It>::value
+int my_distance(It first, It last)
+{
+	int n = 0;
+	while (first != last) { ++first; ++n; }
+	return n;
+}
+
+template <typename It>
+	requires is_random_iterator<It>::value
+int my_distance(It first, It last)
+{
+	return last - first;
+}
+```
+Because from perspective of `std::vector::iterator`, both constraints are equally valid.
+
+So, to overcome this limitations, we need more sophisticated instrument. And name of this one is `requires-expressions`.
+Note - before this point we were discussing `requires-clauses`.
+# Complex constraints
+Let's return to a simple example:
+```cpp
+template <typename T, typename U> bool
+	requires is_equality_comparable<T, U>::value
+check_eq(T && lhs, U &&rhs) { return (lhs == rhs);}
+```
+
+The same can be written using a **requires-expression**:
+```cpp
+template <typename T, typename U> bool
+	requires requires(T t, U u) { t == u; }	
+check_eq(T && lhs, U &&rhs) { return (lhs == rhs);}
+```
+Yes, the `requires`-`requires` might look confusing.
+But recall `noexcept-clause` and `noexcept-expression` (or `throw`-`nothrow`). 
+# Even better diagnostics
+```cpp
+template <typename T, typename U> bool
+	requires requires(T t, U u) { t == u; }	
+check_eq(T && lhs, U &&rhs) { return (lhs == rhs);}
+```
+The expression:
+```cpp
+check_eq(std::string{"1"}, 1);
+```
+Yields:
+```cpp
+note: because 't == u' would be invalid
+```
+This not only states the constraint name, but also the specific ill-formed expression within it.
+# The key difference of complex constraints
+`Simple constraints` **are evaluated at compile time**:
+```cpp
+consteval int somepred() {return 14;}
+
+// false here for requires-clause
+template <typename T> requires (somepred() == 42)
+bool foo(T&& lhs, U&& rhs);
+```
+`Complex constraints` **check the validity of an expression**, without evaluation:
+```cpp
+// true here for requires-expression
+template <typename T> requires (T t) {somepred<T>() == 42;}
+bool foo(T&& lhs, U&& rhs);
+```
