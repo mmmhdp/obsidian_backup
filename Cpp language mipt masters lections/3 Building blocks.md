@@ -463,3 +463,105 @@ bool foo(T&& lhs, U&& rhs);
 template <typename T> requires (T t) {somepred<T>() == 42;}
 bool foo(T&& lhs, U&& rhs);
 ```
+# Syntax of Complex Constraints
+Think of complex constraint as a compile-time function returning true or false:
+```cpp
+requires (T t, U u) {
+	t + u; 
+	// true if t + u syntaxically possible [simple]
+	
+	typename T::inner; 
+	// true if T::inner exists [type]
+}
+```
+Think or each requirement inside it as a conjunct.
+`Simple` requirements and `type` requirements are basic variants of complex constraints.
+
+There are two more: `compound` and `nested`.
+# Concepts: convertible_to
+To define constraint system, `C++20` introduced the special keyword `concept`:
+```cpp
+template <class From, class Too>
+concept convertible_to = std::is_convertible_v<From, To> &&
+	requires { static_cast<To>(std::declval<From>())};
+```
+Think of a concept as an abbreviation for a requires-expression.
+And, of course, many useful concepts are already in your standard library.
+# You can check a concept
+Any concept works as a compile-time predicate.
+But doesn't need to be **called**. A concept is already a value:
+```cpp
+struct S {};
+static_assert(std::move_constructible<S>); // ok
+bool a = std::convertible_to<int, double>; // true
+bool b = std::convertible_to<int, S>; // false
+```
+# Compound requirements
+Compound requirements check type compatibility with expressions:
+```cpp
+requires requires(T x) { {*x}-> typename T::inner; }
+```
+A compound requirement can use concepts:
+```cpp
+requires requires(T x) { {*x}-> std::convertible_to<typename T::inner>; } // concept
+```
+There is also a special `noexcept` syntax:
+```cpp
+requires requires(T t) {
+	{ ++t } noexcept;
+}
+```
+# Nested constraints
+Inside the requires-expression it can be repeated.
+This is nested requirement:
+```cpp
+requires(T t){
+	requires sizeof(T) == 4; 
+	// calculated [nested]
+	
+	requires somepred<T>() == 42;  
+	// consteval predicate [nested]
+	
+	requires noexcept(++t);
+	//
+}
+```
+Task: simplify this nested requires-clause:
+```cpp
+template <typename T> 
+int foo(T t)
+requires requires (T t) { requires noexcept(++t); } 
+{
+	return 42;
+}
+```
+Solution:
+```cpp
+template <typename T>
+int foo(T t)
+  requires(noexcept(++t))
+{
+  return 42;
+}
+```
+# Constraints on concepts
+**Recursive concepts are not allowed**:
+```cpp
+template<bool b, bool... bs>
+concept AllTrueRec = b && 
+  ((sizeof...(bs) == 0) ? true AllTrueRes<bs...>); // ERROR
+```
+**Concepts cannot be directly constrained by other predicates**:
+```cpp
+template <typename T>
+concept Inner = requires { typename T::inner; };
+
+template <typename T> requires Inner<T>
+concept InOuter = requires { typename T::outer; }; // ERROR
+
+// but can be fixed with
+template <typename T> 
+concept InOuter =
+requires Inner<T> &&
+ requires { typename T::outer; }; // OK
+```
