@@ -565,3 +565,83 @@ concept InOuter =
 requires Inner<T> &&
  requires { typename T::outer; }; // OK
 ```
+# Syntax for using concepts
+Basic syntax:
+```cpp
+template <typename T> requires std::integral<T> void foo(T);
+```
+Template parameter or local variable:
+```cpp
+template <std::integral T> void bar(T t);
+void buzz(std::intergal auto T);
+// still function template
+std::integral auto x = buz(1);
+```
+You can restrict a class template as well:
+```cpp
+template <typename D> requires std::is_class_v<D>
+class Foo { /* */};
+```
+# Funny abbreviations
+Constraint for multiple arguments:
+```cpp
+template <typename T>
+requires std::same_as<T, int>
+struct S {};
+```
+Abbreviation syntax:
+```cpp
+template <std::same_as<int> T>
+struct S {};
+```
+# Concepts on member functions
+You can constraint member functions:
+```cpp
+template <typename D> struct Foo {
+	bool empty() requires ranges::forward_range<D>;
+};
+```
+We will see how is it used in ranges library:
+```cpp
+template <typename T> struct Foo {
+	T val;
+	bool empty () requires requires { val.empty(); } {
+		return val.empty();	
+	}
+}
+```
+As shown above you can also use class members.
+# Concept on `ctor` or `class`? Yes!
+You can constraint only `ctors` without constraining type:
+```cpp
+template <typename T> requires requires(T x) { x.foo(); }
+struct Foo {
+	T t;
+	Foo() requires std::default_initializable<T> : t() {}
+	Foo(Foo &f) requires std::copyable<T> : t(f.t) {}
+};
+```
+You can have both: generic constraint on type and specific constraints on `ctors`.
+# Concept partial order
+```cpp
+template <typename T> concept Ord = 
+	requires (T a, T b) { a < b; };
+template <typename T> concept Inc = 
+	requires (T a) { ++a; };
+template <typename T> concept Int = 
+	std::is_same_v<T, int>;
+
+template <typename T>
+requires Ord<T> || Inc<T> || Int<T>
+int foo(T x) { return 2; }
+
+template <typename T>
+	requires Ord<T> 
+int foo(T x) { return 22; }
+
+int foo(int x) { return 42; }
+
+double y;
+
+foo(y); // -> ??? answer is 22!
+```
