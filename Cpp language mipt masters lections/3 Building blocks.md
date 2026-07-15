@@ -625,7 +625,7 @@ You can have both: generic constraint on type and specific constraints on `ctors
 # Concept partial order
 ```cpp
 template <typename T> concept Ord = 
-	requires (T a, T b) { a < b; };
+	requires (T a, T b) {  a < b; };
 template <typename T> concept Inc = 
 	requires (T a) { ++a; };
 template <typename T> concept Int = 
@@ -644,4 +644,207 @@ int foo(int x) { return 42; }
 double y;
 
 foo(y); // -> ??? answer is 22!
+```
+# Discussion
+How does partial ordering work?
+How does the compiler understand that `Ord` is more specialized than `(Ord || Void)`?
+
+The compiler has minimalistic `theorem-prover` for that cause.
+# Conjuncts and Disjuncts
+Every concept of atomic constraints joined by logical operations (with the usual short-circuiting rules for them):
+```cpp
+template<typename T>
+concept Strange = (sizeof(T) == 4) ||
+	requires() {{T::value} -> convertible_to<bool>} &&
+	T::value == true);
+	
+template <typename T> requires Strange<T>
+void f(T);
+
+f(1); // ok (lazy rules)
+```
+# Subsumes 
+Subsume - читай как "более ограниченный".
+
+**A constraint P subsumes a constraint Q if and only if:**
+**for every disjunctive clause $P_i$ in the disjunctive normal form of $P$, $P_i$ subsumes every conjunctive clause $Q_j$ in the conjunctive normal form of $Q$** `[temp.constr.order]`.
+```cpp
+template <typename T>
+concept Q1 = Q<T> || sizeof(T) == 4; // How do you think?
+
+template <typename T>
+concept P = Q<T> && R(T); // P subsumes Q and R
+```
+# Atomic constraints
+**An atomic constraint A subsumes another atomic constraint B if and only if A and B are identical** `[temp.constr.order]`.
+```cpp
+template <typename T> constexpr bool Atomic = true;
+template <typename T> concept C = Atomic<T>;
+template <typename T> concept D = Atiomic<T*> && true;
+```
+Here compiler cannot determine between `D` and `C`, this is ill-formed.
+
+Of course in the ideal world we would prefer this:
+$A$ constraint $P$ subsumes a constraint $Q$ if and only if $Q$ implies $P$.
+# Identical not similar
+```cpp
+template<typename T>
+concept Foo = (sizeof(T)> 4) && std::is_intergral_v<T>;
+
+template<typename T>
+concept Bar = std::is_integral_v<T>;
+
+template <Foo T> int f(T x) { return x + 1; }
+template <Bar T> int f(T x) { return x + 1; }
+
+int main() {
+	return f(1ull); // FAIL
+}
+
+```
+I WANT Foo to win, since it looks like Bar is subsumes Foo, but it's not like it at all.
+
+To make this work as expected, we should use more constraints:
+```cpp
+template<typename T>
+concept Int = std::is_integral_v<T>;
+
+template<typename T>
+concept Foo = (sizeof(T)> 4) && Int<T>;
+
+template<typename T>
+concept Bar = Int<T>;
+
+template <Foo T> int f(T x) { return x + 1; }
+template <Bar T> int f(T x) { return x + 1; }
+
+int main() {
+	return f(1ull); // FAIL
+}
+```
+We can't subsume types, we can only subsume another concept.
+# Golden rules of concept usage
+If you want to have partial ordering to work correctly, just wright your own concept for every conjunct you have.
+
+But all of that not that good. 
+Here some more problems.
+# Subsuming not automatic
+```cpp
+template<typename T> concept Foo = requries(T x) { x.foo(); };
+
+template<typename T> concept Bar = requries(T x) { x.bar(); };
+
+template<typename T> concept FooBar = requires(T x) {
+	x.foo(); x.bar();
+}
+
+template <Foo T> int f(T x) {return x.foo(); }
+template <FooBar T> int f(T x) {return x.foo() + 1; }
+
+struct SBar {/* have both foo() and bar() */ }
+
+f(SBar{}); // FAIL!
+```
+Пробелема тут сводится к тому, что данный случай сводится опять к сравению атомарных концептов, а в данном случае выходит, что они не одинаковы и ВСЁ, т.е. никакого порядка между ними автоматически установлено не будет.
+
+Чинится это как и в примере ранее, введением концепта дял связи:
+```cpp
+template<typename T> concept Foo = requries(T x) { x.foo(); };
+
+template<typename T> concept Bar = requries(T x) { x.bar(); };
+
+template<typename T> concept FooBar = Foo<T> && Bar<T>;
+
+template <Foo T> int f(T x) {return x.foo(); }
+template <FooBar T> int f(T x) {return x.foo() + 1; }
+
+struct SBar {/* have both foo() and bar() */ }
+
+f(SBar{}); // OK!
+```
+# Subsumes
+Now we can order constraints on subsuming:
+```cpp
+template <typename T>
+concept InputIterator = Iterator<T> &&
+  requires { typename iterator_category_t<T>; } &&
+  DerivedFrom<iterator_category_t<T>, input_iterator_tag>;
+  
+template <typename T>
+concept ForwardIterator = InputIterator<I> &&
+  Incrementable<T> && Sentinel<I, I> &&
+  DerivedFrom<iterator_category_t<T>, forward_iterator_tag>;
+```
+And so on, down to the random access iterator.
+# Now overloading works
+```cpp
+template <InputIterator Iter>
+int my_distance(Iter first, Iter last){
+	int n = 0;
+	while (first != last) { ++first; ++n; }
+	return n;
+}
+
+template<RandomAccessIterator Iter>
+int my_distance(Iter first, Iter last){
+	return last - first;
+}
+
+```
+Because `InputIterator` is less general (it is a sub-condition of `RandomAccessIterator`), there is no ambiguity here.
+# Sutton's counterexample
+Lets suppose we have this implementation of copy:
+```cpp
+template <
+	IntputIterator In,
+	OutputIterator<value_type_t<In>> Out
+>
+Out copy(In first, In last, Out out){
+	// direct loop
+}
+
+template <ContIterator In, ContIterator Out>
+	requires MemCopyable<In, Out>
+Out copy(In first, In last, Out out){
+	// memcpy
+}
+
+```
+Here subsume relationship are hard and we can run into unexpected issues for some types.
+
+Sutton advises not to rely too heavily on subsumption:
+```cpp
+template <
+	IntputIterator In,
+	OutputIterator<value_type_t<In>> Out
+>
+Out copy(In first, In last, Out out){
+	if constexpr(MemCopyable<In, Out>){
+		// memcpy
+	} else {
+		// direct loop
+	}
+}
+
+```
+After all, how often do we introduce new iterator categories?
+# The concepts we dreamed of
+In early articles about concepts, they were much more interesting (concepts initially was introduced as idea in `2003`, and they we planned to be the part of `C++11`):
+```cpp
+concept EqulityComparable<typename T> {
+  requires constraint Equal<T>; 
+  // syntactic
+  
+  requires axiom Equivalence_relation<Equal<T>, T>;
+  // semantic
+  
+  template <Predicate P> axiom Equality (T x, T y, P p){
+	  x == y => p(x) == p(y);
+  }
+  // if x == y then for any Predicate p, p(x) == p(y) 
+  
+  axiom Inequality(T x, T y) { (x != y) == !(x == y); }
+  // inquality is the neagtion of equality
+}
+
 ```
