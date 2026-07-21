@@ -616,3 +616,231 @@ int g(N::A *a){
 }
 ```
 # Hidden friend
+Friend functions, defined inside the class are looked up bey ADL only
+```cpp
+struct X {
+	friend bool operator==(X lhs, x rhs){
+		return (lhs.data == rhs.data);
+	}
+};
+
+struct Y {
+	operator X() const { return X{}; }
+};
+
+X a,b;
+Y c,d; 
+
+(a == b); // OK, but 
+(c == d); // FAIL
+```
+# Overview of overload resolution rules
+1. The set of `overloaded names` is selected
+2. The set of `candidates` is selected
+3. From candidates set, the `viable candidates` for this overload are chosen
+4. The best candidate is selected based on the `chains of implicit conversions` for each parameter
+5. If best candidate `exists and is unique`, the overload resolution succeeds
+- Otherwise, the program is ill-formed, no diagnostics required
+# Note on candidates selection
+Even during the candidate search phase, type deduction may be required to determine if a function template is a candidate:
+```cpp
+struct S { int x; };
+struct U : S { using S::x; };
+
+int bar (S x) { return 52; }
+// is a candidate, but
+// will fail at the end, no implicit cast from U to S
+
+template <typename T> // NOTE!
+int bar(T &&) {       // this part wiil be instantiate
+	return 2;
+}
+
+int foo() { return bar(U{}); } // here!
+
+// the reason is bar is a possible candidate,
+// and compiler have to substitute T to be sure 
+// that this candidate is viable
+
+// so processes could overlap here,
+// and we will see more of such thing
+``` 
+# Viability
+More then enough to think about `viable` candidate as a candidate with correct number of parameters.
+
+It's not the only thing happening here, on that step, but it's main one:
+```cpp
+// not viable
+foo (int);
+
+// viable
+foo(int, ...);
+
+// viable
+foo(int, float, int = 0);
+
+// not viable
+foo(int, float, int);
+
+int x, y;
+foo(x, y);
+```
+- `[over.match.viable]` if there are **m** arguments it the list, all candidate functions having exactly **m** parameters are viable.
+- A candidate function having fewer than **m** parameters is viable only if all parameters following the **mth** have default arguments. 
+# The idea of building a chain
+From a naive perspective, the conversion chain includes:
+1. Highers priority: standard conversions
+2. Slightly lower: user-defined conversions
+3. Lowest priority: ellipsis (...)
+
+Complexities arise when many different ones are combined:
+```cpp
+strcut S { S(int){} };
+
+void foo(int); // 1
+void foo(S);   // 2
+void foo(...); // 3
+
+foo(1); // -> 1
+```
+# Standard conversions
+![[Pasted image 20260721202135.png]]
+
+- Objects transformations (Exact match rank):
+```cpp
+int arr[10]; int *p = arr; // [conv.array]
+
+```
+- Qualifier adjustments (Exact match rank):
+```cpp
+int x; const int *px = &x; // [conv.qual]
+
+```
+- Promotions (Promotion rank):
+```cpp
+int res = true; // [conv.prom]
+```
+- Conversions (Conversion rank):
+```cpp
+float f = 1; // [conv.fpint]
+```
+# User-defined conversions
+Defined by an implicit constructor or a conversion operator:
+```cpp
+struct A{
+	operator int();    // 1
+	operator double(); // 2
+};
+
+int i = A{}; // calls (1)
+
+```
+Here , `(1)` is better then `(2)` because it requires fewer standard conversions.
+
+Chain of user-defined conversions have to contain **ONLY one** user defined conversion. Before and after this user-defined conversion could be placed unbounded amount of implicit conversions. Part after is a tail and this part is crucial, because: **if place it intuitively, a chain with a shorter tail is better**.
+# Specifics of ICS (Implicit conversions sequence)
+```cpp
+struct S { S(long){} };
+
+void foo(S) {}
+
+int x = 42;
+
+foo(x); // int -> long -> S wins
+
+```
+and another one:
+```cpp
+struct T { T(int){} };
+struct S { S(T){} };
+
+void foo(S) {}
+
+int x = 42;
+
+foo(x); // int -> T -> S fails
+
+```
+# Where name lookup resides
+Name lookup occurs after alias substitution but before (other steps of) overload resolution:
+```cpp
+namespace S {
+	using vector = std::vector<int>;
+	void foo(vector) {}
+}
+
+int main() {
+	foo(S::vector{}); // error
+	// S::vector{} -> std::vector<int>
+	// and ADL will look for foo() in std namespace 
+	// and of course will fail
+}
+
+```
+A typedef-name can also be introduced by an alias-declaration. The identifier following the using keyword is not looked up `[dcl.typedef, 2]`
+# The bad reputation of aliases
+Name lookup occurs `after` alias substitution but before (other steps of) overload resolution:
+```cpp
+namespace S {
+// can be fixed wiht
+	struct vector { std::vector<int> v; };
+//  or
+	struct vector : public std::vector<int> {} v;
+	
+	void foo(vector) {}
+}
+
+int main() {
+	foo(S::vector{}); // OK!
+}
+
+```
+This gives aliases their bad reputation in the language: 
+they disappear too early.
+
+# The bad reputation of unqualified names
+```cpp
+namespace A {
+	struct std { struct Cout{}; static Cout cout; };
+	
+	void operator << (std::Cout, const char *){
+		::std::cout << "World\n";
+	}
+}
+
+int main() {
+	using A::std;
+	::std::cout << "Hello, "; // qualified std -> namespace
+	std::cout << "Hello"; // unqualified std -> struct
+}
+
+// "Hello, World" on the screen
+
+```
+# Semantic processes so far
+![[Pasted image 20260721211320.png]]
+# Normal process
+```cpp
+template <typename T>
+T min(T x, T y){
+	return x < y ? x : y;
+}
+
+template <typename T>
+T min(T x, T y, T z){
+	auto t = min(x, y);
+	return min(t, z);
+}
+
+min(1, 2, 3) -> min (1, 2) -> _|_
+			 -> min (1, 3) -> _|_
+
+```
+![[Pasted image 20260721211631.png]]
+This example about is somewhat called by Constantine like 
+`normal semantic process`. In reality, if this is true, code base is really well designed. Otherwise semantic processes in real code be way different.
+# Homework assignment
+![[Pasted image 20260721211940.png]]
+Use standard for this one.
+And here should be `static_assert` or not?
+![[Pasted image 20260721212255.png]]
