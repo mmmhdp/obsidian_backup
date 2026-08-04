@@ -55,7 +55,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -196,16 +198,23 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-kanban:Create new board": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-kanban:Create new board": false
     }
   },
   "active": "fdea32b11c484fc5",
   "lastOpenFiles": [
-    "Cpp language mipt masters lections/4 Names and processes.md",
-    "Cpp language mipt masters lections/5 Type inference.md",
-    "Cpp language mipt masters lections/local_attachments/Pasted image 20260721212255.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260804210839.png",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260804204119.png",
     "Cpp language mipt masters lections/Hierarchy of complexity classes.md",
+    "Cpp language mipt lections/slides/08-exceptions.pdf",
+    "Cpp language mipt lections/slides/10-3dgraphics.pdf",
+    "Cpp language mipt lections/slides/09-philosophy.pdf",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175917.png",
+    "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219180001.png",
+    "Cpp language mipt masters lections/5 Type inference.md",
+    "Cpp language mipt masters lections/4 Names and processes.md",
+    "Cpp language mipt masters lections/local_attachments/Pasted image 20260721212255.png",
     "Cpp language mipt masters lections/2 Strings.md",
     "Cpp language mipt masters lections/3 Building blocks.md",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260721211940.png",
@@ -215,9 +224,6 @@
     "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260719143326.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260719142438.png",
-    "Cpp language mipt masters lections/local_attachments/Pasted image 20260719141632.png",
-    "Cpp language mipt masters lections/local_attachments/Pasted image 20260719140811.png",
-    "Cpp language mipt masters lections/local_attachments/Pasted image 20260719140334.png",
     "Shad preparation/Probability theory/04_Numeric properties of random variables/Закон Больших Чисел.md",
     "Shad preparation/Probability theory/04_Numeric properties of random variables/! Числовые характеристики случайных величин.md",
     "Shad preparation/Probability theory/Теория вероятности.md",
@@ -241,13 +247,9 @@
     "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
     "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
     "Cpp language mipt lections/12-templates/CRTP.md",
-    "Cpp language mipt lections/04-raii/EBCO.md",
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/Untitled",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
-    "Cpp language mipt lections/slides/17-algorithms.pdf",
-    "Cpp language mipt lections/slides/03-creation.pdf",
-    "Cpp language mipt lections/slides/04-raii.pdf",
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",

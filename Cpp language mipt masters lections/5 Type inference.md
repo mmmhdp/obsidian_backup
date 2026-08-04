@@ -167,3 +167,95 @@ auto v0 = foo(); // -> double
 
 Only the last line will break if the template's default parameter is removed.
 # Type deduction after substitution
+Type deduction inside a template function creates deduction points where the type can only be resolved after substitutuion:
+
+```cpp
+template <typename T>
+T max(T x, T y) { .... }
+
+template <typename T>
+T min(T x, T y) { .... }
+
+template <typename T>
+bool test_minmax(const T& x, const T& y) {
+	if (x > y) return test_minmax(y, x);
+	return min(x, y) == x && max(x, y) == y;
+}
+
+```
+Thus, name lookup, deduction, and substitution are engaged alternately.
+# Normal process
+We already encountered such a case of semantic process:
+![[Pasted image 20260804204119.png]]
+# Type decaying during deduction
+During deduction, references and top-level cv-qualifiers are stripped:
+```cpp
+const int& a = 1; int b = 2; const int c = 1; int& d = b;
+
+auto x = max(a, b); // -> int
+auto y = max(c, d); // -> int
+
+std::intergral auto z = a; // -> int
+std::intergral auto w = d; // -> int
+```
+This is done to avoid generation functionally identical specializations.
+# Deduction of elaborated types
+if the template type is elaborated, the argument will be elaborated accordingly:
+```cpp
+template<typename T> T max(const T& x, const T& y);
+auto a = max(1, 3); 
+// -> int max<int>(const int&, const int&);
+
+```
+Elaborated deduction works differently with types - it preserves cv-qualifiers:
+```cpp
+template<typename T> void foo(T& x);
+
+const int &a = 3;
+foo(a); // -> void foo<const int>(const int& x);
+
+const int c = 1;
+auto& z = c; // -> const int& !!!
+
+```
+# Strange aspects of recursive deduction
+This code works fine:
+```cpp
+auto sum(int i){
+	 if (i == 1){
+		 return i;
+	 } else {
+		 return sum(i - 1) + 1;
+	 }
+}
+
+```
+But this one is compilation error:
+```cpp
+auto sum(int i){
+	if (i == 1){
+		 return sum(i - 1) + i;
+	} else {
+		 return i;
+	}
+}
+
+```
+And this one also fails:
+```cpp
+auto sum(int i){
+	return (i == 1) ? i : sum(i - 1) + 1;
+}
+
+```
+
+The reason for such behavior explained in a standard: 
+Once a non-discarded return statement **has been seen** in a function, however, the return type deduced from that statement **can be used** in the rest of the function, including in other return statements `[dcl.spec.auto.general]`
+
+# Do compilers have eyes?
+in the `C++23` standard, the expression "has been seen" appears only three times:
+![[Pasted image 20260804210839.png]]
+
+It's meaning is vague in all these cases.
+
+But seems like it's just about real physical presence in the code, linewise.
