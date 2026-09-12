@@ -1,8 +1,8 @@
 {
-  "accentColor": "",
-  "cssTheme": "WY Console",
+  "accentColor": "#6a956d",
+  "cssTheme": "Minimal",
   "baseFontSize": 18,
-  "theme": "obsidian",
+  "theme": "moonstone",
   "enabledCssSnippets": [
     "black_text_in_both_modes"
   ],

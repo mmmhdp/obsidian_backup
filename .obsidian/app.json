@@ -14,5 +14,15 @@
   "newFileLocation": "current",
   "trashOption": "system",
   "readableLineLength": true,
-  "showLineNumber": false
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "foldHeading": false,
+  "autoPairBrackets": false,
+  "smartIndentList": false,
+  "useTab": false,
+  "autoPairMarkdown": false,
+  "showIndentGuide": false,
+  "foldIndent": false,
+  "showInlineTitle": true,
+  "autoConvertHtml": true
 }
