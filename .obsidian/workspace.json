@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cpp language mipt masters lections/5 Type inference.md",
+                "file": "Shad preparation/Calculus/Series/Числовые ряды.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5 Type inference"
+              "title": "Числовые ряды"
             }
           },
           {
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ряд тейлора",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -109,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 247.5,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bf2d35ea60dfb48a",
@@ -204,6 +203,19 @@
   },
   "active": "fdea32b11c484fc5",
   "lastOpenFiles": [
+    "Shad preparation/Calculus/05_Improper integral/Несобственный интеграл Римана.md",
+    "Shad preparation/Calculus/04_Indefinite integral/Определенный интеграл.md",
+    "Shad preparation/Calculus/04_Indefinite integral/Неопределенный интеграл.md",
+    "Shad preparation/Calculus/Series/Числовые ряды.md",
+    "Shad preparation/Calculus/Uniform convergence/Равномерная сходимость.md",
+    "Shad preparation/Linalg/01_Complex numbers/Комплексные числа.md",
+    "Shad preparation/Discrete math/Дискретная математика.md",
+    "Shad preparation/Discrete math/00_Basics/Формулы Де Моргана.md",
+    "Shad preparation/Discrete math/00_Basics/Свойства биномиальных коэфов.md",
+    "Shad preparation/Discrete math/00_Basics/Делимость.md",
+    "Shad preparation/Discrete math/00_Basics/! Основа.md",
+    "Shad preparation/Linalg/01_Complex numbers/! Комплексные числа.md",
+    "Cpp language mipt masters lections/5 Type inference.md",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260804210839.png",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260804204119.png",
     "Cpp language mipt masters lections/Hierarchy of complexity classes.md",
@@ -212,7 +224,6 @@
     "Cpp language mipt lections/slides/09-philosophy.pdf",
     "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219175917.png",
     "Cpp language mipt lections/09-philosophy/local_attachments/Pasted image 20251219180001.png",
-    "Cpp language mipt masters lections/5 Type inference.md",
     "Cpp language mipt masters lections/4 Names and processes.md",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260721212255.png",
     "Cpp language mipt masters lections/2 Strings.md",
@@ -223,30 +234,18 @@
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260721202135.png",
     "Cpp language mipt lections/12-templates/Обощения типов.md",
     "Cpp language mipt masters lections/local_attachments/Pasted image 20260719143326.png",
-    "Cpp language mipt masters lections/local_attachments/Pasted image 20260719142438.png",
     "Shad preparation/Probability theory/04_Numeric properties of random variables/Закон Больших Чисел.md",
     "Shad preparation/Probability theory/04_Numeric properties of random variables/! Числовые характеристики случайных величин.md",
     "Shad preparation/Probability theory/Теория вероятности.md",
     "Cpp language mipt lections/13-vectors-sfinae/Вектора и SFINAE.md",
-    "Shad preparation/Discrete math/00_Basics/! Основа.md",
-    "Shad preparation/Discrete math/00_Basics/Делимость.md",
-    "Shad preparation/Discrete math/Дискретная математика.md",
     "Shad preparation/Calculus/_Basics/Базовые разложения в ряд Тейлора.md",
     "Shad preparation/Calculus/_Basics/! Важные справочные материалы.md",
     "Cpp language mipt masters lections/1 The very soul of C++.md",
     "Notes/О том, как организовать заметки и общее расписание.md",
-    "Notes/Untitled Kanban.md",
     "Notes",
     "Cpp language mipt masters lections/local_attachments",
     "Cpp language mipt masters lections/slides",
-    "Cpp language mipt lections/02-lrefs/Left reference.md",
-    "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
-    "Cpp language mipt lections/02-lrefs/Lvalue & rvalue.md",
     "Cpp language mipt masters lections",
-    "Cpp language mipt lections/08-exceptions/Ошибки и исключения.md",
-    "Cpp language mipt lections/18-meta-ce/CONSTEXPR.md",
-    "Cpp language mipt lections/17-algorithms/Алгоритмы.md",
-    "Cpp language mipt lections/12-templates/CRTP.md",
     "Cpp language mipt lections/04-raii",
     "Cpp language mipt lections/03-creation/Untitled",
     "Cpp language mipt lections/slides/18-meta-ce.pdf",
