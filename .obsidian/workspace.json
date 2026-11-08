@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Shad preparation/Calculus/00_Введение в математический анализ/Элементарные функции.md",
+                "file": "Cpp language mipt lections/02-lrefs/Scope and Objects lifetime.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Элементарные функции"
+              "title": "Scope and Objects lifetime"
             }
           }
         ]
@@ -190,15 +190,20 @@
   },
   "active": "85efae2a619bd70a",
   "lastOpenFiles": [
-    "Shad preparation/Calculus/00_Введение в математический анализ/Свойства числовых функций.md",
+    "Cpp language mipt lections/02-lrefs/Lvalue & rvalue.md",
+    "Cpp language mipt lections/02-lrefs/Left reference.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Уравнение и неравенства.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Формулы разложения.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Элементарные функции.md",
     "Shad preparation/Calculus/00_Введение в математический анализ/Теорема Виета.md",
-    "Shad preparation/Calculus/00_Введение в математический анализ/Преобразование графиков.md",
-    "Shad preparation/Calculus/00_Введение в математический анализ/Неравенства с модулями.md",
-    "Shad preparation/Calculus/00_Введение в математический анализ/Неравенства о средних.md",
     "Shad preparation/Calculus/00_Введение в математический анализ/! Введение в математический анализ.md",
-    "Shad preparation/Discrete math/Дискретная математика.md",
-    "Shad preparation/Discrete math/00_Элементарная математика/! Элементарная математика.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Неравенства о средних.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Неравенства с модулями.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Преобразование графиков.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Свойства числовых функций.md",
     "Shad preparation/Discrete math/00_Элементарная математика/Делимость.md",
+    "Shad preparation/Discrete math/00_Элементарная математика/! Элементарная математика.md",
+    "Shad preparation/Discrete math/Дискретная математика.md",
     "Shad preparation/Discrete math/Справочные материалы/! Справочные материалы.md",
     "Shad preparation/Discrete math/Справочные материалы/Свойства биномиальных коэфов.md",
     "Shad preparation/Discrete math/Справочные материалы/Формула включений-исключений.md",
@@ -212,12 +217,7 @@
     "Shad preparation/Calculus/04_Indefinite integral/Неопределенный интеграл.md",
     "Shad preparation/Calculus/03_Differentiable functions/! Дифференцируемые функции.md",
     "Shad preparation/Calculus/03_Differentiable functions/Выпуклость функции.md",
-    "Shad preparation/Calculus/02_Continuous functions,their limits and discontinuity points classification/! Непрерывные функции, их пределы и классификация точек разрыва.md",
-    "Shad preparation/Linalg/Линейная алгебра.md",
-    "Shad preparation/Probability theory/Теория вероятности.md",
     "Shad preparation/Discrete math/_Базовый курс",
-    "Shad preparation/Calculus/Справочные материалы/Формула Стирлинга.md",
-    "Cpp language mipt masters lections/5 Type inference.md",
     "C language mipt lections/offtop",
     "C language mipt lections/Seminar 3/Untitled 1.base",
     "C language mipt lections/Seminar 3/Untitled.base",
