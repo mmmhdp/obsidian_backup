@@ -1,4 +1,4 @@
-Тут много связано с `using`, туда и внёс в итоге [[Using keyword]].
+Тут много связано с `using`, туда и внёс в итоге [[Cpp language bachelor mipt lections/offtop/Using keyword]].
 # Правила хорошего тона
 - Не засорять глобальное пространство имён
 - Никогда не писать `using namespace` в заголовочных файлах

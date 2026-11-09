@@ -18,6 +18,25 @@
                 "source": false
               },
               "icon": "lucide-file",
+                "file": "Cpp language bachelor mipt lections/03-creation/Difference between coping and initialisation.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Difference between coping and initialisation"
+            }
+          },
+          {
+            "id": "880e003f250f31d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Shad preparation/Calculus/Справочные материалы/Тригонометрия.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
               "title": "Тригонометрия"
             }
           }
@@ -189,6 +208,37 @@
   },
   "active": "880e003f250f31d5",
   "lastOpenFiles": [
+<<<<<<< HEAD
+=======
+    "Cpp language bachelor mipt lections/06-inheritance/Наследование.md",
+    "Cpp language bachelor mipt lections/06-inheritance/Множественное наследование.md",
+    "Cpp language bachelor mipt lections/04-raii/PtrGuard.md",
+    "Cpp language bachelor mipt lections/05-opers/Operator overloading.md",
+    "Cpp language bachelor mipt lections/05-opers/Operators and chains.md",
+    "Cpp language bachelor mipt lections/03-creation/Operator type.md",
+    "Cpp language bachelor mipt lections/05-opers/Static and friend methods.md",
+    "Cpp language bachelor mipt lections/05-opers/Type casting.md",
+    "Cpp language bachelor mipt lections/05-opers/Sequecing.md",
+    "Cpp language bachelor mipt lections/12-templates/Обощения типов.md",
+    "Shad preparation/Calculus/Справочные материалы/Тригонометрия.md",
+    "Shad preparation/Calculus/Справочные материалы/local_attachments/get_all_trigonom_formulas.pdf",
+    "Shad preparation/Calculus/00_Введение в математический анализ/! Введение в математический анализ.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Неравенства о средних.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Неравенства с модулями.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Преобразование графиков.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Свойства числовых функций.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Теорема Виета.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Уравнение и неравенства.md",
+    "Shad preparation/Calculus/00_Введение в математический анализ/Элементарные функции.md",
+    "Shad preparation/Discrete math/00_Элементарная математика/Делимость.md",
+    "Shad preparation/Discrete math/00_Элементарная математика/Сравнения по модулю. Признаки делимости. Количество и сумма делителей. Формула Лежандра. Китайская теорема об остатках..md",
+    "Shad preparation/Discrete math/Дискретная математика.md",
+    "Shad preparation/Подготовка к ШАД.md",
+    "Shad preparation/Discrete math/00_Элементарная математика/! Элементарная математика.md",
+    "Cpp language mipt masters lections/3 Building blocks.md",
+    "Cpp language mipt masters lections/4 Names and processes.md",
+    "Cpp language bachelor mipt lections/ADL.md~",
+>>>>>>> 00cf16f (backup: basic)
     "Cpp language bachelor mipt lections/slides/18-meta-ce.pdf",
     "Cpp language bachelor mipt lections/slides/17-algorithms.pdf",
     "Cpp language bachelor mipt lections/slides/16-containers.pdf",
@@ -197,9 +247,13 @@
     "Cpp language bachelor mipt lections/slides/13-vectors.pdf",
     "Cpp language bachelor mipt lections/slides/12-templates.pdf",
     "Cpp language bachelor mipt lections/slides/11-compute.pdf",
+<<<<<<< HEAD
     "Cpp language bachelor mipt lections/slides/10-3dgraphics.pdf",
     "Cpp language bachelor mipt lections/slides/09-philosophy.pdf",
     "Cpp language bachelor mipt lections/slides/08-exceptions.pdf",
+=======
+    "Cpp language bachelor mipt lections/18-meta-ce/local_attachments/Pasted image 20260115141056.png",
+>>>>>>> 00cf16f (backup: basic)
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114114038.png",
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114114005.png",
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114113830.png",
@@ -209,6 +263,7 @@
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114111327.png",
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114111230.png",
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114111154.png",
+<<<<<<< HEAD
     "Cpp language bachelor mipt lections/17-algorithms/local_attachments/Pasted image 20260114111148.png",
     "Cpp language bachelor mipt lections/18-meta-ce/CONSTEXPR.md",
     "Cpp language bachelor mipt lections/17-algorithms/Алгоритмы.md",
@@ -235,6 +290,8 @@
     "Cpp language bachelor mipt lections/04-raii/RAII.md",
     "Cpp language bachelor mipt lections/04-raii/PtrGuard.md",
     "Cpp language bachelor mipt lections/04-raii/PImpl.md",
+=======
+>>>>>>> 00cf16f (backup: basic)
     "Untitled.canvas",
     "Диплом/arch.canvas",
     "uni/digital economy/Untitled.canvas",

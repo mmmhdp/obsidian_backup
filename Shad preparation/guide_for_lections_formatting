@@ -16,18 +16,6 @@ This guide outlines the instructions and formatting rules to convert handwritten
 
 ## Formatting Instructions
 
-1. Headings:
-   - Wrap all top-level headers with `<mark class="hltr-coler">...</mark>` for clarity.
-   - Example:
-     ```
-     # <mark class="hltr-coler">Многочлены</mark>
-     ```
-   - Wrap lower-level headers (e.g., `##`) with `<mark class="hltr-yellow">...</mark>` for distinction.
-   - Example:
-     ```
-     ## <mark class="hltr-yellow">Key Notes</mark>
-     ```
-
 2. Inline Math:
    - Use `$...$` for inline mathematical expressions.
    - Example:
@@ -74,14 +62,14 @@ This guide outlines the instructions and formatting rules to convert handwritten
 
 Here’s how a note might look after transcription and formatting:
 
-# <mark class="hltr-coler">Многочлены</mark>
+# Многочлены
 - K-поле: $K \supseteq 0, 1; \text{операции: } +, -, \cdot, \div$ ($K = \mathbb{Q}, \mathbb{R}, \mathbb{C}$)
 - Многочлен от $x$ над полем $K$ — выражение вида:
 $$
 f(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0, \text{ где } a_0, a_1, \dots, a_n \in K
 $$
-## <mark class="hltr-yellow">Операции с многочленами</mark>
-### <mark class="hltr-yellow">Сложение многочленов</mark>
+## Операции с многочленами
+### Сложение многочленов
 - Пусть $f(x)$ и $g(x)$ — многочлены вида:
 $$
 f(x) = a_n x^n + \dots + a_0, \quad g(x) = b_m x^m + \dots + b_0
@@ -100,7 +88,7 @@ $$
 $$
 c_k = \sum_{i+j=k} a_i b_j
 $$
-## <mark class="hltr-yellow">Степень многочлена</mark>
+## Степень многочлена
 - Степень многочлена $f(x)$ — это наибольшее число $n$, для которого $a_n \neq 0$.
 - Обозначение: $\deg(f(x)) = n$
 - Свойства:

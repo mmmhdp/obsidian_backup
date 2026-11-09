@@ -85,7 +85,7 @@ struct Copyable {
 	Copyable (const Copyable& c);
 };
 ```
-Но, допустимо также принимать неконстантную ссылку, как угодно `cv`-квалифицированную ссылку или значение (`cv - const volatile` [[Functions and methods specifiers, modifiers, attributes]]).
+Но, допустимо также принимать неконстантную ссылку, как угодно `cv`-квалифицированную ссылку или значение (`cv - const volatile` [[Cpp language bachelor mipt lections/offtop/Functions and methods specifiers, modifiers, attributes]]).
 # Недопустимые формы
 `Шаблонный конструктор это никогда не конструктор копирования`:
 ```cpp
